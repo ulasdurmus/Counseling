@@ -1,0 +1,12 @@
+C:\Git\Projeler\BitirmeProjesi\Counseling\Counseling.Entity\bin\Debug\net7.0\Counseling.Entity.deps.json
+C:\Git\Projeler\BitirmeProjesi\Counseling\Counseling.Entity\bin\Debug\net7.0\Counseling.Entity.dll
+C:\Git\Projeler\BitirmeProjesi\Counseling\Counseling.Entity\bin\Debug\net7.0\Counseling.Entity.pdb
+C:\Git\Projeler\BitirmeProjesi\Counseling\Counseling.Entity\obj\Debug\net7.0\Counseling.Entity.csproj.AssemblyReference.cache
+C:\Git\Projeler\BitirmeProjesi\Counseling\Counseling.Entity\obj\Debug\net7.0\Counseling.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\Projeler\BitirmeProjesi\Counseling\Counseling.Entity\obj\Debug\net7.0\Counseling.Entity.AssemblyInfoInputs.cache
+C:\Git\Projeler\BitirmeProjesi\Counseling\Counseling.Entity\obj\Debug\net7.0\Counseling.Entity.AssemblyInfo.cs
+C:\Git\Projeler\BitirmeProjesi\Counseling\Counseling.Entity\obj\Debug\net7.0\Counseling.Entity.csproj.CoreCompileInputs.cache
+C:\Git\Projeler\BitirmeProjesi\Counseling\Counseling.Entity\obj\Debug\net7.0\Counseling.Entity.dll
+C:\Git\Projeler\BitirmeProjesi\Counseling\Counseling.Entity\obj\Debug\net7.0\refint\Counseling.Entity.dll
+C:\Git\Projeler\BitirmeProjesi\Counseling\Counseling.Entity\obj\Debug\net7.0\Counseling.Entity.pdb
+C:\Git\Projeler\BitirmeProjesi\Counseling\Counseling.Entity\obj\Debug\net7.0\ref\Counseling.Entity.dll
