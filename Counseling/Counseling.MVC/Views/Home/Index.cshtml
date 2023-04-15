@@ -1,0 +1,20 @@
+﻿@model List<ServiceModel>
+@{
+    ViewData["Title"] = "Home Page";
+    List<ServiceModel> services = Model;
+}
+
+<h1>Services</h1>
+<div class="row">
+    @foreach (var service in services)
+    {
+        <div col-md-3>
+            @foreach (var category in service.ServiceCategories)
+            {
+                <h3>@category.Category.Name</h3>
+            }
+        </div>
+    }
+</div>
+
+

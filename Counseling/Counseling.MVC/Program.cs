@@ -1,14 +1,60 @@
+using Counseling.Business.Abstract;
+using Counseling.Business.Concrete;
+using Counseling.Data.Abstract;
+using Counseling.Data.Concrete.Context;
+using Counseling.Data.Concrete.EfCoreRepositories;
+using Counseling.Entity.Entity.Identitiy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddControllersWithViews();
+
+//Sqlite Connection
+builder.Services.AddDbContext<CounselingContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
+//Identity Package
+builder.Services.AddIdentity<User, Role>()
+    .AddEntityFrameworkStores<CounselingContext>()
+    .AddDefaultTokenProviders();
+
+// User Settings
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequiredLength = 6;
+    options.Password.RequireNonAlphanumeric = true;
+
+    options.Lockout.MaxFailedAccessAttempts = 3;
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+
+    options.User.RequireUniqueEmail = true;
+
+    options.SignIn.RequireConfirmedEmail = false;
+    options.SignIn.RequireConfirmedPhoneNumber = false;
+});
+
+//Add Services-Manager
+builder.Services.AddScoped<ICategoryService, CategoryManager>();
+builder.Services.AddScoped<IClientService, ClientManager>();
+builder.Services.AddScoped<IServiceService,ServiceManager>();
+builder.Services.AddScoped<ITherapistService,TherapistManager>();
+//Add Repository
+builder.Services.AddScoped<ICategoryRepository, EfCoreCategoryRepository>();
+builder.Services.AddScoped<IClientRepository,EfCoreClientRepository>();
+builder.Services.AddScoped<IServiceRepository,EfCoreServiceRepository>();
+builder.Services.AddScoped<ITherapistRepository,EfCoreTherapistRepository>();
+
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
+    app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
@@ -19,7 +65,13 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
-
-app.MapRazorPages();
+app.MapAreaControllerRoute(
+    name: "Admin",
+    areaName: "Admin",
+    pattern: "admin/{controller=Home}/{action=Index}/{id?}"
+    );
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

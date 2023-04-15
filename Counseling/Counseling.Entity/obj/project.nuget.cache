@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NbWd4zcp1yiUuiIAt1IyzQito8p+g/ufWsyIMmQdK2GpXLKn/JC5TsFhQxINMdTRY2Xy4BMlhYrQSHV6B8at5Q==",
+  "dgSpecHash": "DoOqu8YYrF3+YV+UG+mQaht7a8W54cg6B6yImpogohtmSYHEpmNYjOhSohxaEVv7rhj/XyDL1bcfpQAePSXEUg==",
   "success": true,
-  "projectFilePath": "C:\\Git\\Projeler\\BitirmeProjesi\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj",
+  "projectFilePath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ulas_\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.4\\microsoft.aspnetcore.cryptography.internal.7.0.4.nupkg.sha512",
     "C:\\Users\\ulas_\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.4\\microsoft.aspnetcore.cryptography.keyderivation.7.0.4.nupkg.sha512",

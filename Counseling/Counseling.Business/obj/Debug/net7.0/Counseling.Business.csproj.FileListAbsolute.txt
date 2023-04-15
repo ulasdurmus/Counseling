@@ -1,0 +1,17 @@
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\bin\Debug\net7.0\Counseling.Business.deps.json
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\bin\Debug\net7.0\Counseling.Business.dll
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\bin\Debug\net7.0\Counseling.Business.pdb
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\bin\Debug\net7.0\Counseling.Data.dll
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\bin\Debug\net7.0\Counseling.Entity.dll
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\bin\Debug\net7.0\Counseling.Data.pdb
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\bin\Debug\net7.0\Counseling.Entity.pdb
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\obj\Debug\net7.0\Counseling.Business.csproj.AssemblyReference.cache
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\obj\Debug\net7.0\Counseling.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\obj\Debug\net7.0\Counseling.Business.AssemblyInfoInputs.cache
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\obj\Debug\net7.0\Counseling.Business.AssemblyInfo.cs
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\obj\Debug\net7.0\Counseling.Business.csproj.CoreCompileInputs.cache
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\obj\Debug\net7.0\Counseling.Business.csproj.CopyComplete
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\obj\Debug\net7.0\Counseling.Business.dll
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\obj\Debug\net7.0\refint\Counseling.Business.dll
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\obj\Debug\net7.0\Counseling.Business.pdb
+C:\Git\Projeler\Counseling\Counseling\Counseling.Business\obj\Debug\net7.0\ref\Counseling.Business.dll

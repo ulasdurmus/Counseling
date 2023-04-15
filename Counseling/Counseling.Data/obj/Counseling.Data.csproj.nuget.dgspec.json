@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git\\Projeler\\BitirmeProjesi\\Counseling\\Counseling.Data\\Counseling.Data.csproj": {}
+    "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Data\\Counseling.Data.csproj": {}
   },
   "projects": {
-    "C:\\Git\\Projeler\\BitirmeProjesi\\Counseling\\Counseling.Data\\Counseling.Data.csproj": {
+    "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Data\\Counseling.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\Projeler\\BitirmeProjesi\\Counseling\\Counseling.Data\\Counseling.Data.csproj",
+        "projectUniqueName": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Data\\Counseling.Data.csproj",
         "projectName": "Counseling.Data",
-        "projectPath": "C:\\Git\\Projeler\\BitirmeProjesi\\Counseling\\Counseling.Data\\Counseling.Data.csproj",
+        "projectPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Data\\Counseling.Data.csproj",
         "packagesPath": "C:\\Users\\ulas_\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\Projeler\\BitirmeProjesi\\Counseling\\Counseling.Data\\obj\\",
+        "outputPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Git\\Projeler\\BitirmeProjesi\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj": {
-                "projectPath": "C:\\Git\\Projeler\\BitirmeProjesi\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj"
+              "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj": {
+                "projectPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj"
               }
             }
           }
@@ -79,18 +79,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Git\\Projeler\\BitirmeProjesi\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj": {
+    "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\Projeler\\BitirmeProjesi\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj",
+        "projectUniqueName": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj",
         "projectName": "Counseling.Entity",
-        "projectPath": "C:\\Git\\Projeler\\BitirmeProjesi\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj",
+        "projectPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj",
         "packagesPath": "C:\\Users\\ulas_\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\Projeler\\BitirmeProjesi\\Counseling\\Counseling.Entity\\obj\\",
+        "outputPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -144,7 +144,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

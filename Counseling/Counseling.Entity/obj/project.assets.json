@@ -774,11 +774,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\Projeler\\BitirmeProjesi\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj",
+      "projectUniqueName": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj",
       "projectName": "Counseling.Entity",
-      "projectPath": "C:\\Git\\Projeler\\BitirmeProjesi\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj",
+      "projectPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj",
       "packagesPath": "C:\\Users\\ulas_\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\Projeler\\BitirmeProjesi\\Counseling\\Counseling.Entity\\obj\\",
+      "outputPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -832,7 +832,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

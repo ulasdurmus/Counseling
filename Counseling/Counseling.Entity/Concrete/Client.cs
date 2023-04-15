@@ -1,4 +1,5 @@
 ﻿using Counseling.Entity.Abstract;
+using Counseling.Entity.Entity.Identitiy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace Counseling.Entity.Entity
     {
         public int Id { get; set; }
         public string UserId { get; set; }
+        public User User { get; set; }
         public string Url { get; set; }
         public bool IsApproved { get; set; }
         public List<ClientTherapist> ClientTherapists { get; set; }

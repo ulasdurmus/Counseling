@@ -20,9 +20,9 @@ namespace Counseling.Data.Concrete.Config
             builder.Property(x => x.UniversityId).IsRequired();
             builder.Property(x => x.DepartmentId).IsRequired();
             builder.HasData(
-                new Education { Id=1,DepartmentId=1,UniversityId=1, StartedDate=new DateTime(2010,9,1),EndedDate=new DateTime(2014,6,1)},
-                new Education { Id=1,DepartmentId=2,UniversityId=2, StartedDate=new DateTime(2005,9,1),EndedDate=new DateTime(209,6,1)},
-                new Education { Id=1,DepartmentId=1,UniversityId=3, StartedDate=new DateTime(2013,9,1),EndedDate=new DateTime(2018,6,1)}
+                new Education { Id=1,DepartmentId=1,UniversityId=1, StartedDate=new DateTime(2010,09,01),EndedDate=new DateTime(2014,6,01)},
+                new Education { Id=2,DepartmentId=2,UniversityId=2, StartedDate=new DateTime(2005,09,01),EndedDate=new DateTime(209,06,01)},
+                new Education { Id=3,DepartmentId=1,UniversityId=3, StartedDate=new DateTime(2013,09,01),EndedDate=new DateTime(2018,06,01)}
                 );
         }
     }

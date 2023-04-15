@@ -13,7 +13,7 @@ namespace Counseling.Data.Concrete.Config
     {
         public void Configure(EntityTypeBuilder<ServiceTherapist> builder)
         {
-            builder.HasKey(st => new { st.ServiceId, st.Therapist });
+            builder.HasKey(st => new { st.ServiceId, st.TherapistId });
             builder.HasData(
                 new ServiceTherapist { ServiceId=1,TherapistId=2 },
                 new ServiceTherapist { ServiceId=2,TherapistId=1 },
