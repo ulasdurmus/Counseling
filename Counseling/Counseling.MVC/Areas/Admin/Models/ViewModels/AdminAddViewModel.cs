@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Counseling.MVC.Areas.Admin.Models.ViewModels
@@ -48,6 +49,7 @@ namespace Counseling.MVC.Areas.Admin.Models.ViewModels
         [DisplayName("Profil Foroğrafı")]
         [Required(ErrorMessage = "Profil Fotoğrafı boş bırakılmamalıdır.")]
         public IFormFile ProfilePic { get; set; }
+        public List<SelectListItem> GenderSelectList{ get; set; }
 
     }
 }

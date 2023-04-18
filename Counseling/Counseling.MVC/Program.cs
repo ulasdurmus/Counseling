@@ -42,11 +42,13 @@ builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<IClientService, ClientManager>();
 builder.Services.AddScoped<IServiceService,ServiceManager>();
 builder.Services.AddScoped<ITherapistService,TherapistManager>();
+builder.Services.AddScoped<IImageService, ImageManager>();
 //Add Repository
 builder.Services.AddScoped<ICategoryRepository, EfCoreCategoryRepository>();
 builder.Services.AddScoped<IClientRepository,EfCoreClientRepository>();
 builder.Services.AddScoped<IServiceRepository,EfCoreServiceRepository>();
 builder.Services.AddScoped<ITherapistRepository,EfCoreTherapistRepository>();
+builder.Services.AddScoped<IImageRepository, EfCoreImageRepository>();
 
 
 var app = builder.Build();
@@ -65,13 +67,13 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
-app.MapAreaControllerRoute(
-    name: "Admin",
-    areaName: "Admin",
-    pattern: "admin/{controller=Home}/{action=Index}/{id?}"
-    );
+//app.MapAreaControllerRoute(
+//    name: "Admin",
+//    areaName: "Admin",
+//    pattern: "admin/{controller=Home}/{action=Index}/{id?}"
+//    );
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{Area=Admin}/{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

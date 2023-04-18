@@ -18,6 +18,5 @@ namespace Counseling.Entity.Entity.Identitiy
         public DateTime DateOfBirth{ get; set; }
         public DateTime DateOfRegistration { get; set; }
         public Image Image { get; set; }
-
     }
 }

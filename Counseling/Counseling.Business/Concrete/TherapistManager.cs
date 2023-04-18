@@ -1,6 +1,7 @@
 ﻿using Counseling.Business.Abstract;
 using Counseling.Data.Abstract;
 using Counseling.Entity.Entity;
+using Counseling.Entity.Entity.Identitiy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,11 @@ namespace Counseling.Business.Concrete
         public async Task<List<Therapist>> GetAllAsync()
         {
             return await _therapistRepository.GetAllAsync();
+        }
+
+        public List<Therapist> GetAllEntityAndUserInformation(List<Therapist> entitys, IList<User> users)
+        {
+            return _therapistRepository.GetAllEntityAndUserInformation(entitys, users);
         }
 
         public async Task<Therapist> GetByIdAsync(int id)
