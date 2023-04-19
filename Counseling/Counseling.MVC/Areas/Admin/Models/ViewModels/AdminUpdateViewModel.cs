@@ -37,8 +37,6 @@ namespace Counseling.MVC.Areas.Admin.Models.ViewModels
         [DisplayName("Doğum Tarihi")]
         [Required(ErrorMessage = "Doğum Tarihi boş bırakılmamalıdır.")]
         public DateTime DateOfBirth { get; set; }
-
-        
         public IFormFile ProfilePic { get; set; }
         public string ProfilPictureUrl { get; set; }
         public List<SelectListItem> GenderSelectList { get; set; }

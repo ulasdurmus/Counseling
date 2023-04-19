@@ -109,7 +109,8 @@ namespace Counseling.MVC.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(string id)
         {
             var admin = await _userManager.FindByIdAsync(id);
-            var images = await _imageService.GetAllAsync();
+            //var images = await _imageService.GetAllAsync();
+            var images = await _imageService.GetByIdAsync(admin.Image.Id);
 
             List<SelectListItem> genderList = new List<SelectListItem>();
            
@@ -137,7 +138,7 @@ namespace Counseling.MVC.Areas.Admin.Controllers
                 PhoneNumber = admin.PhoneNumber,
                 GenderSelectList = genderList,
                 ProfilPictureUrl = admin.Image.Url
-
+                
             };
 
             return View(adminUpdataViewModel);
@@ -164,8 +165,6 @@ namespace Counseling.MVC.Areas.Admin.Controllers
             // Identitiy change passwpord methodunu kullan
             if (ModelState.IsValid)
             {
-                
-                
                 user.UserName = adminUpdateViewModel.UserName;
                 user.LastName = adminUpdateViewModel.LastName;
                 user.Email = adminUpdateViewModel.Email;
@@ -182,7 +181,6 @@ namespace Counseling.MVC.Areas.Admin.Controllers
                     int ImageNameRepeatCount = _imageService.CheckImageName(imageName);
                     user.Image = new Image
                     {
-
                         IsApproved = true,
                         Url = Jobs.UploadImage(adminUpdateViewModel.ProfilePic, "profilepics/admins", ImageNameRepeatCount)
                     };

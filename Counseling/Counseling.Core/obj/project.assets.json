@@ -122,23 +122,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ulas_\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Core\\Counseling.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Core\\Counseling.Core.csproj",
       "projectName": "Counseling.Core",
-      "projectPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Core\\Counseling.Core.csproj",
-      "packagesPath": "C:\\Users\\ulas_\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Core\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Core\\Counseling.Core.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ulas_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

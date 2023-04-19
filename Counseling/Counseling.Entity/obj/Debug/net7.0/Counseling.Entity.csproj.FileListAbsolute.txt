@@ -10,3 +10,15 @@ C:\Git\Projeler\Counseling\Counseling\Counseling.Entity\obj\Debug\net7.0\Counsel
 C:\Git\Projeler\Counseling\Counseling\Counseling.Entity\obj\Debug\net7.0\refint\Counseling.Entity.dll
 C:\Git\Projeler\Counseling\Counseling\Counseling.Entity\obj\Debug\net7.0\Counseling.Entity.pdb
 C:\Git\Projeler\Counseling\Counseling\Counseling.Entity\obj\Debug\net7.0\ref\Counseling.Entity.dll
+C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.Entity\bin\Debug\net7.0\Counseling.Entity.deps.json
+C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.Entity\bin\Debug\net7.0\Counseling.Entity.dll
+C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.Entity\bin\Debug\net7.0\Counseling.Entity.pdb
+C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.Entity\obj\Debug\net7.0\Counseling.Entity.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.Entity\obj\Debug\net7.0\Counseling.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.Entity\obj\Debug\net7.0\Counseling.Entity.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.Entity\obj\Debug\net7.0\Counseling.Entity.AssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.Entity\obj\Debug\net7.0\Counseling.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.Entity\obj\Debug\net7.0\Counseling.Entity.dll
+C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.Entity\obj\Debug\net7.0\refint\Counseling.Entity.dll
+C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.Entity\obj\Debug\net7.0\Counseling.Entity.pdb
+C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.Entity\obj\Debug\net7.0\ref\Counseling.Entity.dll

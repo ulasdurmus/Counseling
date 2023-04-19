@@ -52,11 +52,6 @@ namespace Counseling.MVC.Areas.Admin.Models.ViewModels
         public string Url { get; set; }
         public string Description { get; set; }
         public bool IsApproved { get; set; }
-        public List<TherapistCategory> TherapistCategories { get; set; }
-        public List<ClientTherapist> ClientTherapists { get; set; }
-        public List<Certificate> Certificates { get; set; }
-        public List<Education> Educations { get; set; }
-        public int TitleId { get; set; }
         public List<SelectListItem> GenderList { get; set; }
     }
 }

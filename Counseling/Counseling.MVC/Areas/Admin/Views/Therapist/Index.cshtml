@@ -49,7 +49,7 @@
                                        asp-area="Admin"
                                        asp-controller="Therapist"
                                        asp-action="Edit"
-                                       asp-route-id="@therapist.UserId">Düzenle</a>
+                                       asp-route-id="@therapist.TherapistId">Düzenle</a>
                                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModel_@therapist.UserName">
                                             Sil
                                         </button>
@@ -61,7 +61,7 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Admin kalıcı olarak silinecektir!</h1>
+                                                <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Terapist kalıcı olarak silinecektir!</h1>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
@@ -74,7 +74,7 @@
                                                asp-area="Admin"
                                                asp-controller="Therapist"
                                                asp-action="Delete"
-                                               asp-route-id="@therapist.Email">Sil</a>
+                                               asp-route-id="@therapist.TherapistId">Sil</a>
                                             </div>
                                         </div>
                                     </div>
