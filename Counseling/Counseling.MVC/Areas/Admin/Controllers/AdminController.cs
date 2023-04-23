@@ -100,6 +100,7 @@ namespace Counseling.MVC.Areas.Admin.Controllers
                     return RedirectToAction("Index", "Admin");
                 }
             }
+
             return View(adminAddViewModel);
         }
 

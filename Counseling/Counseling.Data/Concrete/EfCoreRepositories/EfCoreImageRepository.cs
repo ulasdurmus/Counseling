@@ -44,5 +44,24 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
 
             return count;
         }
+
+        public async Task<Image> GetImageByUserIdAsync(string userId)
+        {
+            int imageId =await AppContext
+                .Users
+                .Where(u => u.Id == userId)
+                .Select(u => u.Image.Id)
+                .FirstOrDefaultAsync();
+            Image image = await AppContext
+                .Images
+                .Where(i => i.Id == imageId)
+                .Select(i => new Image
+                {
+                    Id = i.Id,
+                    IsApproved = i.IsApproved,
+                    Url = i.Url
+                }).FirstOrDefaultAsync();
+            return image;
+        }
     }
 }

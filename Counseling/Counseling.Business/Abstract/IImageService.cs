@@ -9,6 +9,7 @@ namespace Counseling.Business.Abstract
 {
     public interface IImageService
     {
+        Task<Image> GetImageByUserIdAsync(string userId);
         int CheckImageName(string imageName);
         Task CretaeAsync(Image image);
         Task<Image> GetByIdAsync(int id);

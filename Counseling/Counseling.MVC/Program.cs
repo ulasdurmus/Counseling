@@ -67,13 +67,13 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
-//app.MapAreaControllerRoute(
-//    name: "Admin",
-//    areaName: "Admin",
-//    pattern: "admin/{controller=Home}/{action=Index}/{id?}"
-//    );
+app.MapAreaControllerRoute(
+    name: "Admin",
+    areaName: "Admin",
+    pattern: "admin/{controller=Home}/{action=Index}/{id?}"
+    );
 app.MapControllerRoute(
     name: "default",
-    pattern: "{Area=Admin}/{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

@@ -43,6 +43,11 @@ namespace Counseling.Business.Concrete
             return await _imageRepository.GetByIdAsync(id);
         }
 
+        public async Task<Image> GetImageByUserIdAsync(string userId)
+        {
+            return await _imageRepository.GetImageByUserIdAsync(userId);
+        }
+
         public void Update(Image image)
         {
             _imageRepository.Update(image);

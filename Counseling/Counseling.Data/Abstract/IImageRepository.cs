@@ -10,5 +10,6 @@ namespace Counseling.Data.Abstract
     public interface IImageRepository : IGenericRepository<Image>
     {
         int CheckImageName(string imageName);
+        Task<Image> GetImageByUserIdAsync(string userId);
     }
 }

@@ -27,6 +27,9 @@ namespace Counseling.MVC.Areas.Admin.Models.ViewModels
         [DisplayName("Cinsiyet")]
         [Required(ErrorMessage = "Cinsiyet boş bırakılmamalıdır.")]
         public string Gender { get; set; }
+
+        [DisplayName("Doğum Tarihi")]
+        [Required(ErrorMessage = "Doğum Tarihi boş bırakılmamalıdır.")]
         public DateTime DateOfBirth { get; set; }
         public DateTime DateOfRegistration { get; set; }
 

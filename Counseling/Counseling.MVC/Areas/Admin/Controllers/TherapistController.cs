@@ -3,6 +3,7 @@ using Counseling.Core;
 using Counseling.Entity.Entity;
 using Counseling.Entity.Entity.Identitiy;
 using Counseling.MVC.Areas.Admin.Models.ViewModels;
+using Counseling.MVC.Methods;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -54,26 +55,8 @@ namespace Counseling.MVC.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            List<SelectListItem> genderList = new List<SelectListItem>();
-            genderList.Add(new SelectListItem
-            {
-                Text = "Cinsiyet Seçiniz",
-                Selected = true,
-                Disabled = true
-
-            });
-            genderList.Add(new SelectListItem
-            {
-                Text = "Kadın",
-                Value = "Kadın"
-            });
-            genderList.Add(new SelectListItem
-            {
-                Text = "Erkek",
-                Value = "Erkek"
-            });
             TherapistAddViewModel therapistAddViewModel = new TherapistAddViewModel();
-            therapistAddViewModel.GenderList= genderList;
+            therapistAddViewModel.GenderList= GeneralMethods.GenderList();
             return View(therapistAddViewModel);
         }
         [HttpPost]
@@ -82,7 +65,7 @@ namespace Counseling.MVC.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 var imageName = therapistAddViewModel.ProfilePic.FileName;
-                int ImageNameRepeatCount = _imageService.CheckImageName(imageName); ;
+                int ImageNameRepeatCount = _imageService.CheckImageName(imageName);
                 User user = new User
                 {
                     FirstName = therapistAddViewModel.FirstName,
@@ -109,6 +92,7 @@ namespace Counseling.MVC.Areas.Admin.Controllers
                         Description = therapistAddViewModel.Description,
                         IsApproved = true,
                         UserId = user.Id,
+                        Url= Jobs.GetUrl(therapistAddViewModel.UserName)
 
                     };
                     await _therapistService.CreateAsync(therapist);
@@ -117,7 +101,7 @@ namespace Counseling.MVC.Areas.Admin.Controllers
                 }
                 
             }
-
+            therapistAddViewModel.GenderList = GeneralMethods.GenderList();
             return View(therapistAddViewModel);
         }
         #endregion
@@ -206,7 +190,7 @@ namespace Counseling.MVC.Areas.Admin.Controllers
                     user.Image = new Image
                     {
                         IsApproved = true,
-                        Url = Jobs.UploadImage(therapistUpdateViewModel.ProfilePic, "profilepics/admins", ImageNameRepeatCount)
+                        Url = Jobs.UploadImage(therapistUpdateViewModel.ProfilePic, "profilepics/therapists", ImageNameRepeatCount)
                     };
                 }
                 await _userManager.UpdateAsync(user);
