@@ -37,6 +37,11 @@ namespace Counseling.Business.Concrete
             return await _clientRepository.GetByIdAsync(id);
         }
 
+        public async Task<Client> GetClientByUserName(string userName)
+        {
+            return await _clientRepository.GetClientByUserName(userName);
+        }
+
         public void Update(Client client)
         {
             _clientRepository.Update(client);

@@ -21,6 +21,6 @@ namespace Counseling.Entity.Entity
         public List<ClientTherapist> ClientTherapists { get; set; }
         public List<Certificate> Certificates { get; set; }
         public List<Education> Educations { get; set; }
-        public int TitleId{ get; set; }
+        public int? TitleId{ get; set; }
     }
 }

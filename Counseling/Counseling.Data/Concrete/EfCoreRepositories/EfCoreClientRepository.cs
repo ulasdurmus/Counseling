@@ -19,5 +19,13 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
         {
             get { return _dbContext as CounselingContext; }
         }
+        public async Task<Client> GetClientByUserName(string userName)
+        {
+            Client client = await AppContext
+                .Clients
+                .Where(c => c.User.UserName == userName)
+                .FirstOrDefaultAsync();
+            return client;
+        }
     }
 }

@@ -11,5 +11,9 @@ namespace Counseling.Data.Abstract
     public interface ITherapistRepository : IGenericRepository<Therapist>
     {
         public List<Therapist> GetAllEntityAndUserInformation(List<Therapist> entitys, IList<User> users);
+        public Task<List<University>> GetAllUniversty();
+        public Task<List<Department>> GetAllDepartments();
+        public Task<List<TherapistTitle>> GetAllTitles();
+        public Task CreateTherapistWithFullDataAsync(Therapist therapist, int[] selectedCategories = null);
     }
 }

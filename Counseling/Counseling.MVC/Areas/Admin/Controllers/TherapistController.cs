@@ -110,8 +110,8 @@ namespace Counseling.MVC.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             var therapist = await _therapistService.GetByIdAsync(id);
-            var user = await _userManager.FindByIdAsync(therapist.UserId);
             var image = await _imageService.GetAllAsync();
+            var user = await _userManager.FindByIdAsync(therapist.UserId);
             List<SelectListItem> genderList = new List<SelectListItem>();
 
             genderList.Add(new SelectListItem

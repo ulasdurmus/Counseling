@@ -12,9 +12,9 @@ namespace Counseling.Entity.Entity
         public DateTime StartedDate { get; set; }
         public DateTime EndedDate { get; set; }
         public University University { get; set; }
-        public int UniversityId{ get; set; }
+        public int? UniversityId{ get; set; }
         public Department Department { get; set; }
-        public int DepartmentId { get; set; }
+        public int? DepartmentId { get; set; }
 
     }
 }

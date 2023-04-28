@@ -37,6 +37,22 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.SignIn.RequireConfirmedPhoneNumber = false;
 });
 
+//Cookie Settings
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/account/login";
+    options.LogoutPath = "/account/logout";
+    options.AccessDeniedPath = "/account/accessdenied";
+    options.SlidingExpiration = true;
+    options.ExpireTimeSpan = TimeSpan.FromDays(10);
+    options.Cookie = new CookieBuilder
+    {
+        HttpOnly = true,
+        SameSite = SameSiteMode.Strict,
+        Name = ".Counseling.Security.Cookie"
+    };
+});
+
 //Add Services-Manager
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<IClientService, ClientManager>();
@@ -67,6 +83,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
 app.MapAreaControllerRoute(
     name: "Admin",
     areaName: "Admin",

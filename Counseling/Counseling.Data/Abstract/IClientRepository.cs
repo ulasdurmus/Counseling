@@ -9,5 +9,6 @@ namespace Counseling.Data.Abstract
 {
     public interface IClientRepository : IGenericRepository<Client>
     {
+        public Task<Client> GetClientByUserName(string userName);
     }
 }

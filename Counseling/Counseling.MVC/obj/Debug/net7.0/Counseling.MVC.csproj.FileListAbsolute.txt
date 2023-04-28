@@ -283,7 +283,6 @@ C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\staticweba
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\staticwebassets.pack.json
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\staticwebassets.build.json
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\staticwebassets.development.json
-C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\scopedcss\bundle\Counseling.MVC.styles.css
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\scopedcss\projectbundle\Counseling.MVC.bundle.scp.css
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\Counseling.MVC.csproj.CopyComplete
@@ -586,3 +585,5 @@ C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.MVC\obj\Debug\n
 C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\Counseling.MVC.pdb
 C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\Counseling.MVC.genruntimeconfig.cache
 C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\ref\Counseling.MVC.dll
+C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout_Index.cshtml.rz.scp.css
+C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css

@@ -1,0 +1,139 @@
+﻿@model ClientManageViewModel
+<div class="page-header align-items-start min-vh-100" style="background-color: bisque" loading="lazy">
+    <span class="mask bg-gradient-dark opacity-6"></span>
+    <div class="container my-auto">
+        <div class="row">
+            <div class=" col-12 mx-auto">
+                <div class="card z-index-0 fadeIn3 fadeInBottom mt-6">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 w-50 mx-auto">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                            <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">@Model.FirstName @Model.LastName</h4>
+                            <div class="row mt-3">
+                                <div class="col-2 text-center ms-auto">
+                                    <a class="btn btn-link px-3" href="javascript:;">
+                                        <i class="fa fa-facebook text-white text-lg"></i>
+                                    </a>
+                                </div>
+                                <div class="col-2 text-center px-1">
+                                    <a class="btn btn-link px-3" href="javascript:;">
+                                        <i class="fa fa-github text-white text-lg"></i>
+                                    </a>
+                                </div>
+                                <div class="col-2 text-center me-auto">
+                                    <a class="btn btn-link px-3" href="javascript:;">
+                                        <i class="fa fa-google text-white text-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form asp-area=""
+                              asp-controller="Account"
+                              asp-action="ClientManage"
+                              method="post"
+                              enctype="multipart/form-data"
+                              role="form" class="text-start ">
+                            <div class="row">
+                                <div asp-validation-summary="All"></div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label asp-for="FirstName"></label>
+                                                <input type="text" class="form-control" asp-for="FirstName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label asp-for="LastName"></label>
+                                                <input type="text" class="form-control" asp-for="LastName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label asp-for="PhoneNumber"></label>
+                                                <input type="tel" class="form-control" asp-for="PhoneNumber">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label asp-for="UserName"></label>
+                                                <input type="text" class="form-control" asp-for="UserName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label asp-for="Email"></label>
+                                                <input type="text" class="form-control" asp-for="Email">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-6">
+                                            <label asp-for="ProfilePic" class="col-form-label d-block"></label>
+                                            <input type="file" name="ProfilePic" class="btn btn-primary btn-sm" />
+
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                @*Selected part*@
+                                <div class="col-md-4">
+                                    <div class="input-group input-group-static   my-3">
+                                        <label asp-for="Address"></label>
+                                        <input type="text" class="form-control" asp-for="Address">
+                                    </div>
+                                    @*Chosing Gender*@
+                                    <div class="d-flex justify-content-center">
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" asp-for="Gender" value="Kadın">
+                                            <label class="form-check-label" for="Kadın">
+                                                Kadın
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" asp-for="Gender" value="Erkek">
+                                            <label class="form-check-label" for="male" value="Erkek">
+                                                Erkek
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        @{
+                                            DateTime today = DateTime.Now;
+                                            int year = today.Year - 22;
+                                            int month = today.Month;
+                                            int day = today.Day;
+                                            DateTime maximumDate = new DateTime(year, month, day);
+                                        }
+                                        <label asp-for="DateOfBirth" class="col-md-4 col-lg-3 col-form-label"></label>
+                                        <input type="date" asp-for="DateOfBirth" class="form-control"
+                                               max="@(maximumDate.ToString("yyyy-MM-dd"))"
+                                               min="1990-01-01" value=@maximumDate.ToString("yyyy-MM-dd")>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Kaydet</button>
+                            </div>
+                            <div class="text-center">
+                                <p class="mt-4 text-sm ">
+                                    Hesabın var mı ?
+                                </p>
+                                <a asp-area=""
+                                   asp-controller="Account"
+                                   asp-action="Login"
+                                   class="btn btn-link">Giriş yap</a>
+                            </div>
+                            <input asp-for="ClientId" type="hidden" />
+                            <input asp-for="UserId" type="hidden" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

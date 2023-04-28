@@ -23,6 +23,11 @@ namespace Counseling.Business.Concrete
             await _therapistRepository.CreateAsync(therapist);
         }
 
+        public async Task CreateTherapistWithFullDataAsync(Therapist therapist, int[] selectedCategories = null)
+        {
+            await _therapistRepository.CreateTherapistWithFullDataAsync(therapist, selectedCategories);
+        }
+
         public void Delete(Therapist therapist)
         {
             _therapistRepository.Delete(therapist);
@@ -33,9 +38,24 @@ namespace Counseling.Business.Concrete
             return await _therapistRepository.GetAllAsync();
         }
 
+        public async Task<List<Department>> GetAllDepartments()
+        {
+            return await _therapistRepository.GetAllDepartments();
+        }
+
         public List<Therapist> GetAllEntityAndUserInformation(List<Therapist> entitys, IList<User> users)
         {
             return _therapistRepository.GetAllEntityAndUserInformation(entitys, users);
+        }
+
+        public async Task<List<TherapistTitle>> GetAllTitles()
+        {
+            return await _therapistRepository.GetAllTitles();
+        }
+
+        public Task<List<University>> GetAllUniversty()
+        {
+            return _therapistRepository.GetAllUniversty();
         }
 
         public async Task<Therapist> GetByIdAsync(int id)

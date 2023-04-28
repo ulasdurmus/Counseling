@@ -20,7 +20,12 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
         {
             get { return _dbContext as CounselingContext; }
         }
-
+        public async Task<List<Department>> GetAllDepartments()
+        {
+            return await AppContext
+                .Departments
+                .ToListAsync();
+        }
         public List<Therapist> GetAllEntityAndUserInformation(List<Therapist> therapists, IList<User> users)
         {
             List<Therapist> therapistList = therapists
@@ -87,6 +92,30 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
 
           
             return therapistList;
+        }
+        public async Task<List<University>> GetAllUniversty()
+        {
+            return await AppContext
+                .Universities
+                .ToListAsync();
+        }
+        public async Task<List<TherapistTitle>> GetAllTitles()
+        {
+            return await AppContext
+                .TherapistTitles
+                .ToListAsync();
+        }
+        public async Task CreateTherapistWithFullDataAsync(Therapist therapist, int[] selectedCategories = null)
+        {
+            await AppContext.Therapists.AddAsync(therapist);
+            await AppContext.SaveChangesAsync();
+            List<TherapistCategory> therapistCategories = selectedCategories.Select(tc => new TherapistCategory
+            {
+                CategoryId=tc,
+                TherapistId=therapist.Id,
+            }).ToList();
+            AppContext.TherapistCategories.AddRange(therapistCategories);
+            await AppContext.SaveChangesAsync();
         }
     }
 }

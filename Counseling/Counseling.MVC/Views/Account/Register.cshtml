@@ -1,0 +1,221 @@
+﻿@model RegisterViewModel
+<div class="page-header align-items-start min-vh-100" style="background-image: url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');" loading="lazy">
+    <span class="mask bg-gradient-dark opacity-6"></span>
+    <div class="container my-auto">
+        <div class="row">
+            <div class=" col-12 mx-auto">
+                <div class="card z-index-0 fadeIn3 fadeInBottom mt-6">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 w-50 mx-auto">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                            <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">@(Model.RoleId == 0 ? "Terapist" : "Danışan") Kaydı</h4>
+                            <div class="row mt-3">
+                                <div class="col-2 text-center ms-auto">
+                                    <a class="btn btn-link px-3" href="javascript:;">
+                                        <i class="fa fa-facebook text-white text-lg"></i>
+                                    </a>
+                                </div>
+                                <div class="col-2 text-center px-1">
+                                    <a class="btn btn-link px-3" href="javascript:;">
+                                        <i class="fa fa-github text-white text-lg"></i>
+                                    </a>
+                                </div>
+                                <div class="col-2 text-center me-auto">
+                                    <a class="btn btn-link px-3" href="javascript:;">
+                                        <i class="fa fa-google text-white text-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form 
+                            asp-area=""
+                            asp-controller="Account"
+                            asp-action="Register"
+                            method="post"
+                              enctype="multipart/form-data"
+                            role="form" class="text-start ">
+                            <div class="row">
+                                <div asp-validation-summary="All"></div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label  asp-for="FirstName"></label>
+                                                <input type="text" class="form-control" asp-for="FirstName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label  asp-for="LastName"></label>
+                                                <input type="text" class="form-control" asp-for="LastName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label asp-for="UserName"></label>
+                                                <input type="text" class="form-control" asp-for="UserName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label  asp-for="Email"></label>
+                                                <input type="text" class="form-control" asp-for="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label  asp-for="Password"></label>
+                                                <input type="password" class="form-control" asp-for="Password">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label  asp-for="RePassword"></label>
+                                                <input type="password" class="form-control" asp-for="RePassword">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <label asp-for="ProfilePic" class="col-form-label d-block"></label>
+                                                <input type="file" name="ProfilePic" class="btn btn-primary btn-sm" />
+                                            
+                                        </div>
+                                        <div class="col-md-6">
+                                            @{
+                                                DateTime today = DateTime.Now;
+                                                int year = today.Year - 22;
+                                                int month = today.Month;
+                                                int day = today.Day;
+                                                DateTime maximumDate = new DateTime(year, month, day);
+                                            }
+                                            <label asp-for="DateOfBirth" class="col-md-4 col-lg-3 col-form-label"></label>
+                                            <input type="date" asp-for="DateOfBirth" class="form-control"
+                                                   max="@(maximumDate.ToString("yyyy-MM-dd"))"
+                                                   min="1990-01-01" value=@maximumDate.ToString("yyyy-MM-dd")>
+                                        </div>
+                                    </div>
+                                </div>
+                                @*Selected part*@
+                                <div class="col-md-4">
+                                    @if(Model.RoleId==0)
+                                    {
+                                        @*Choosing Category*@
+                                        <div class="form-check">
+                                            <div class="drop-down">
+                                                <button class="btn btn-primary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Kategori Seçiniz</button>
+                                                <ul class="dropdown-menu overflow-auto" style="height:200px;">
+                                                    @foreach (var category in Model.Categories)
+                                                    {
+                                                        <li class="dropdown-item">
+                                                            <div class="form-check ">
+                                                                <input class="form-check-input" type="checkbox" name="SelectedCategories" value="@category.Id" @if (Model.SelectedCategories != null)
+                                                                {
+                                                                    @(Model.SelectedCategories.Any(sc => sc == category.Id) ? "checked" : "")
+                                                                }>
+                                                                <label class="form-check-label">@category.Name</label>
+                                                            </div>
+                                                        </li>
+                                                    }
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        @*Choosing University*@
+                                        <div class="form-check">
+                                            <div class="drop-down">
+                                                <button class="btn btn-primary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Üniversite Seçiniz</button>
+                                                <ul class="dropdown-menu overflow-auto" style="height:300px;  width:370px;">
+                                                    @foreach (var university in Model.Universities)
+                                                    {
+                                                        <li class="dropdown-item">
+                                                            <div class="form-check ">
+                                                                <input class="form-check-input" type="radio" name="UniversityId" value=@university.Id>
+                                                                <label class="form-check-label">@university.Name</label>
+                                                            </div>
+                                                        </li>
+                                                    }
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        @*Choosing Department*@
+                                        <div class="form-check">
+                                            <div class="drop-down">
+                                                <button class="btn btn-primary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Bölüm Seçiniz</button>
+                                                <ul class="dropdown-menu overflow-auto" style="height:100px">
+                                                    @foreach (var department in Model.Departments)
+                                                    {
+                                                        <li class="dropdown-item">
+                                                            <div class="form-check ">
+                                                                <input class="form-check-input" type="radio" name="DepartmentId" value=@department.Id>
+                                                                <label class="form-check-label">@department.Name</label>
+                                                            </div>
+                                                        </li>
+                                                    }
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        @*Choosing title*@
+                                        <div class="form-check">
+                                            <div class="drop-down">
+                                                <button class="btn btn-primary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Ünvan Seçiniz</button>
+                                                <ul class="dropdown-menu overflow-auto" style="height:100px">
+                                                    @foreach (var title in Model.Titles)
+                                                    {
+                                                        <li class="dropdown-item">
+                                                            <div class="form-check ">
+                                                                <input class="form-check-input" type="radio" name="TitleId" value=@title.Id>
+                                                                <label class="form-check-label">@title.Name</label>
+                                                            </div>
+                                                        </li>
+                                                    }
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    }
+                                    @*Chosing Gender*@
+                                    <div class="d-flex justify-content-center">
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" asp-for="Gender" value="Kadın">
+                                            <label class="form-check-label" for="Kadın">
+                                                Kadın
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" asp-for="Gender" value="Erkek">
+                                            <label class="form-check-label" for="male" value="Erkek">
+                                                Erkek
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Hesap Oluştur</button>
+                            </div>
+                            <div class="text-center">
+                                <p class="mt-4 text-sm ">
+                                    Hesabın var mı ?
+                                </p>
+                                <a asp-area=""
+                                   asp-controller="Account"
+                                   asp-action="Login"
+                                   class="btn btn-link">Giriş yap</a>
+                            </div>
+                            <input asp-for="RoleId" type="hidden"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        if (document.querySelector(".datepicker")) {
+            flatpickr(".datepicker", {});
+        }
+        $('#ex-basic').picker();
+
+    </script>
+
+}

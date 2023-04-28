@@ -14,6 +14,7 @@ namespace Counseling.Business.Abstract
         Task<List<Client>> GetAllAsync();
         void Update(Client client);
         void Delete(Client client);
+        public Task<Client> GetClientByUserName(string userName);
 
 
     }
