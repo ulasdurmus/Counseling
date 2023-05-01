@@ -50,15 +50,24 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
                     ClientId = ct.ClientId,
                     TherapistId = ct.TherapistId
                 }).ToList(),
-                Educations = x.Educations.Select(e=> new Education
+                Education = new Education
                 {
-                    Id=e.Id,
+                    Id = x.Education.Id,
                     Department = new Department
                     {
-                        Id=e.Department.Id,
-                        Name=e.Department.Name
+                        Id =x.Education.Department.Id,
+                        Name = x.Education.Department.Name
                     }
-                }).ToList(),
+                },
+                //Education = x.Education.Select(e=> new Education
+                //{
+                //    Id=e.Id,
+                //    Department = new Department
+                //    {
+                //        Id=e.Department.Id,
+                //        Name=e.Department.Name
+                //    }
+                //}).
                 TherapistCategories = x.TherapistCategories.Select(tc=> new TherapistCategory
                 {
                     CategoryId = tc.CategoryId,
@@ -105,6 +114,12 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
                 .TherapistTitles
                 .ToListAsync();
         }
+        public async Task<List<Certificate>> GetAllCertificates()
+        {
+            return await AppContext
+                .Certificates
+                .ToListAsync();
+        }
         public async Task CreateTherapistWithFullDataAsync(Therapist therapist, int[] selectedCategories = null)
         {
             await AppContext.Therapists.AddAsync(therapist);
@@ -117,5 +132,49 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
             AppContext.TherapistCategories.AddRange(therapistCategories);
             await AppContext.SaveChangesAsync();
         }
+        public async Task UpdateTherapist(Therapist therapist, int[] selectedCategories)
+        {
+            Therapist newTherapist = await AppContext
+               .Therapists
+               .Include(t => t.TherapistCategories)
+               .Include(t => t.Certificates)
+               .Include(t => t.Education)
+               .FirstOrDefaultAsync();
+
+            newTherapist.Description = therapist.Description;
+            newTherapist.TitleId = therapist.TitleId;
+            newTherapist.Url = therapist.Url;
+            newTherapist.TherapistCategories = selectedCategories
+                .Select(sc => new TherapistCategory
+                { 
+                    TherapistId = newTherapist.Id,
+                    CategoryId = sc
+                }).ToList();
+            AppContext.Update(newTherapist);
+            await AppContext.SaveChangesAsync();
+        }
+        
+        public async Task<Therapist> GetTherapistFullDataByUserName(string userName)
+        {
+            Therapist therapist = await AppContext
+                .Therapists
+                .Where(t => t.User.UserName == userName)
+                .Include(t => t.TherapistCategories)
+                .ThenInclude(tc => tc.Category)
+                .Include(t => t.Education)
+                .ThenInclude(te => te.University)
+                .Include(t => t.Education)
+                .ThenInclude(td => td.Department)
+                .Include(t => t.Certificates)
+                .FirstOrDefaultAsync();
+            return therapist; 
+        }
+
+        public Task<List<Education>> GetEducationFullData()
+        {
+            throw new NotImplementedException();
+        }
+        
+
     }
 }

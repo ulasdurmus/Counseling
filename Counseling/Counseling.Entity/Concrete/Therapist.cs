@@ -20,7 +20,8 @@ namespace Counseling.Entity.Entity
         public List<TherapistCategory> TherapistCategories { get; set; }
         public List<ClientTherapist> ClientTherapists { get; set; }
         public List<Certificate> Certificates { get; set; }
-        public List<Education> Educations { get; set; }
+        public int EducationId { get; set; }
+        public Education Education { get; set; }
         public int? TitleId{ get; set; }
     }
 }

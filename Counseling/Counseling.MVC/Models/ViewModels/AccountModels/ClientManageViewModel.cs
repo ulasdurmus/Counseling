@@ -29,17 +29,14 @@ namespace Counseling.MVC.Models.ViewModels.AccountModels
         [Required(ErrorMessage = "Cinsiyet boş bırakılmamalıdır.")]
         public string Gender { get; set; }
         [DisplayName("Adres")]
-        [Required(ErrorMessage = "Adres boş bırakılmamalıdır.")]
         public string Address { get; set; }
         [DisplayName("Doğum Tarihi")]
-        [Required(ErrorMessage = "Doğum Tarihi boş bırakılmamalıdır.")]
         public DateTime DateOfBirth { get; set; }
-        [DisplayName("Profil Foroğrafı")]
+        [DisplayName("Profil Foroğrafını Güncelle")]
         public IFormFile ProfilePic { get; set; }
         public string ProfilPictureUrl { get; set; }
         [DisplayName("Telefon Numarası")]
         [DataType(DataType.PhoneNumber)]
-        [Required(ErrorMessage = "Telefon Numarası boş bırakılmamalıdır.")]
         public string PhoneNumber { get; set; }
 
     }

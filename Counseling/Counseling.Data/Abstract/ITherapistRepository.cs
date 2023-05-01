@@ -15,5 +15,9 @@ namespace Counseling.Data.Abstract
         public Task<List<Department>> GetAllDepartments();
         public Task<List<TherapistTitle>> GetAllTitles();
         public Task CreateTherapistWithFullDataAsync(Therapist therapist, int[] selectedCategories = null);
+        public Task<Therapist> GetTherapistFullDataByUserName(string userName);
+        public Task<List<Education>> GetEducationFullData();
+        public Task UpdateTherapist(Therapist therapist, int[] selectedCategories);
+        public Task<List<Certificate>> GetAllCertificates();
     }
 }

@@ -213,6 +213,8 @@ namespace Counseling.MVC.Areas.Admin.Controllers
             }
             await _userManager.DeleteAsync(user);
             _therapistService.Delete(therapist);
+            
+            
             return RedirectToAction("Index","Therapist");
         }
         #endregion

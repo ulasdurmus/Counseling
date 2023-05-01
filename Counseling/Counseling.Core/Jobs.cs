@@ -78,6 +78,19 @@ namespace Counseling.Core
             }
             return fileName;
         }
+        public static string UploadPdf(IFormFile document)
+        {
+            var extension = Path.GetExtension(document.FileName);
+            var randomName = $"{Guid.NewGuid()}{extension}";
+            //Şimdi de resmi sunucuya yüklüyoruz
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/documents/pdfs", randomName);
+            using (var stream = new FileStream(path, FileMode.Create))
+            {
+                document.CopyTo(stream);
+            }
+
+            return randomName;
+        }
 
     }
 }

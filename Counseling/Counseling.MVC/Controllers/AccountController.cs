@@ -84,25 +84,25 @@ namespace Counseling.MVC.Controllers
                         {
                             if (registerViewModel.DepartmentId.HasValue)
                             {
-                                therapist.Educations = new List<Education>
-                                {
+                                therapist.Education =
+
                                     new Education
                                     {
-                                        UniversityId=registerViewModel.UniversityId,
+                                        UniversityId = registerViewModel.UniversityId,
                                         DepartmentId = registerViewModel.DepartmentId,
 
-                                    }
-                                }.ToList();
+                                    };
+
                             }
                             else
                             {
-                                therapist.Educations = new List<Education>
-                                {
+                                therapist.Education =
+
                                     new Education
                                     {
-                                        UniversityId=registerViewModel.UniversityId
-                                    }
-                                }.ToList();
+                                        UniversityId = registerViewModel.UniversityId
+                                    };
+
                             }
                         }
 
@@ -181,7 +181,7 @@ namespace Counseling.MVC.Controllers
             }
             var client = await _clientService.GetClientByUserName(userName);
             var user = await _userManager.FindByNameAsync(userName);
-            if (user==null)
+            if (user == null)
             {
                 return NotFound();
             }
@@ -201,13 +201,163 @@ namespace Counseling.MVC.Controllers
                 Address = user.Address,
             };
             return View(clientManageViewModel);
-
-            
-
-
-
-            return View();
         }
+        [HttpPost]
+        public async Task<IActionResult> ClientManage(ClientManageViewModel clientManageViewModel)
+        {
+            var user = await _userManager.FindByIdAsync(clientManageViewModel.UserId);
+            var client = await _clientService.GetById(clientManageViewModel.ClientId);
+            if (ModelState.IsValid)
+            {
+                bool logOut = (clientManageViewModel.UserName != user.UserName);
+                user.UserName = clientManageViewModel.UserName;
+                user.LastName = clientManageViewModel.LastName;
+                user.Email = clientManageViewModel.Email;
+                user.Gender = clientManageViewModel.Gender;
+                user.DateOfBirth = clientManageViewModel.DateOfBirth;
+                user.FirstName = clientManageViewModel.FirstName;
+                user.Address = clientManageViewModel.Address;
+                user.NormalizedName = (clientManageViewModel.FirstName + clientManageViewModel.LastName).ToUpper();
+                user.PhoneNumber = clientManageViewModel.PhoneNumber;
+                client.Url = Jobs.GetUrl(clientManageViewModel.UserName);
+                if (clientManageViewModel.ProfilePic != null)
+                {
+
+                    var imageName = clientManageViewModel.ProfilePic.FileName;
+                    int ImageNameRepeatCount = _imageService.CheckImageName(imageName);
+                    user.Image = new Image
+                    {
+                        IsApproved = true,
+                        Url = Jobs.UploadImage(clientManageViewModel.ProfilePic, "profilepics/clients", ImageNameRepeatCount)
+                    };
+                }
+                await _userManager.UpdateAsync(user);
+                _clientService.Update(client);
+                if (logOut)
+                {
+                    return RedirectToAction("Logout");
+                }
+                return RedirectToAction("Index", "Home");
+            }
+            return View(clientManageViewModel);
+        }
+        [HttpGet]
+        public async Task<IActionResult> TherapistManage(string id)
+        {
+            string userName = id;
+            if (String.IsNullOrEmpty(userName))
+            {
+                return NotFound();
+            }
+            var therapist = await _therapistService.GetTherapistFullDataByUserName(userName);
+            var user = await _userManager.FindByNameAsync(userName);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            user.Image = await _imageService.GetImageByUserIdAsync(therapist.UserId);
+            var therapistManageViewModel = new TherapistManageViewModel
+            {
+                TherapistId = therapist.Id,
+                UserId = user.Id,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                UserName = user.UserName,
+                Gender = user.Gender,
+                Email = user.Email,
+                DateOfBirth = user.DateOfBirth,
+                PhoneNumber = user.PhoneNumber,
+                ProfilPictureUrl = user.Image.Url,
+                Address = user.Address,
+                SelectedCategories = therapist.TherapistCategories.Select(t => t.CategoryId).ToArray(),
+                //Categories = therapist.TherapistCategories.
+                EducationId = therapist.Education.Id,
+                Education = new Education
+                {
+                    Id = therapist.EducationId,
+                    Department = therapist.Education.Department,
+                    University = therapist.Education.University,
+                    DepartmentId = therapist.Education.DepartmentId,
+                    UniversityId = therapist.Education.UniversityId,
+                    StartedDate = therapist.Education.StartedDate,
+                    EndedDate = therapist.Education.EndedDate
+                },
+                Universities = await _therapistService.GetAllUniversty(),
+                Departments = await _therapistService.GetAllDepartments(),
+                Categories = await _categoryService.GetAllAsync(),
+                Certificates = await _therapistService.GetAllCertificates(),
+                Titles = await _therapistService.GetAllTitles()
+
+                
+            };
+            return View(therapistManageViewModel);
+        }
+        [HttpPost]
+        public async Task<IActionResult> TherapistManage(TherapistManageViewModel therapistManageViewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                var user = await _userManager.FindByIdAsync(therapistManageViewModel.UserId);
+                var therapist = await _therapistService.GetTherapistFullDataByUserName(user.UserName);
+                if (therapist == null)
+                {
+                    return NotFound();
+                }
+                bool logOut = (therapistManageViewModel.UserName != user.UserName);
+                user.FirstName = therapistManageViewModel.FirstName;
+                user.LastName=therapistManageViewModel.LastName;
+                user.PhoneNumber = therapistManageViewModel.PhoneNumber;
+                user.DateOfBirth = therapistManageViewModel.DateOfBirth;
+                user.Address= therapistManageViewModel.Address;
+                user.Email = therapistManageViewModel.Email;
+                user.Gender = therapistManageViewModel.Gender;
+                user.UserName = therapistManageViewModel.UserName;
+                if (therapistManageViewModel.ProfilePic != null)
+                {
+                    var imageName = therapistManageViewModel.ProfilePic.FileName;
+                    int ImageNameRepeatCount = _imageService.CheckImageName(imageName);
+                    user.Image = new Image
+                    {
+                        IsApproved = true,
+                        Url = Jobs.UploadImage(therapistManageViewModel.ProfilePic, "profilepics/therapists", ImageNameRepeatCount)
+                    };
+                    await _imageService.CretaeAsync(user.Image);
+                }
+                therapist.Description = therapistManageViewModel.Description;
+                therapist.Url = Jobs.GetUrl(therapistManageViewModel.UserName);
+                therapist.Education = new Education
+                { 
+                    UniversityId = therapistManageViewModel.UniversityId,
+                    DepartmentId = therapistManageViewModel.DepartmentId,
+                    EndedDate = therapistManageViewModel.Education.EndedDate,
+                    StartedDate = therapistManageViewModel.Education.StartedDate,
+                };
+                if(therapistManageViewModel.CertificatePdf != null)
+                {
+                    therapist.Certificates.Add(new Certificate
+                    {
+                        Name = therapistManageViewModel.CertificateName,
+                        Description = therapistManageViewModel.CertificateDescription,
+                        PdfUrl = Jobs.UploadPdf(therapistManageViewModel.CertificatePdf)
+                    });
+                }
+                await _userManager.UpdateAsync(user);
+                await _therapistService.UpdateTherapist(therapist, therapistManageViewModel.SelectedCategories);
+                if (logOut)
+                {
+                    return RedirectToAction("logout");
+                }
+                return RedirectToAction("Index", "Home");
+
+            }
+            therapistManageViewModel.Categories = await _categoryService.GetAllAsync();
+            therapistManageViewModel.Universities = await _therapistService.GetAllUniversty();
+            therapistManageViewModel.Departments = await _therapistService.GetAllDepartments();
+            therapistManageViewModel.Titles = await _therapistService.GetAllTitles();
+            therapistManageViewModel.Certificates = await _therapistService.GetAllCertificates();
+            return View(therapistManageViewModel);
+        }
+
     }
 }
 

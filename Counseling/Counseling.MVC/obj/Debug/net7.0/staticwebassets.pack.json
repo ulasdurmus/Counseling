@@ -2473,6 +2473,14 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\documents\\pdfs\\2ab8cef1-8906-4586-93af-cec9f648d3d2.pdf",
+      "PackagePath": "staticwebassets\\documents\\pdfs\\2ab8cef1-8906-4586-93af-cec9f648d3d2.pdf"
+    },
+    {
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\documents\\pdfs\\814130dd-47f2-4dfc-b004-f96e70080a7a.pdf",
+      "PackagePath": "staticwebassets\\documents\\pdfs\\814130dd-47f2-4dfc-b004-f96e70080a7a.pdf"
+    },
+    {
       "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -2529,6 +2537,10 @@
       "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\messages-3.jpg"
     },
     {
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Clients\\aec505fa-a54d-4b54-a621-3c64ae142162.jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Clients\\aec505fa-a54d-4b54-a621-3c64ae142162.jpg"
+    },
+    {
       "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Clients\\messages-3(13).jpg",
       "PackagePath": "staticwebassets\\images\\ProfilePics\\Clients\\messages-3(13).jpg"
     },
@@ -2541,8 +2553,20 @@
       "PackagePath": "staticwebassets\\images\\ProfilePics\\Clients\\messages-3(16).jpg"
     },
     {
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Clients\\messages-3(4)(3).jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Clients\\messages-3(4)(3).jpg"
+    },
+    {
       "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\17223ed1-2575-499e-98aa-11acf26f8200(3)(7).jpg",
       "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\17223ed1-2575-499e-98aa-11acf26f8200(3)(7).jpg"
+    },
+    {
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\17223ed1-2575-499e-98aa-11acf26f8200(3).jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\17223ed1-2575-499e-98aa-11acf26f8200(3).jpg"
+    },
+    {
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\17223ed1-2575-499e-98aa-11acf26f8200.jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\17223ed1-2575-499e-98aa-11acf26f8200.jpg"
     },
     {
       "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\1723d9ec-dd09-4b1f-96f0-167c0c7844f3.jpg",
@@ -2551,6 +2575,10 @@
     {
       "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\e94c3755-8057-4e46-8252-f650b891af6b(6)(10).jpg",
       "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\e94c3755-8057-4e46-8252-f650b891af6b(6)(10).jpg"
+    },
+    {
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\e94c3755-8057-4e46-8252-f650b891af6b(6)(11).jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\e94c3755-8057-4e46-8252-f650b891af6b(6)(11).jpg"
     },
     {
       "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\e94c3755-8057-4e46-8252-f650b891af6b(6).jpg",

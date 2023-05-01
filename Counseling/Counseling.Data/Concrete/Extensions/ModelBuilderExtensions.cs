@@ -228,7 +228,8 @@ namespace Counseling.Data.Concrete.Extensions
                     IsApproved=true,
                     IsOnline=false,
                     Url="therapist1",
-                    TitleId=1
+                    TitleId=1,
+                    EducationId=1
 
                 },
                 new Therapist
@@ -239,7 +240,8 @@ namespace Counseling.Data.Concrete.Extensions
                     IsApproved=true,
                     IsOnline=false,
                     Url="therapist2",
-                    TitleId = 1
+                    TitleId = 1,
+                    EducationId=2
                 },
                 new Therapist
                 {
@@ -249,7 +251,8 @@ namespace Counseling.Data.Concrete.Extensions
                     IsApproved=true,
                     IsOnline=false,
                     Url="therapist3",
-                    TitleId = 1
+                    TitleId = 1,
+                    EducationId=3
                 }
             };
             modelBuilder.Entity<Therapist>().HasData(therapists);

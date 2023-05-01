@@ -38,6 +38,11 @@ namespace Counseling.Business.Concrete
             return await _therapistRepository.GetAllAsync();
         }
 
+        public Task<List<Certificate>> GetAllCertificates()
+        {
+            return _therapistRepository.GetAllCertificates();
+        }
+
         public async Task<List<Department>> GetAllDepartments()
         {
             return await _therapistRepository.GetAllDepartments();
@@ -63,9 +68,24 @@ namespace Counseling.Business.Concrete
             return await _therapistRepository.GetByIdAsync(id);
         }
 
+        public async Task<List<Education>> GetEducationFullData()
+        {
+            return await _therapistRepository.GetEducationFullData();
+        }
+
+        public async Task<Therapist> GetTherapistFullDataByUserName(string userName)
+        {
+            return await _therapistRepository.GetTherapistFullDataByUserName(userName);
+        }
+
         public void Update(Therapist therapist)
         {
             _therapistRepository.Update(therapist);
+        }
+
+        public async Task UpdateTherapist(Therapist therapist, int[] selectedCategories)
+        {
+            await _therapistRepository.UpdateTherapist(therapist, selectedCategories);
         }
     }
 }
