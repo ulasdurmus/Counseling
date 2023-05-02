@@ -39,7 +39,7 @@ namespace Counseling.Business.Concrete
 
         public async Task<Service> GetByIdAsync(int id)
         {
-            return await GetByIdAsync(id);
+            return await _serviceRepository.GetByIdAsync(id);
         }
 
         public async Task<List<Service>> GetServicesWithFullDataByTherapistIdAsync(int therapistId)

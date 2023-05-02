@@ -1,0 +1,48 @@
+﻿@model ServiceUpdateViewModel
+<!-- Button trigger modal -->
+@*<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Launch static backdrop modal
+</button>
+*@
+<!-- Modal -->
+<h1>Edit</h1>
+@*<form 
+asp-area=""
+asp-controller="Service"
+asp-action="Edit"
+asp-route-id="@Model.TherapistId"
+>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">İlan Düzenle</h1>
+                <a
+                    asp-area=""
+                    asp-controller="Service"
+                    asp-action="Index"
+                    asp-route-id="@Model.TherapistId"
+                    type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <a asp-area=""
+                       asp-controller="Service"
+                       asp-action="Index"
+                       asp-route-id="@Model.TherapistId" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</a>
+                <button type="button" class="btn btn-primary">Güncelle</button>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+@section Scripts{
+    <script>
+        $(window).on('load', function () {
+            $('#staticBackdrop').modal('show');
+        });
+    </script>
+}*@

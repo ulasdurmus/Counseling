@@ -9,141 +9,145 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Counseling.MVC
 build_property.RootNamespace = Counseling.MVC
-build_property.ProjectDir = C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\
+build_property.ProjectDir = C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.MVC\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Git\Projeler\Counseling\Counseling\Counseling.MVC
+build_property.MSBuildProjectDirectory = C:\Users\Admin\Documents\GitHub\Counseling\Counseling\Counseling.MVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Admin/Create.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Admin/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Admin/Edit.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Admin/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Admin/Index.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Client/Create.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Client/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xpZW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Client/Edit.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Client/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xpZW50XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Client/Index.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Client/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xpZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Home/Index.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Shared/_FooterPartial.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Shared/_FooterPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Gb290ZXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Shared/_HeaderPartial.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Shared/_HeaderPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9IZWFkZXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Shared/_SideBarPartial.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Shared/_SideBarPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9TaWRlQmFyUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Therapist/Create.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Therapist/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGhlcmFwaXN0XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Therapist/Edit.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Therapist/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGhlcmFwaXN0XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Therapist/Index.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/Therapist/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGhlcmFwaXN0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/Account/ClientManage.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/Account/ClientManage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDbGllbnRNYW5hZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/Account/Login.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/Account/Register.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/Account/TherapistManage.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/Account/TherapistManage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxUaGVyYXBpc3RNYW5hZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/Home/Index.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/Home/Privacy.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/OldVersion/_Layout.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/OldVersion/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2xkVmVyc2lvblxfTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/Service/Index.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/Service/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/Service/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/Shared/_FooterPartial.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/Shared/_FooterPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/Shared/_HeaderMenuPartial.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/Shared/_HeaderMenuPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXJNZW51UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/Shared/_HeaderPartial.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/Shared/_HeaderPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/Shared/_NavbarPartial.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/Shared/_NavbarPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/_ViewImports.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/_ViewStart.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/Shared/_Layout.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rg0odeli2j
 
-[C:/Git/Projeler/Counseling/Counseling/Counseling.MVC/Views/Shared/_Layout_Index.cshtml]
+[C:/Users/Admin/Documents/GitHub/Counseling/Counseling/Counseling.MVC/Views/Shared/_Layout_Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4w6pw5yeb1
