@@ -42,6 +42,11 @@ namespace Counseling.Business.Concrete
             return await GetByIdAsync(id);
         }
 
+        public async Task<List<Service>> GetServicesWithFullDataByTherapistIdAsync(int therapistId)
+        {
+            return await _serviceRepository.GetServicesWithFullDataByTherapistIdAsync(therapistId);
+        }
+
         public void Update(Service service)
         {
             _serviceRepository.Update(service);

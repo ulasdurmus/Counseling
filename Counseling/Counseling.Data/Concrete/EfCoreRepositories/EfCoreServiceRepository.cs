@@ -32,5 +32,17 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
                 .ToListAsync();
             return services;
         }
+        public async Task<List<Service>> GetServicesWithFullDataByTherapistIdAsync(int therapistId)
+        {
+            var services = await AppContext
+                .Services
+                .Where(s => s.TherapistId == therapistId)
+                .Include(s => s.ServiceCategories)
+                .ThenInclude(sc => sc.Category)
+                .Include(s => s.ServiceTherapist)
+                .ThenInclude(st => st.Therapist)
+                .ToListAsync();
+            return services;
+        }
     }
 }

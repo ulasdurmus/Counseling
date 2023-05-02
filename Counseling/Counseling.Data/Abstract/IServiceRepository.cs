@@ -10,6 +10,7 @@ namespace Counseling.Data.Abstract
     public interface IServiceRepository : IGenericRepository<Service>
     {
         Task<List<Service>> GetAllServiceWithFullDataAsync(bool isAproved);
+        public Task<List<Service>> GetServicesWithFullDataByTherapistIdAsync(int therapistId);
     }
     
 }

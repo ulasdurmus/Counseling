@@ -409,6 +409,12 @@
                     <a asp-area="" asp-controller="Account" asp-action="TherapistManage" asp-route-id="@User.Identity.Name" class="dropdown-item border-radius-md">
                         <span>Hesabım</span>
                     </a>
+                    <a asp-area="" asp-controller="Service" asp-action="Index" asp-route-id="@User.Identity.Name" class="dropdown-item border-radius-md">
+                        <span>İlanlarım</span>
+                    </a>
+                    <a asp-area="" asp-controller="Service" asp-action="Create" asp-route-id="@User.Identity.Name" class="dropdown-item border-radius-md">
+                        <span>İlan Ekle</span>
+                    </a>
                 }
                 else if(User.IsInRole("Client"))
                 {
