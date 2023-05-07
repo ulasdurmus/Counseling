@@ -19,9 +19,9 @@ namespace Counseling.Data.Concrete.Config
             builder.Property(x => x.Price).IsRequired();
 
             builder.HasData(
-                new Service { Id = 1, Price = 500, IsApproved=true,IsConfirmed=true, TherapistId=1, Url="service1" },
-                new Service { Id = 2, Price = 400, IsApproved=true,IsConfirmed=true, TherapistId=2, Url="service2" },
-                new Service { Id = 3, Price = 200, IsApproved=true,IsConfirmed=true, TherapistId=3, Url="service3" }
+                new Service { Id = 1, Price = 500, IsApproved=true,IsConfirmed=true, TherapistId=1, Url="service1", Description = "Seans açıklaması 1" },
+                new Service { Id = 2, Price = 400, IsApproved=true,IsConfirmed=true, TherapistId=2, Url="service2", Description = "Seans açıklaması 2" },
+                new Service { Id = 3, Price = 200, IsApproved=true,IsConfirmed=true, TherapistId=3, Url="service3", Description = "Seans açıklaması 3" }
                 ) ;
         }
     }

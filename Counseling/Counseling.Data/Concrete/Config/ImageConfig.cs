@@ -17,7 +17,7 @@ namespace Counseling.Data.Concrete.Config
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(x => x.Url).IsRequired().HasMaxLength(500);
             builder.HasData(
-                new Image { Id=1,IsApproved=true,Url="Image1"}
+                new Image { Id=1,IsApproved=true,Url="messages-1.png"}
                 );
         }
     }

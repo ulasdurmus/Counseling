@@ -1,10 +1,11 @@
-﻿@{
+﻿@model List<ServiceModel>
+@{
     Layout = "_Layout_Index";
 }
 
 <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
 
-    @*Section 1*@
+    @*Section 1 sayılı bölüm*@
     <section class="pt-3 pb-4" id="count-stats">
         <div class="container">
             <div class="row">
@@ -47,7 +48,68 @@
         </div>
     </section>
 
-    @*Section 2*@
+    @*Section Services*@
+
+    <div class="container">
+        @foreach (var service in Model)
+        {
+            <div class="card card-nav-tabs mb-5">
+                <div class="card-header text-bg-warning d-flex justify-content-between">
+                    <img src="~/images/ProfilePics/Therapists/@service.ImageUrl" class="card-img-top" style="width:150px" />
+                    <h3 class="display-6 fs-3"><span class="fs-bold">@service.Therapist.Title.Name</span> @service.User.FirstName @service.User.LastName</h3>
+                </div>
+                <div class="card-body">
+                    <div class="card-title d-flex justify-content-between">
+                        <div>
+                            @{
+                                foreach (var category in service.Categories)
+                                {
+                                    <button type="button" class="btn btn-light rounded-5">@category.Name</button>
+                                }
+                            }
+                        </div>
+                        <span class="text-success display-5 fs-3"> @($"{service.Price:C2}")</span>
+                    </div>
+                    <p class="card-text">@service.Description</p>
+                    <div class="row d-flex justify-content-end">
+                        <form asp-area=""
+                        asp-controller="Reservation"
+                        asp-action="Create"
+                        asp-route-id="@service.ServiceId"
+                        method="get">
+                        
+                        @*<div class="col-md-4">
+                            @{
+                                DateTime today = DateTime.Now;
+                                int year = today.Year;
+                                int month = today.Month;
+                                int day = today.Day+21;
+                                DateTime maximumDate = new DateTime(year, month, day);
+                                DateTime minimumDate = DateTime.Now;
+                            }
+                            <label asp-for="@service.RezervationDate" class="col-md-4 col-lg-3 col-form-label"></label>
+                            <input asp-format="{0:yyyy-MM-dd}" asp-for="@service.RezervationDate" class="form-control"
+                                   max="@(maximumDate.ToString("0:yyyy-MM-ddTHH:00"))"
+                                   min="@(minimumDate.ToString("0:yyyy-MM-ddTHH:00"))" value=@minimumDate.ToString("yyyy-MM-ddTHH:00") >
+                        </div>*@
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-primary ">Rezervasyon Oluştur</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+
+
+
+
+
+
+    @*Section 2 Dönen kart*@
     <section class="my-5 py-5">
         <div class="container">
             <div class="row align-items-center">

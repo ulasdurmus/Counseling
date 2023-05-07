@@ -59,12 +59,14 @@ builder.Services.AddScoped<IClientService, ClientManager>();
 builder.Services.AddScoped<IServiceService,ServiceManager>();
 builder.Services.AddScoped<ITherapistService,TherapistManager>();
 builder.Services.AddScoped<IImageService, ImageManager>();
+builder.Services.AddScoped<IReservationService,ReservationManager>();
 //Add Repository
 builder.Services.AddScoped<ICategoryRepository, EfCoreCategoryRepository>();
 builder.Services.AddScoped<IClientRepository,EfCoreClientRepository>();
 builder.Services.AddScoped<IServiceRepository,EfCoreServiceRepository>();
 builder.Services.AddScoped<ITherapistRepository,EfCoreTherapistRepository>();
 builder.Services.AddScoped<IImageRepository, EfCoreImageRepository>();
+builder.Services.AddScoped<IReservationRepository,EfCoreReservationRepository>();
 
 
 var app = builder.Build();

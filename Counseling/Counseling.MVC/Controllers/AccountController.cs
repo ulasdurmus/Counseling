@@ -30,7 +30,7 @@ namespace Counseling.MVC.Controllers
             _clientService = clientService;
         }
         [HttpGet]
-        public async Task<IActionResult> Register(int id)
+        public async Task<IActionResult> Register(int id=1)
         {
 
             RegisterViewModel registerViewModel = new RegisterViewModel

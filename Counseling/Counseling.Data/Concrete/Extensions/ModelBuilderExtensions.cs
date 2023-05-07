@@ -99,7 +99,8 @@ namespace Counseling.Data.Concrete.Extensions
                     DateOfBirth = new DateTime(1990, 01, 01),
                     DateOfRegistration= DateTime.Now,
                     Address = "1234 Elm Street, Springfield",
-                    EmailConfirmed = true
+                    EmailConfirmed = true,
+                    PhoneNumber = "0544 372 12 11"
                 },
                 new User
                 {
@@ -115,7 +116,8 @@ namespace Counseling.Data.Concrete.Extensions
                     DateOfBirth = new DateTime(1992, 10, 28),
                     DateOfRegistration= DateTime.Now,
                     Address = "9876 Maple Street, New York",
-                    EmailConfirmed = false
+                    EmailConfirmed = false,
+                    PhoneNumber = "0544 372 51 33"
                 },
                 new User
                 {
@@ -131,7 +133,8 @@ namespace Counseling.Data.Concrete.Extensions
                     DateOfBirth = new DateTime(1995, 7, 22),
                     DateOfRegistration= DateTime.Now,
                     Address = "1234 Elm Street",
-                    EmailConfirmed = true
+                    EmailConfirmed = true,
+                    PhoneNumber = "0532 872 42 55"
                 },
                 //Client
                 new User

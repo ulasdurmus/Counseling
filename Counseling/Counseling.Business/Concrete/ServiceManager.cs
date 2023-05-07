@@ -17,6 +17,11 @@ namespace Counseling.Business.Concrete
             _serviceRepository = serviceRepository;
         }
 
+        public async Task CreateServiceWithFullData(Service service, int[] selectedCategories = null)
+        {
+            await _serviceRepository.CreateServiceWithFullData(service, selectedCategories);
+        }
+
         public async Task CretaeAsync(Service service)
         {
             await _serviceRepository.CreateAsync(service);
@@ -45,6 +50,11 @@ namespace Counseling.Business.Concrete
         public async Task<List<Service>> GetServicesWithFullDataByTherapistIdAsync(int therapistId)
         {
             return await _serviceRepository.GetServicesWithFullDataByTherapistIdAsync(therapistId);
+        }
+
+        public async Task<Service> GetServiceWithFullDataById(int id)
+        {
+            return await _serviceRepository.GetServiceWithFullDataById(id);
         }
 
         public void Update(Service service)

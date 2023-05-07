@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.MVC\\Counseling.MVC.csproj": {}
+    "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\Counseling.MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Business\\Counseling.Business.csproj": {
+    "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Business\\Counseling.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Business\\Counseling.Business.csproj",
+        "projectUniqueName": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Business\\Counseling.Business.csproj",
         "projectName": "Counseling.Business",
-        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Business\\Counseling.Business.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Business\\obj\\",
+        "projectPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Business\\Counseling.Business.csproj",
+        "packagesPath": "C:\\Users\\ulas_\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ulas_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Data\\Counseling.Data.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Data\\Counseling.Data.csproj"
+              "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Data\\Counseling.Data.csproj": {
+                "projectPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Data\\Counseling.Data.csproj"
               }
             }
           }
@@ -67,20 +67,20 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Core\\Counseling.Core.csproj": {
+    "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Core\\Counseling.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Core\\Counseling.Core.csproj",
+        "projectUniqueName": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Core\\Counseling.Core.csproj",
         "projectName": "Counseling.Core",
-        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Core\\Counseling.Core.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Core\\obj\\",
+        "projectPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Core\\Counseling.Core.csproj",
+        "packagesPath": "C:\\Users\\ulas_\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ulas_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -132,20 +132,20 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Data\\Counseling.Data.csproj": {
+    "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Data\\Counseling.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Data\\Counseling.Data.csproj",
+        "projectUniqueName": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Data\\Counseling.Data.csproj",
         "projectName": "Counseling.Data",
-        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Data\\Counseling.Data.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Data\\obj\\",
+        "projectPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Data\\Counseling.Data.csproj",
+        "packagesPath": "C:\\Users\\ulas_\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ulas_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -160,8 +160,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj"
+              "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj": {
+                "projectPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj"
               }
             }
           }
@@ -211,20 +211,20 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj": {
+    "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj",
+        "projectUniqueName": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj",
         "projectName": "Counseling.Entity",
-        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Entity\\obj\\",
+        "projectPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\Counseling.Entity.csproj",
+        "packagesPath": "C:\\Users\\ulas_\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ulas_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -276,20 +276,20 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.MVC\\Counseling.MVC.csproj": {
+    "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\Counseling.MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.MVC\\Counseling.MVC.csproj",
+        "projectUniqueName": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\Counseling.MVC.csproj",
         "projectName": "Counseling.MVC",
-        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.MVC\\Counseling.MVC.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.MVC\\obj\\",
+        "projectPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\Counseling.MVC.csproj",
+        "packagesPath": "C:\\Users\\ulas_\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ulas_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -304,11 +304,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Business\\Counseling.Business.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Business\\Counseling.Business.csproj"
+              "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Business\\Counseling.Business.csproj": {
+                "projectPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Business\\Counseling.Business.csproj"
               },
-              "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Core\\Counseling.Core.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\Counseling\\Counseling\\Counseling.Core\\Counseling.Core.csproj"
+              "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Core\\Counseling.Core.csproj": {
+                "projectPath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Core\\Counseling.Core.csproj"
               }
             }
           }

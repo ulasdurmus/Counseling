@@ -6,8 +6,11 @@ namespace Counseling.MVC.Models.ViewModels.ServiceModels
 {
     public class ServiceUpdateViewModel
     {
-        
-        public int TherapistId { get; set; }
+        public string UserName { get; set; }
+        public int ServiceId { get; set; }
+        [DisplayName("Açıklama")]
+        [Required(ErrorMessage = "Açıklama girilmek zorundadır.")]
+        public string Description { get; set; }
         public string Url { get; set; }
         [DisplayName("Aktif Mi")]
         public bool IsApproved { get; set; }

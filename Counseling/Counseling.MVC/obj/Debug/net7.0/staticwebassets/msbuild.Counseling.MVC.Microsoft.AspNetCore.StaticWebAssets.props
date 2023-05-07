@@ -10288,6 +10288,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\ProfilePics\Therapists\1723d9ec-dd09-4b1f-96f0-167c0c7844f3.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\ProfilePics\Therapists\aec505fa-a54d-4b54-a621-3c64ae142162.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Counseling.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Counseling.MVC</BasePath>
+      <RelativePath>images/ProfilePics/Therapists/aec505fa-a54d-4b54-a621-3c64ae142162.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\ProfilePics\Therapists\aec505fa-a54d-4b54-a621-3c64ae142162.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\ProfilePics\Therapists\e94c3755-8057-4e46-8252-f650b891af6b(6)(10).jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Counseling.MVC</SourceId>

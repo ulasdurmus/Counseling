@@ -16,6 +16,10 @@ namespace Counseling.Business.Abstract
         void Delete(Service service);
         Task<List<Service>> GetAllServiceWithFullDataAsync(bool isAproved);
         public Task<List<Service>> GetServicesWithFullDataByTherapistIdAsync(int therapistId);
+        public Task<Service> GetServiceWithFullDataById(int id);
+        public Task CreateServiceWithFullData(Service service, int[] selectedCategories = null);
+
+
 
     }
 }
