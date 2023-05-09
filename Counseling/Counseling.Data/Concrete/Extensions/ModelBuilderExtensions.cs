@@ -20,28 +20,28 @@ namespace Counseling.Data.Concrete.Extensions
                 new Role
                 {
                     //Id="a116760b-7777-45f6-ae6e-eaf8f434ea49",
-                    Name="SuperAdmin", 
+                    Name="SuperAdmin",
                     Description="Tam yönetim hakkı bulunur.",
                     NormalizedName="SUPERADMIN"
                 },
                 new Role
                 {
                     //Id="da4903c5-afb5-4990-ab58-0da456b838c2",
-                    Name="Admin", 
+                    Name="Admin",
                     Description="Kısıtlı yönetim hakkı bulunur.",
                     NormalizedName="ADMIN"
                 },
                 new Role
                 {
                     //Id="78ff3433-5ca3-4e26-a2bd-d91c35a67a25",
-                    Name="Therapist", 
+                    Name="Therapist",
                     Description="Kendilerine özel, kısıtlı izin verilmiş admin paneline sahip olabilir.",
                     NormalizedName="THERAPIST"
                 },
                 new Role
                 {
                     //Id="b62dd87d-1a4b-4f7f-a3e1-2560b9af4198",
-                    Name="Client", 
+                    Name="Client",
                     Description="Kendilerine özel, hesap bilgilerini yöenetbilecekleri bir panele sahip olurlar.",
                     NormalizedName="CLIENT"
                 }
@@ -54,7 +54,7 @@ namespace Counseling.Data.Concrete.Extensions
                 //SuperAdmin
                 new User{
                     Id="b7082603-2d69-4adc-bc4e-1e294a75cd5a",
-                    FirstName="Ulaş", 
+                    FirstName="Ulaş",
                     LastName="Durmuş",
                     NormalizedName="ULAŞDURMUŞ",
                     UserName="ulasdurmus",
@@ -64,7 +64,7 @@ namespace Counseling.Data.Concrete.Extensions
                     Gender="Erkek",
                     DateOfBirth=new DateTime(1999,12,13),
                     DateOfRegistration= DateTime.Now,
-                    Address="Çekmeköy", 
+                    Address="Çekmeköy",
                     EmailConfirmed=true
                 },
                 //Admin

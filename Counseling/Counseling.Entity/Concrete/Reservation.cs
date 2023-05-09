@@ -12,10 +12,12 @@ namespace Counseling.Entity.Concrete
         public int Id { get; set; }
         public int ServiceId { get; set; }
         public int ClientId { get; set; }
+        public int TherapistId{ get; set; }
         public DateTime ReservationDate { get; set; }
         public decimal? Price { get; set; }
         public bool IsConfirmed { get; set; }
-        public ClientTherapist ClientTherapist { get; set; }
-        public ClientService ClientService { get; set; }
+        public bool IsPaid { get; set; }
+        public List<ClientTherapist> ClientTherapists { get; set; }
+        public List<ClientService> ClientServices { get; set; }
     }
 }

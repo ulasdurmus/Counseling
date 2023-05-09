@@ -415,6 +415,12 @@
                     <a asp-area="" asp-controller="Service" asp-action="Create" asp-route-id="@User.Identity.Name" class="dropdown-item border-radius-md">
                         <span>İlan Ekle</span>
                     </a>
+                    <a asp-area="" asp-controller="Reservation" asp-action="Index"  class="dropdown-item border-radius-md">
+                        <span>Rezervasyonlar</span>
+                    </a>
+                    <a asp-area="" asp-controller="Reservation" asp-action="Session"  class="dropdown-item border-radius-md">
+                        <span>Seanslarım</span>
+                    </a>
                 }
                 else if(User.IsInRole("Client"))
                 {

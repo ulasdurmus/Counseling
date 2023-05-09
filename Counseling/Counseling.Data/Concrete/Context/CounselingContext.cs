@@ -1,5 +1,6 @@
 ﻿using Counseling.Data.Concrete.Config;
 using Counseling.Data.Concrete.Extensions;
+using Counseling.Entity.Concrete;
 using Counseling.Entity.Entity;
 using Counseling.Entity.Entity.Identitiy;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -32,6 +33,7 @@ namespace Counseling.Data.Concrete.Context
         public DbSet<Client> Clients{ get; set; }
         public DbSet<ClientService> ClientServices{ get; set; }
         public DbSet<ClientTherapist> ClientTherapists{ get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
         
 
         protected override void OnModelCreating(ModelBuilder builder)

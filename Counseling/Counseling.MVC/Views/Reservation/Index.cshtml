@@ -1,0 +1,56 @@
+﻿@model List<ReservationViewModel>
+<div class="page-header align-items-start min-vh-100" style="background-color: bisque" loading="lazy">
+    <span class="mask bg-gradient-dark opacity-6"></span>
+    <div class="container my-5">
+        <div class="row">
+            <div class=" col-12 mx-auto">
+                <div class="card z-index-0 fadeIn3 fadeInBottom mt-6">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                            <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Rezervasyonlar</h4>
+                        </div>
+                    </div>
+
+                    @if (Model.Count > 0)
+                    {
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Danışan Bilgileri</th>
+                                    <th>Rezervasyon Tarihi</th>
+                                    <th>Onaylı Mı</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var reservation in Model)
+                                {
+                                    <tr>
+                                        <td rowspan="2">@reservation.Id</td>
+                                        <td rowspan="3">
+                                            <div>@reservation.ClientName</div>
+                                            <div>@reservation.ClientName</div>
+                                            <div>@reservation.ClientName</div>
+                                        </td>
+                                        <td>@reservation.ReservationDate</td>
+                                        <td></td>
+                                    </tr>
+
+                                }
+                                
+                            </tbody>
+
+                        </table>
+
+                    }
+                    else
+                    {
+                        <h4>Hiç ilanınız bulunmamktadır.</h4>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

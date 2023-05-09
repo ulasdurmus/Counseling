@@ -136,6 +136,7 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
         {
             Therapist newTherapist = await AppContext
                .Therapists
+               .Where(t=> t.Id == therapist.Id)
                .Include(t => t.TherapistCategories)
                .Include(t => t.Certificates)
                .Include(t => t.Education)
@@ -153,7 +154,6 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
             AppContext.Update(newTherapist);
             await AppContext.SaveChangesAsync();
         }
-        
         public async Task<Therapist> GetTherapistFullDataByUserName(string userName)
         {
             Therapist therapist = await AppContext
@@ -169,7 +169,14 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
                 .FirstOrDefaultAsync();
             return therapist; 
         }
-
+        public async Task<int> GetTherapistIdByUserName(string userName)
+        {
+            int id = await AppContext
+                .Therapists
+                .Where(t=> t.User.UserName == userName)
+                .Select(t=> t.Id).FirstOrDefaultAsync();
+            return id;
+        }
         public Task<List<Education>> GetEducationFullData()
         {
             throw new NotImplementedException();

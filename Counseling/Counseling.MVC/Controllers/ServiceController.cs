@@ -139,6 +139,7 @@ namespace Counseling.MVC.Controllers
                 
                 return RedirectToAction("Index");
             }
+            serviceAddViewModel.Categories = await _categoryService.GetAllAsync();
             return View(serviceAddViewModel);
         }
         #endregion

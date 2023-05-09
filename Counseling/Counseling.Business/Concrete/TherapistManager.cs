@@ -78,6 +78,11 @@ namespace Counseling.Business.Concrete
             return await _therapistRepository.GetTherapistFullDataByUserName(userName);
         }
 
+        public async Task<int> GetTherapistIdByUserName(string userName)
+        {
+            return await _therapistRepository.GetTherapistIdByUserName(userName);
+        }
+
         public void Update(Therapist therapist)
         {
             _therapistRepository.Update(therapist);

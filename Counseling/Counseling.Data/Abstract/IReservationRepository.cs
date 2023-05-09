@@ -9,5 +9,6 @@ namespace Counseling.Data.Abstract
 {
     public interface IReservationRepository : IGenericRepository<Reservation>
     {
+        public List<Reservation> GetAllReservations(bool? isPaid = null, string roleName = null, int? id = null);
     }
 }

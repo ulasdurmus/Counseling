@@ -19,5 +19,6 @@ namespace Counseling.Data.Abstract
         public Task<List<Education>> GetEducationFullData();
         public Task UpdateTherapist(Therapist therapist, int[] selectedCategories);
         public Task<List<Certificate>> GetAllCertificates();
+        public Task<int> GetTherapistIdByUserName(string userName);
     }
 }

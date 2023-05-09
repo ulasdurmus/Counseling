@@ -17,6 +17,7 @@ namespace Counseling.Entity.Entity.Identitiy
         public string Gender { get; set; }
         public DateTime DateOfBirth{ get; set; }
         public DateTime DateOfRegistration { get; set; }
+        public int? ImageId { get; set; }
         public Image Image { get; set; }
     }
 }

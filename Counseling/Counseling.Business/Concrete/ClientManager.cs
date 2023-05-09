@@ -32,6 +32,11 @@ namespace Counseling.Business.Concrete
             return await _clientRepository.GetAllAsync();
         }
 
+        public async Task<List<Client>> GetAllClientsWithUserInformationsAsync()
+        {
+            return await _clientRepository.GetAllClientsWithUserInformationsAsync();
+        }
+
         public async Task<Client> GetById(int id)
         {
             return await _clientRepository.GetByIdAsync(id);
@@ -40,6 +45,11 @@ namespace Counseling.Business.Concrete
         public async Task<Client> GetClientByUserName(string userName)
         {
             return await _clientRepository.GetClientByUserName(userName);
+        }
+
+        public async Task<int> GetClientIdByUserNameAsync(string userName)
+        {
+            return await _clientRepository.GetClientIdByUserNameAsync(userName);
         }
 
         public void Update(Client client)

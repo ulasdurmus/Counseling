@@ -20,10 +20,11 @@ namespace Counseling.Data.Concrete.Config
             builder.Property(x=> x.ReservationDate).IsRequired();
             builder.Property(x=> x.ServiceId).IsRequired();
             builder.Property(x => x.ClientId).IsRequired();
+            builder.Property(x => x.TherapistId).IsRequired();
             builder.HasData(
-                new Reservation { Id=1, ClientId=1, ServiceId=1,IsConfirmed=true,Price=500},
-                new Reservation { Id=2, ClientId=2, ServiceId=2,IsConfirmed=true,Price=500},
-                new Reservation { Id=3, ClientId=3, ServiceId=3,IsConfirmed=true,Price=500}
+                new Reservation { Id=1, ClientId=1, ServiceId=1,TherapistId=1, IsConfirmed=true,Price=500, IsPaid=true},
+                new Reservation { Id=2, ClientId=2, ServiceId=2,TherapistId=2, IsConfirmed=true,Price=500, IsPaid=false},
+                new Reservation { Id=3, ClientId=3, ServiceId=3,TherapistId=3, IsConfirmed=true,Price=500, IsPaid=true}
                 );
         }
     }
