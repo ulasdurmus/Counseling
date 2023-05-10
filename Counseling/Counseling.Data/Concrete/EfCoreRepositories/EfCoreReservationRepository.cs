@@ -24,6 +24,9 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
         {
             var reservations = AppContext
                 .Reservations
+                .Include(r=> r.ClientTherapists)
+                .ThenInclude(r=> r.Therapist)
+                .ThenInclude(tu=> tu.User)
                 .Include(r => r.ClientServices)
                 .ThenInclude(ct => ct.Client)
                 .ThenInclude(cu => cu.User)

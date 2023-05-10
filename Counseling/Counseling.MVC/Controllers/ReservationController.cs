@@ -49,15 +49,21 @@ namespace Counseling.MVC.Controllers
                 Price = r.Price,
                 ReservationDate = r.ReservationDate,
                 ClientId = r.ClientId,
-                Email = r.ClientServices
-                .Select(r => r.Client.User.Email).FirstOrDefault(),
-                ClientName = r.ClientServices
-                .Select(r=> r.Client.User.FirstName+ " " + r.Client.User.LastName).FirstOrDefault(),
-                ClientPhoneNumber= r.ClientServices
-                .Select(r => r.Client.User.PhoneNumber).FirstOrDefault()
+                IsConfirmed=r.IsConfirmed,
+                TherapistEmail=r.ClientTherapists.Select(r=> r.Therapist.User.Email).FirstOrDefault(),
+                TherapistPhoneNumber=r.ClientTherapists.Select(r=> r.Therapist.User.PhoneNumber).FirstOrDefault(),
+                TherapistName=r.ClientTherapists.Select(r=> r.Therapist.User.FirstName + " " + r.Therapist.User.LastName).FirstOrDefault(),
+                ClientEmail = r.ClientServices.Select(r => r.Client.User.Email).FirstOrDefault(),
+                ClientName = r.ClientServices.Select(r=> r.Client.User.FirstName+ " " + r.Client.User.LastName).FirstOrDefault(),
+                ClientPhoneNumber= r.ClientServices.Select(r => r.Client.User.PhoneNumber).FirstOrDefault()
                 
             }).ToList();
-            return View(reservationViewModels);
+            var reservationListViewModel = new ReservationListViewModel
+            {
+                ReservationViewModels = reservationViewModels,
+                RoleName = roleName,
+            };
+            return View(reservationListViewModel);
         }
 
         #region Create
@@ -120,5 +126,19 @@ namespace Counseling.MVC.Controllers
             return View(reservationAddViewModel);
         }
         #endregion
+        #region CheckStatus
+        public async Task<IActionResult> UpdateIsConfirmed(int id)
+        {
+            Reservation reservation = await _reservationService.GetByIdAsync(id);
+            if(reservation == null)
+            {
+                return NotFound();
+            }
+            reservation.IsConfirmed= !reservation.IsConfirmed;
+            _reservationService.Update(reservation);
+            return RedirectToAction("Index");
+        }
+        #endregion
+
     }
 }

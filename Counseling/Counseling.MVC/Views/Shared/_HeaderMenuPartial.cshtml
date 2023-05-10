@@ -427,6 +427,12 @@
                     <a asp-area="" asp-controller="Account" asp-action="ClientManage" asp-route-id="@User.Identity.Name" class="dropdown-item border-radius-md">
                         <span>Hesabım</span>
                     </a>
+                    <a asp-area="" asp-controller="Reservation" asp-action="Index" class="dropdown-item border-radius-md">
+                        <span>Rezervasyonlar</span>
+                    </a>
+                    <a asp-area="" asp-controller="Reservation" asp-action="Session" class="dropdown-item border-radius-md">
+                        <span>Seanslarım</span>
+                    </a>
                 }
                 <a asp-area="" asp-controller="Account" asp-action="Logout" class="dropdown-item border-radius-md">
                     <span>Çıkış Yap</span>

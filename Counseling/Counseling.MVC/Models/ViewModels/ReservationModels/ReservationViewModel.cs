@@ -14,8 +14,12 @@ namespace Counseling.MVC.Models.ViewModels.ReservationModels
         public bool IsConfirmed { get; set; }
         public bool IsPaid { get; set; }
         public string ClientName { get; set; }
-        public string Email { get; set; }
+        public string ClientEmail { get; set; }
         public string ClientPhoneNumber { get; set; }
+        public string TherapistName { get; set; }
+        public string  TherapistEmail { get; set; }
+        public string TherapistPhoneNumber { get; set; }
+        public string RoleName { get; set; }
 
         //public List<ClientTherapist> ClientTherapists { get; set; }
         //public List<ClientService> ClientServices { get; set; }
