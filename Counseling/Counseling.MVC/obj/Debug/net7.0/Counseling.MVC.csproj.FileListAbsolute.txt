@@ -293,3 +293,4 @@ C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\refint\Cou
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\Counseling.MVC.pdb
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\Counseling.MVC.genruntimeconfig.cache
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\ref\Counseling.MVC.dll
+C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\bin\Debug\net7.0\Iyzipay.dll

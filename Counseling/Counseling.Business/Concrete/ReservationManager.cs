@@ -34,6 +34,11 @@ namespace Counseling.Business.Concrete
             return await _reservationRepository.GetAllAsync();
         }
 
+        public async Task<Reservation> GetReservationFullDataAsync(int reservationId)
+        {
+            return await _reservationRepository.GetReservationFullDataAsync(reservationId);
+        }
+
         public List<Reservation> GetAllReservations(bool? isPaid = null, string roleName = null, int? id = null)
         {
             return _reservationRepository.GetAllReservations(isPaid,roleName,id);

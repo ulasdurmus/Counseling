@@ -10,5 +10,6 @@ namespace Counseling.Data.Abstract
     public interface IReservationRepository : IGenericRepository<Reservation>
     {
         public List<Reservation> GetAllReservations(bool? isPaid = null, string roleName = null, int? id = null);
+        public Task<Reservation> GetReservationFullDataAsync(int reservationId);
     }
 }

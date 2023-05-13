@@ -12,5 +12,7 @@ namespace Counseling.Entity.Entity
         public Client Client { get; set; }
         public int TherapistId { get; set; }
         public Therapist Therapist { get; set; }
+        public int ReservationId { get; set; }
+
     }
 }

@@ -12,6 +12,8 @@ namespace Counseling.Entity.Entity
         public Client Client { get; set; }
         public int ServiceId { get; set; }
         public Service Service { get; set; }
+        public int ReservationId { get; set; }
+
 
     }
 }

@@ -1,0 +1,201 @@
+﻿@model ReservationPaymentviewModel
+<div class="page-header align-items-start min-vh-100 bg-dark"  loading="lazy">
+
+    <span class="mask bg-gradient-dark opacity-6"></span>
+    <div class="container-fluid m-5">
+         
+            <form asp-area=""
+                  asp-controller="Reservation"
+                  asp-action="Checkout"
+                  method="post"
+              role="form" class="text-start ">
+            <div class="row">
+                <div class="col-md-9">
+                    @*Fatura Bilgiler*@
+                    <div class=" mx-auto">
+                        <div class="card z-index-0 fadeIn3 fadeInBottom mt-6">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 ">
+                                    <div class="card-header p-0 position-relative mt-n4  z-index-2 w-100 mx-auto">
+                                        <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                                            <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Fatura Bilgileri</h4>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div asp-validation-summary="All"></div>
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="input-group input-group-static   my-3">
+                                                    <label asp-for="ClientFirstName"></label>
+                                                    <input type="text" class="form-control" asp-for="ClientFirstName">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group input-group-static   my-3">
+                                                    <label asp-for="ClientLastName"></label>
+                                                    <input type="text" class="form-control" asp-for="ClientLastName">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group input-group-static   my-3">
+                                                    <label asp-for="ClientPhoneNumber"></label>
+                                                    <input type="tel" class="form-control" asp-for="ClientPhoneNumber">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group input-group-static   my-3">
+                                                    <label asp-for="City"></label>
+                                                    <input type="tel" class="form-control" asp-for="City" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group input-group-static   my-3">
+                                                    <label asp-for="Address"></label>
+                                                    <input type="tel" class="form-control" asp-for="Address" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*Card Bilgiler*@
+                    <div class="my-5 mx-auto">
+                        <div class="card z-index-0 fadeIn3 fadeInBottom mt-3">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 ">
+                                    <div class="card-header p-0 position-relative mt-n4  z-index-2 w-100 mx-auto">
+                                        <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                                            <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Kart Bilgileri</h4>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div asp-validation-summary="All"></div>
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="input-group input-group-static   my-3">
+                                                    <label asp-for="CardName"></label>
+                                                    <input type="text" class="form-control" asp-for="CardName">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group input-group-static   my-3">
+                                                    <label asp-for="CardNumber"></label>
+                                                    <input type="number" class="form-control" asp-for="CardNumber">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-group input-group-static   my-3">
+                                                    <label asp-for="Cvc"></label>
+                                                    <input type="number" class="form-control" asp-for="Cvc">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-group input-group-static   my-3">
+                                                    <label asp-for="ExpirationYear"></label>
+                                                    <input type="number" class="form-control" asp-for="ExpirationYear">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-group input-group-static   my-3">
+                                                    <label asp-for="ExpirationMonth"></label>
+                                                    <input type="number" class="form-control" asp-for="ExpirationMonth" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    @*Rezervasyon Bilgiler*@
+                    <div class=" mx-auto">
+                        <div class="card z-index-0 fadeIn3 fadeInBottom mt-6">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 ">
+                                    <div class="card-header p-0 position-relative mt-n4  z-index-2 w-100 mx-auto">
+                                        <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                                            <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Rezervasyon Bilgileri</h4>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div asp-validation-summary="All"></div>
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="input-group input-group-static   my-3">
+                                                    <label asp-for="TherapistName"></label>
+                                                    <input type="text" class="form-control" asp-for="TherapistName" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="input-group input-group-static   my-3">
+                                                    <label asp-for="TherapistMail"></label>
+                                                    <input type="text" class="form-control" asp-for="TherapistMail" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="input-group input-group-static   my-3">
+                                                    <label asp-for="TherapistPhoneNumber"></label>
+                                                    <input type="tel" class="form-control" asp-for="TherapistPhoneNumber" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="input-group input-group-static   my-3">
+                                                    <label asp-for="ReservationDate"></label>
+                                                    <input type="tel" class="form-control" asp-for="ReservationDate" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="input-group input-group-static   my-3">
+                                                    <label asp-for="Price"></label>
+                                                    <input type="tel" class="form-control" asp-for="Price" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 ">
+                        <button type="submit" class="btn btn-success w-100">Ödeme Yap</button>
+                    </div>
+                </div>
+                
+                
+                
+                
+            </div>
+            <input type="hidden" asp-for="TherapistName" />
+            <input type="hidden" asp-for="TherapistPhoneNumber" />
+            <input type="hidden" asp-for="TherapistMail" />
+            <input type="hidden" asp-for="ClientMail" />
+            <input type="hidden" asp-for="Price" />
+            </form>
+        </div>
+    </div>
+
+
+

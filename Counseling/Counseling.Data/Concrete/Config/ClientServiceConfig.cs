@@ -13,18 +13,18 @@ namespace Counseling.Data.Concrete.Config
     {
         public void Configure(EntityTypeBuilder<ClientService> builder)
         {
-            builder.HasKey(ba => new { ba.ClientId, ba.ServiceId });
+            builder.HasKey(ba => new { ba.ClientId, ba.ServiceId, ba.ReservationId });
             builder.HasData(
-                new ClientService { ClientId = 1, ServiceId = 1 },
-                new ClientService { ClientId = 1, ServiceId = 2 },
-                new ClientService { ClientId = 1, ServiceId = 3 },
+                new ClientService { ClientId = 1, ServiceId = 1, ReservationId=1 },
+                new ClientService { ClientId = 1, ServiceId = 2, ReservationId= 2},
+                new ClientService { ClientId = 1, ServiceId = 3, ReservationId=3 },
 
-                new ClientService { ClientId = 2, ServiceId = 2 },
-                new ClientService { ClientId = 2, ServiceId = 3 },
+                new ClientService { ClientId = 2, ServiceId = 2, ReservationId=1 },
+                new ClientService { ClientId = 2, ServiceId = 3, ReservationId=2 },
 
-                new ClientService { ClientId = 3, ServiceId = 1 },
-                new ClientService { ClientId = 3, ServiceId = 2 },
-                new ClientService { ClientId = 3, ServiceId = 3 }
+                new ClientService { ClientId = 3, ServiceId = 1, ReservationId=2 },
+                new ClientService { ClientId = 3, ServiceId = 2, ReservationId=3 },
+                new ClientService { ClientId = 3, ServiceId = 3, ReservationId=1 }
                 );
         }
     }

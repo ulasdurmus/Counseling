@@ -4,9 +4,15 @@ using Counseling.Entity.Entity;
 using Counseling.Entity.Entity.Identitiy;
 using Counseling.MVC.Models.ViewModels.ReservationModels;
 using Counseling.MVC.Models.ViewModels.ServiceModels;
+using Iyzipay;
+using Iyzipay.Model;
+using Iyzipay.Request;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+//using Microsoft.Extensions.Options;
+using System;
 using System.Collections.Generic;
+using System.Net;
 
 namespace Counseling.MVC.Controllers
 {
@@ -40,7 +46,7 @@ namespace Counseling.MVC.Controllers
             {
                 userId = await _clientService.GetClientIdByUserNameAsync(userName);
             }
-            var reservations = _reservationService.GetAllReservations(null, roleName, userId);
+            var reservations = _reservationService.GetAllReservations(false, roleName, userId);
             List<ReservationViewModel> reservationViewModels = reservations.Select(r => new ReservationViewModel
             {
                 Id = r.Id,
@@ -139,6 +145,158 @@ namespace Counseling.MVC.Controllers
             return RedirectToAction("Index");
         }
         #endregion
+        #region Checkout
+        [HttpGet]
+        public async Task<IActionResult> Checkout(int id)
+        {
+            // id = reservationId
+            var userName = _userManager.FindByNameAsync(User.Identity.Name);
+            var reservation = await _reservationService.GetReservationFullDataAsync(id);
+            ReservationPaymentviewModel reserationPaymentViewModel = new ReservationPaymentviewModel
+            {
+                Id = id,
+                ClientFirstName = reservation.ClientServices.Select(r => r.Client.User.FirstName).FirstOrDefault(),
+                ClientLastName = reservation.ClientServices.Select(r => r.Client.User.LastName).FirstOrDefault(),
+                ClientMail = reservation.ClientServices.Select(r => r.Client.User.Email).FirstOrDefault(),
+                ClientPhoneNumber = reservation.ClientServices.Select(r => r.Client.User.PhoneNumber).FirstOrDefault(),
+                TherapistName = reservation.ClientTherapists.Select(r => r.Therapist.User.FirstName + " " + r.Therapist.User.LastName).FirstOrDefault(),
+                TherapistMail = reservation.ClientTherapists.Select(r => r.Therapist.User.Email).FirstOrDefault(),
+                TherapistPhoneNumber = reservation.ClientTherapists.Select(r => r.Therapist.User.PhoneNumber).FirstOrDefault(),
+                ReservationDate = reservation.ReservationDate,
+                Price = reservation.Price
 
+            };
+            return View(reserationPaymentViewModel);
+
+        }
+        [HttpPost]
+        public async Task<IActionResult> Checkout(ReservationPaymentviewModel reservationPaymentViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var reservation = await _reservationService.GetReservationFullDataAsync(reservationPaymentViewModel.Id);
+                if (!CardNumberControl(reservationPaymentViewModel.CardNumber))
+                {
+                    return View(reservationPaymentViewModel);
+                }
+                Payment payment = PaymentProcess(reservationPaymentViewModel);
+                if (payment.Status == "success")
+                {
+                    reservation.IsPaid = true;
+                    _reservationService.Update(reservation);
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+            return View(reservationPaymentViewModel);
+        }
+        #endregion
+
+        [NonAction]
+        private bool CardNumberControl(string cardNumber)
+        {
+            #region Açıklamalar
+            /* -cardNumber'ı boşluk ve tire'den arındıracağız.
+             * -cardNumber uzunluk kontrolünü yapacağız.
+             * -Sayısal değer kontrolü yapacağız.
+             * -Luhn algoritmasına uygunluğunu test edeceğiz
+             */
+            #endregion
+            cardNumber = cardNumber.Replace("-", "").Replace(" ", "");
+            if (cardNumber.Length != 16) return false;
+            foreach (var chr in cardNumber)
+            {
+                if (!Char.IsNumber(chr)) return false;
+            }
+            int oddTotal = 0;
+            int ovenTotal = 0;
+            for (int i = 0; i < cardNumber.Length; i += 2)
+            {
+                int nextOddNumber = Convert.ToInt32(cardNumber[i].ToString());
+                int nextOvenNumber = Convert.ToInt32(cardNumber[i + 1].ToString());
+                int addedOddNumber = nextOddNumber * 2;
+                addedOddNumber = addedOddNumber >= 10 ? addedOddNumber - 9 : addedOddNumber;
+                oddTotal += addedOddNumber;
+                ovenTotal += nextOvenNumber;
+            }
+            int total = oddTotal + ovenTotal;
+            bool isValidNumber = total % 10 == 0 ? true : false;
+            return isValidNumber;
+        }
+        private Payment PaymentProcess(ReservationPaymentviewModel reservationPaymentViewModel)
+        {
+            #region Payment Options Created
+            Options options = new Options();
+            options.ApiKey = "sandbox-A7BCyFsZE4RiKRgPFsK0SQvGUoUxT5XG";
+            options.SecretKey = "sandbox-8C8S83dLKs7USUvSR05xaFKYGMBtBuPC";
+            options.BaseUrl = "https://sandbox-api.iyzipay.com";
+            #endregion
+            #region Create Payment Request
+            CreatePaymentRequest request = new CreatePaymentRequest
+            {
+                Locale = Locale.TR.ToString(),
+                ConversationId = new Random().Next(1000000, 9999999).ToString(),
+                Price = Convert.ToInt32(reservationPaymentViewModel.Price).ToString(),
+                PaidPrice = Convert.ToInt32(reservationPaymentViewModel.Price).ToString(),
+                Currency = Currency.TRY.ToString(),
+                Installment = 1,
+                BasketId = reservationPaymentViewModel.Id.ToString(),
+                PaymentChannel = PaymentChannel.WEB.ToString(),
+                PaymentGroup = PaymentGroup.PRODUCT.ToString(),
+                PaymentCard = new PaymentCard
+                {
+                    CardHolderName = reservationPaymentViewModel.CardName,
+                    CardNumber = reservationPaymentViewModel.CardNumber,
+                    ExpireMonth = reservationPaymentViewModel.ExpirationMonth,
+                    ExpireYear = reservationPaymentViewModel.ExpirationYear,
+                    Cvc = reservationPaymentViewModel.Cvc,
+                    RegisterCard = 0
+                },
+                Buyer = new Buyer
+                {
+                    Id = "BY999",
+                    Name = reservationPaymentViewModel.ClientFirstName,
+                    Surname = reservationPaymentViewModel.ClientLastName,
+                    GsmNumber = reservationPaymentViewModel.ClientPhoneNumber,
+                    Email = reservationPaymentViewModel.ClientMail,
+                    IdentityNumber = "87955588899",
+                    RegistrationAddress = reservationPaymentViewModel.Address,
+                    Ip = "84.99.155.212",
+                    City = reservationPaymentViewModel.City,
+                    Country = "Türkiye",
+                    ZipCode = "34700"
+                },
+                ShippingAddress = new Address
+                {
+                    ContactName = reservationPaymentViewModel.ClientFirstName + " " + reservationPaymentViewModel.ClientLastName,
+                    City = reservationPaymentViewModel.City,
+                    Country = "Türkiye",
+                    Description = reservationPaymentViewModel.Address
+                },
+                BillingAddress = new Address
+                {
+                    ContactName = reservationPaymentViewModel.ClientFirstName + " " + reservationPaymentViewModel.ClientLastName,
+                    City = reservationPaymentViewModel.City,
+                    Country = "Türkiye",
+                    Description = reservationPaymentViewModel.Address
+                }
+            };
+            List<BasketItem> basketItems = new List<BasketItem>();
+            BasketItem basketItem;
+            
+                basketItem = new BasketItem
+                {
+                    Id = reservationPaymentViewModel.Id.ToString(),
+                    Name = reservationPaymentViewModel.TherapistName.ToString(),
+                    Category1 = "Service",
+                    ItemType = BasketItemType.VIRTUAL.ToString(),
+                    Price = Convert.ToInt32(reservationPaymentViewModel.Price).ToString()
+                };
+                basketItems.Add(basketItem);
+            
+            request.BasketItems = basketItems;
+            #endregion
+            Payment payment = Payment.Create(request, options);
+            return payment;
+        }
     }
 }

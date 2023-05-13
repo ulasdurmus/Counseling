@@ -277,10 +277,10 @@ namespace Counseling.Data.Migrations
                     b.Property<int>("ServiceId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("ReservationId")
+                    b.Property<int>("ReservationId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("ClientId", "ServiceId");
+                    b.HasKey("ClientId", "ServiceId", "ReservationId");
 
                     b.HasIndex("ReservationId");
 
@@ -292,42 +292,50 @@ namespace Counseling.Data.Migrations
                         new
                         {
                             ClientId = 1,
-                            ServiceId = 1
+                            ServiceId = 1,
+                            ReservationId = 1
                         },
                         new
                         {
                             ClientId = 1,
-                            ServiceId = 2
+                            ServiceId = 2,
+                            ReservationId = 2
                         },
                         new
                         {
                             ClientId = 1,
-                            ServiceId = 3
+                            ServiceId = 3,
+                            ReservationId = 3
                         },
                         new
                         {
                             ClientId = 2,
-                            ServiceId = 2
+                            ServiceId = 2,
+                            ReservationId = 1
                         },
                         new
                         {
                             ClientId = 2,
-                            ServiceId = 3
+                            ServiceId = 3,
+                            ReservationId = 2
                         },
                         new
                         {
                             ClientId = 3,
-                            ServiceId = 1
+                            ServiceId = 1,
+                            ReservationId = 2
                         },
                         new
                         {
                             ClientId = 3,
-                            ServiceId = 2
+                            ServiceId = 2,
+                            ReservationId = 3
                         },
                         new
                         {
                             ClientId = 3,
-                            ServiceId = 3
+                            ServiceId = 3,
+                            ReservationId = 1
                         });
                 });
 
@@ -339,10 +347,10 @@ namespace Counseling.Data.Migrations
                     b.Property<int>("TherapistId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("ReservationId")
+                    b.Property<int>("ReservationId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("ClientId", "TherapistId");
+                    b.HasKey("ClientId", "TherapistId", "ReservationId");
 
                     b.HasIndex("ReservationId");
 
@@ -354,17 +362,20 @@ namespace Counseling.Data.Migrations
                         new
                         {
                             ClientId = 1,
-                            TherapistId = 3
+                            TherapistId = 3,
+                            ReservationId = 1
                         },
                         new
                         {
                             ClientId = 1,
-                            TherapistId = 2
+                            TherapistId = 2,
+                            ReservationId = 2
                         },
                         new
                         {
                             ClientId = 1,
-                            TherapistId = 1
+                            TherapistId = 1,
+                            ReservationId = 3
                         });
                 });
 
@@ -482,28 +493,28 @@ namespace Counseling.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ca48d2ae-0035-4722-a115-5c8c9f44850e",
+                            Id = "8d07f8b3-1020-4da7-9d57-b025719e6200",
                             Description = "Tam yönetim hakkı bulunur.",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         },
                         new
                         {
-                            Id = "73a5e7a6-7aad-43a3-9138-46ddcd72ce42",
+                            Id = "4dd382ce-bc59-4ff5-a5d3-446a11d34941",
                             Description = "Kısıtlı yönetim hakkı bulunur.",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "797abfa7-baee-4b75-a13e-2df8ea5c1001",
+                            Id = "7619050e-3a6a-4a33-9491-ea5b2db63c0b",
                             Description = "Kendilerine özel, kısıtlı izin verilmiş admin paneline sahip olabilir.",
                             Name = "Therapist",
                             NormalizedName = "THERAPIST"
                         },
                         new
                         {
-                            Id = "857a3b07-b12d-4b40-a839-29f8c36c2a1c",
+                            Id = "5b2458f2-3be9-4be3-ad1b-1e30eeb1da0d",
                             Description = "Kendilerine özel, hesap bilgilerini yöenetbilecekleri bir panele sahip olurlar.",
                             Name = "Client",
                             NormalizedName = "CLIENT"
@@ -605,9 +616,9 @@ namespace Counseling.Data.Migrations
                             Id = "b7082603-2d69-4adc-bc4e-1e294a75cd5a",
                             AccessFailedCount = 0,
                             Address = "Çekmeköy",
-                            ConcurrencyStamp = "aa9dcae6-77ef-43fd-9ef1-3cb19bfca6ae",
+                            ConcurrencyStamp = "8908d845-753b-4c1d-8760-93d653b189bd",
                             DateOfBirth = new DateTime(1999, 12, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfRegistration = new DateTime(2023, 5, 9, 1, 58, 57, 634, DateTimeKind.Local).AddTicks(2905),
+                            DateOfRegistration = new DateTime(2023, 5, 13, 13, 38, 48, 52, DateTimeKind.Local).AddTicks(6676),
                             Email = "ulasdurmus1@gmail.com",
                             EmailConfirmed = true,
                             FirstName = "Ulaş",
@@ -617,9 +628,9 @@ namespace Counseling.Data.Migrations
                             NormalizedEmail = "ULASDURMUS1@GMAIL.COM",
                             NormalizedName = "ULAŞDURMUŞ",
                             NormalizedUserName = "ULASDURMUS",
-                            PasswordHash = "AQAAAAIAAYagAAAAEKmGV6DKNpksxS6pS8tuUErwZm/I+G/ZPttDS7H9CRDlBC5S3pR69OIYlWRQqpK6Fw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJSbkZ+jEnRgiG1mqLwZ9kU7mOeYrkDoHit7I2QR8+7vnGEoyZxl47vE6kCygifo4A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c78ac210-6133-4b7c-9da7-65ba8dbb4325",
+                            SecurityStamp = "073dd180-0158-4dec-8b74-93e2678be737",
                             TwoFactorEnabled = false,
                             UserName = "ulasdurmus"
                         },
@@ -628,9 +639,9 @@ namespace Counseling.Data.Migrations
                             Id = "eba9d9f5-bcde-4039-8e38-2f3292ed46b6",
                             AccessFailedCount = 0,
                             Address = "5678 Oak Avenue, Los Angeles",
-                            ConcurrencyStamp = "b9a43620-6ba4-4a4b-ba8a-3067ecb09321",
+                            ConcurrencyStamp = "295062b7-4498-4f8d-99ae-e5647c885e3d",
                             DateOfBirth = new DateTime(1985, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfRegistration = new DateTime(2023, 5, 9, 1, 58, 57, 634, DateTimeKind.Local).AddTicks(2953),
+                            DateOfRegistration = new DateTime(2023, 5, 13, 13, 38, 48, 52, DateTimeKind.Local).AddTicks(6720),
                             Email = "alice.johnson@example.com",
                             EmailConfirmed = true,
                             FirstName = "Alice",
@@ -640,9 +651,9 @@ namespace Counseling.Data.Migrations
                             NormalizedEmail = "ALICE.JOHNSON@EXAMPLE.COM",
                             NormalizedName = "ALİCEJOHNSON",
                             NormalizedUserName = "ALICEJ",
-                            PasswordHash = "AQAAAAIAAYagAAAAEGHPrmWQgHMDqkRoI7DaadPDWO9jnxNUl8Uc67de+lkMiRZQtGUPRTpkDH26K4r7wg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOlP1pBRIIY0eKZnRmQKXz8B4WmanG/rFFNYEUAqkYTfh1iaegUJ1qvGbFaZkOQ2VQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "fb529566-b3e2-4216-8911-2033023a68d0",
+                            SecurityStamp = "dd6f9ba4-4e61-4f9a-beb9-a7d9eeab2fdf",
                             TwoFactorEnabled = false,
                             UserName = "alicej"
                         },
@@ -651,9 +662,9 @@ namespace Counseling.Data.Migrations
                             Id = "86babe7e-9dea-4cf2-9faf-4439b64d13ba",
                             AccessFailedCount = 0,
                             Address = "1234 Elm Street, Springfield",
-                            ConcurrencyStamp = "24dc53e3-c1ce-44a3-8890-2d8afd25ec5d",
+                            ConcurrencyStamp = "23df20bf-0aa5-4f22-992c-6f21f38f638c",
                             DateOfBirth = new DateTime(1990, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfRegistration = new DateTime(2023, 5, 9, 1, 58, 57, 634, DateTimeKind.Local).AddTicks(2966),
+                            DateOfRegistration = new DateTime(2023, 5, 13, 13, 38, 48, 52, DateTimeKind.Local).AddTicks(6735),
                             Email = "john.doe@example.com",
                             EmailConfirmed = true,
                             FirstName = "John",
@@ -663,10 +674,10 @@ namespace Counseling.Data.Migrations
                             NormalizedEmail = "JOHN.DOE@EXAMPLE.COM",
                             NormalizedName = "JOHNDOE",
                             NormalizedUserName = "JOHNDOE",
-                            PasswordHash = "AQAAAAIAAYagAAAAEBQW8F1SbHNpog3afRAEtIgEWwTrV/6k+bVDBb68IB3yjEo59Nl29Rpn1d/MASLqWA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDszwUT3i1u+wLT1PY2TCVY3utI5kP7WqUM9e/TZZWt3nflPwFrl+cDJ6xSEo1UqNQ==",
                             PhoneNumber = "0544 372 12 11",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "4b3c93ec-2c9b-4ff4-af51-6713c0fb586e",
+                            SecurityStamp = "8ee006e6-6e4a-43d2-92bc-173ccada7bce",
                             TwoFactorEnabled = false,
                             UserName = "johndoe"
                         },
@@ -675,9 +686,9 @@ namespace Counseling.Data.Migrations
                             Id = "35891788-47d3-4645-87f0-fda34734bab3",
                             AccessFailedCount = 0,
                             Address = "9876 Maple Street, New York",
-                            ConcurrencyStamp = "3d3f07bb-85a2-4346-b3f3-3f418b114b38",
+                            ConcurrencyStamp = "83c56a90-ada5-4935-9882-0634d8524675",
                             DateOfBirth = new DateTime(1992, 10, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfRegistration = new DateTime(2023, 5, 9, 1, 58, 57, 634, DateTimeKind.Local).AddTicks(2984),
+                            DateOfRegistration = new DateTime(2023, 5, 13, 13, 38, 48, 52, DateTimeKind.Local).AddTicks(6749),
                             Email = "bob.smith@example.com",
                             EmailConfirmed = false,
                             FirstName = "Bob",
@@ -687,10 +698,10 @@ namespace Counseling.Data.Migrations
                             NormalizedEmail = "BOB.SMITH@EXAMPLE.COM",
                             NormalizedName = "BOBSMİTH",
                             NormalizedUserName = "BOBSMITH",
-                            PasswordHash = "AQAAAAIAAYagAAAAEFJYrvmCHbFibVIWlURNKDbkO1haOE9eVocM/rUasjp72dhCSLcx9cMBZDF9KLLPdw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEFS1wdihkHKPS8Dn389alBo+ftjxGZEhWnO7QvNmr7x5GLkFJyqLYwV3zHlQrEaz2g==",
                             PhoneNumber = "0544 372 51 33",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "924d7c0b-c02d-4cd2-9d75-d5dc58c0daf6",
+                            SecurityStamp = "11e7341f-f86e-482d-94f7-6c16c5da6f51",
                             TwoFactorEnabled = false,
                             UserName = "bobsmith"
                         },
@@ -699,9 +710,9 @@ namespace Counseling.Data.Migrations
                             Id = "211e2b50-d08d-4dc7-9944-de813060f3df",
                             AccessFailedCount = 0,
                             Address = "1234 Elm Street",
-                            ConcurrencyStamp = "3d146d7b-8621-4ee1-90d7-759d2ac811b2",
+                            ConcurrencyStamp = "9d968c76-558d-44e4-80a4-9935eecfdcdb",
                             DateOfBirth = new DateTime(1995, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfRegistration = new DateTime(2023, 5, 9, 1, 58, 57, 634, DateTimeKind.Local).AddTicks(2997),
+                            DateOfRegistration = new DateTime(2023, 5, 13, 13, 38, 48, 52, DateTimeKind.Local).AddTicks(6765),
                             Email = "emma.johnson@example.com",
                             EmailConfirmed = true,
                             FirstName = "Emma",
@@ -711,10 +722,10 @@ namespace Counseling.Data.Migrations
                             NormalizedEmail = "EMMA.JOHNSON@EXAMPLE.COM",
                             NormalizedName = "EMMAJOHNSON",
                             NormalizedUserName = "EMMA.JOHNSON",
-                            PasswordHash = "AQAAAAIAAYagAAAAELrQj8EcNaclCZlPkCp/ldbKWYVtB9a5vrZAKGduz7Umms/doWn/q9UyxgEOr52APQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEB/fiqK3+IwPyd9cMqZcwEqHNjqvk9W+ImyNEBOKT+sIaEkxxeogaNyk5YAhJtAxyw==",
                             PhoneNumber = "0532 872 42 55",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "db8424be-0755-4051-9caf-558919a75e60",
+                            SecurityStamp = "2806234f-e8c7-4166-a1ea-852ee429e295",
                             TwoFactorEnabled = false,
                             UserName = "emma.johnson"
                         },
@@ -723,9 +734,9 @@ namespace Counseling.Data.Migrations
                             Id = "5c4080ce-3cee-4051-8660-4b7f208681ce",
                             AccessFailedCount = 0,
                             Address = "3456 Pine Road, Chicago",
-                            ConcurrencyStamp = "60d7f325-a0fe-41af-a8d2-7952109673c4",
+                            ConcurrencyStamp = "3126664e-6907-4718-89e3-b3ce83fb6d04",
                             DateOfBirth = new DateTime(1998, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfRegistration = new DateTime(2023, 5, 9, 1, 58, 57, 634, DateTimeKind.Local).AddTicks(3012),
+                            DateOfRegistration = new DateTime(2023, 5, 13, 13, 38, 48, 52, DateTimeKind.Local).AddTicks(6780),
                             Email = "emma.brown@example.com",
                             EmailConfirmed = true,
                             FirstName = "Emma",
@@ -735,9 +746,9 @@ namespace Counseling.Data.Migrations
                             NormalizedEmail = "EMMA.BROWN@EXAMPLE.COM",
                             NormalizedName = "EMMABROWN",
                             NormalizedUserName = "EMMAB",
-                            PasswordHash = "AQAAAAIAAYagAAAAEIOgBoou5VeWUg9uMTtNq5qi+mN+g65TMLTSKm7/uFZN2+ipYJGa+fty/H7NzTI/7Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEGgjEVyNM4iBnmxZrAt36DKaZd9hd/BpcOaI/XRVdIg7SJ4S8ufjgCMy8+fSGBGrVg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "89b764b9-00c0-409e-9177-9636feaafc2a",
+                            SecurityStamp = "07db9f1f-7b8b-47d7-b656-c9af32b361e6",
                             TwoFactorEnabled = false,
                             UserName = "emmab"
                         },
@@ -746,9 +757,9 @@ namespace Counseling.Data.Migrations
                             Id = "d9034f11-8877-4c14-ae85-442d2449b547",
                             AccessFailedCount = 0,
                             Address = "2345 Cedar Avenue, San Francisco",
-                            ConcurrencyStamp = "630684ce-8eba-4139-9402-a132cbf6e490",
+                            ConcurrencyStamp = "745688e2-88ff-457b-a7f9-d9f888ff87e6",
                             DateOfBirth = new DateTime(1980, 11, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfRegistration = new DateTime(2023, 5, 9, 1, 58, 57, 634, DateTimeKind.Local).AddTicks(3028),
+                            DateOfRegistration = new DateTime(2023, 5, 13, 13, 38, 48, 52, DateTimeKind.Local).AddTicks(6794),
                             Email = "david.lee@example.com",
                             EmailConfirmed = true,
                             FirstName = "David",
@@ -758,9 +769,9 @@ namespace Counseling.Data.Migrations
                             NormalizedEmail = "DAVID.LEE@EXAMPLE.COM",
                             NormalizedName = "DAVİDLEE",
                             NormalizedUserName = "DAVIDL",
-                            PasswordHash = "AQAAAAIAAYagAAAAEFg2EyEhaSxbe2/HSWBvA/E0x7Ig6H/nx4uXsGheGTejOd/qyf+AsSfJHX2zCWUTOA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDEp7kcgvdX/5eAcoSdYpM6gU2QMY7A8T/3VQi5vAx4lLBlf5oABPfTpBuK0Xwc5Ag==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "5e14e40a-cb76-43fd-9b04-7399c01f4f8b",
+                            SecurityStamp = "e5b9c15b-446a-4cd0-bcf7-fdbb6bad35d1",
                             TwoFactorEnabled = false,
                             UserName = "davidl"
                         },
@@ -769,9 +780,9 @@ namespace Counseling.Data.Migrations
                             Id = "0f80dbad-d5f4-4f82-a780-165aa66b7d07",
                             AccessFailedCount = 0,
                             Address = "8765 Birch Street, Miami",
-                            ConcurrencyStamp = "e161be0f-2ebf-4eb1-a07f-0ab0176d9020",
+                            ConcurrencyStamp = "22f8792c-608d-4a25-8af2-b24ac143a2fc",
                             DateOfBirth = new DateTime(1995, 7, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfRegistration = new DateTime(2023, 5, 9, 1, 58, 57, 634, DateTimeKind.Local).AddTicks(3040),
+                            DateOfRegistration = new DateTime(2023, 5, 13, 13, 38, 48, 52, DateTimeKind.Local).AddTicks(6810),
                             Email = "sophia.chen@example.com",
                             EmailConfirmed = false,
                             FirstName = "Sophia",
@@ -781,9 +792,9 @@ namespace Counseling.Data.Migrations
                             NormalizedEmail = "SOPHIA.CHEN@EXAMPLE.COM",
                             NormalizedName = "SOPHİACHEN",
                             NormalizedUserName = "SOPHIAC",
-                            PasswordHash = "AQAAAAIAAYagAAAAEJsd3vVh38ALgZXB27+gzXaqcJVmQp6fLYpGfzZrCYtRSRR7HZDuNpd/aez4d19Cxg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJHl2V3nbsqkGRz6UzfDDJk7CLoq246YqNutiJTqQa+tXNYxYXFQUk1hhPB2Wobdzg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "fc9ff584-94d9-4853-808b-da5b7f7e1f48",
+                            SecurityStamp = "7323c44c-7be9-4709-bf91-ec7883dbe0b0",
                             TwoFactorEnabled = false,
                             UserName = "sophiac"
                         });
@@ -1857,42 +1868,42 @@ namespace Counseling.Data.Migrations
                         new
                         {
                             UserId = "b7082603-2d69-4adc-bc4e-1e294a75cd5a",
-                            RoleId = "ca48d2ae-0035-4722-a115-5c8c9f44850e"
+                            RoleId = "8d07f8b3-1020-4da7-9d57-b025719e6200"
                         },
                         new
                         {
                             UserId = "eba9d9f5-bcde-4039-8e38-2f3292ed46b6",
-                            RoleId = "73a5e7a6-7aad-43a3-9138-46ddcd72ce42"
+                            RoleId = "4dd382ce-bc59-4ff5-a5d3-446a11d34941"
                         },
                         new
                         {
                             UserId = "86babe7e-9dea-4cf2-9faf-4439b64d13ba",
-                            RoleId = "797abfa7-baee-4b75-a13e-2df8ea5c1001"
+                            RoleId = "7619050e-3a6a-4a33-9491-ea5b2db63c0b"
                         },
                         new
                         {
                             UserId = "35891788-47d3-4645-87f0-fda34734bab3",
-                            RoleId = "797abfa7-baee-4b75-a13e-2df8ea5c1001"
+                            RoleId = "7619050e-3a6a-4a33-9491-ea5b2db63c0b"
                         },
                         new
                         {
                             UserId = "211e2b50-d08d-4dc7-9944-de813060f3df",
-                            RoleId = "797abfa7-baee-4b75-a13e-2df8ea5c1001"
+                            RoleId = "7619050e-3a6a-4a33-9491-ea5b2db63c0b"
                         },
                         new
                         {
                             UserId = "5c4080ce-3cee-4051-8660-4b7f208681ce",
-                            RoleId = "857a3b07-b12d-4b40-a839-29f8c36c2a1c"
+                            RoleId = "5b2458f2-3be9-4be3-ad1b-1e30eeb1da0d"
                         },
                         new
                         {
                             UserId = "d9034f11-8877-4c14-ae85-442d2449b547",
-                            RoleId = "857a3b07-b12d-4b40-a839-29f8c36c2a1c"
+                            RoleId = "5b2458f2-3be9-4be3-ad1b-1e30eeb1da0d"
                         },
                         new
                         {
                             UserId = "0f80dbad-d5f4-4f82-a780-165aa66b7d07",
-                            RoleId = "857a3b07-b12d-4b40-a839-29f8c36c2a1c"
+                            RoleId = "5b2458f2-3be9-4be3-ad1b-1e30eeb1da0d"
                         });
                 });
 
@@ -1941,7 +1952,9 @@ namespace Counseling.Data.Migrations
 
                     b.HasOne("Counseling.Entity.Concrete.Reservation", null)
                         .WithMany("ClientServices")
-                        .HasForeignKey("ReservationId");
+                        .HasForeignKey("ReservationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Counseling.Entity.Entity.Service", "Service")
                         .WithMany()
@@ -1964,7 +1977,9 @@ namespace Counseling.Data.Migrations
 
                     b.HasOne("Counseling.Entity.Concrete.Reservation", null)
                         .WithMany("ClientTherapists")
-                        .HasForeignKey("ReservationId");
+                        .HasForeignKey("ReservationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Counseling.Entity.Entity.Therapist", "Therapist")
                         .WithMany("ClientTherapists")

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PXGGH7zAj9uNV9xXVBlPymxejtN3ekOSP6RnAeAi8o8=",
+  "Hash": "3FcS8760QJfDgmeinMhUCuuqnG51BsF00ScxjtMPttk=",
   "Source": "Counseling.MVC",
   "BasePath": "_content/Counseling.MVC",
   "Mode": "Default",
@@ -11167,6 +11167,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\ProfilePics\\Therapists\\messages-3(2).jpg"
+    },
+    {
+      "Identity": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(2)(1).jpg",
+      "SourceId": "Counseling.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\",
+      "BasePath": "_content/Counseling.MVC",
+      "RelativePath": "images/ProfilePics/Therapists/messages-3(2)(1).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ProfilePics\\Therapists\\messages-3(2)(1).jpg"
     },
     {
       "Identity": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(2)(17).jpg",

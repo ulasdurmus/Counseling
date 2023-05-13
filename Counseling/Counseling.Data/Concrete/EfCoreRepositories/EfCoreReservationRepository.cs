@@ -50,5 +50,22 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
 
             return reservations.ToList();
         }
+        public async Task<Reservation> GetReservationFullDataAsync(int reservationId)
+        {
+            var reservation = await AppContext
+                .Reservations
+                .Where(r=> r.Id == reservationId)
+                .Include(r => r.ClientTherapists)
+                .ThenInclude(r => r.Therapist)
+                .ThenInclude(tu => tu.User)
+                .Include(r => r.ClientServices)
+                .ThenInclude(ct => ct.Client)
+                .ThenInclude(cu => cu.User)
+                .Include(r => r.ClientServices)
+                .ThenInclude(cs => cs.Service).FirstOrDefaultAsync();
+            
+
+            return reservation;
+        }
     }
 }
