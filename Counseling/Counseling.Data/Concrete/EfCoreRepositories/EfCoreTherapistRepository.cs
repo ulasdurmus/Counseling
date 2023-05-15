@@ -195,8 +195,7 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
                 .Include(t => t.Education)
                 .ThenInclude(td => td.Department)
                 .Include(t => t.Certificates)
-                .Include(t=> t.TherapistServices)
-                .ThenInclude(ts=> ts.Service)
+                .Include(t=> t.Services)
                 .ThenInclude(x=> x.ServiceCategories)
                 .ThenInclude(x=> x.Category)
                 .FirstOrDefaultAsync();

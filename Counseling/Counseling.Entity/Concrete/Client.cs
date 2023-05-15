@@ -16,7 +16,8 @@ namespace Counseling.Entity.Entity
         public string Url { get; set; }
         public bool IsApproved { get; set; }
         public List<ClientTherapist> ClientTherapists { get; set; }
-        public List<ClientService> ClientServices { get; set; }
+        //public List<ClientService> ClientServices { get; set; }
+        //public List<Service> Services { get; set; }
 
     }
 }

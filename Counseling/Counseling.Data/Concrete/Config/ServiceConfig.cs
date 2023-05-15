@@ -17,7 +17,8 @@ namespace Counseling.Data.Concrete.Config
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(x => x.Url).IsRequired().HasMaxLength(500);
             builder.Property(x => x.Price).IsRequired();
-
+            builder.HasOne(x => x.Therapist).WithMany(x => x.Services).HasForeignKey(x => x.TherapistId).OnDelete(DeleteBehavior.Cascade);
+            //builder.HasOne(x => x.Client).WithMany(x => x.Services).HasForeignKey(x => x.ClientId).OnDelete(DeleteBehavior.Cascade);
             builder.HasData(
                 new Service { Id = 1, Price = 500, IsApproved=true,IsConfirmed=true, TherapistId=1, Url="service1", Description = "Seans açıklaması 1" },
                 new Service { Id = 2, Price = 400, IsApproved=true,IsConfirmed=true, TherapistId=2, Url="service2", Description = "Seans açıklaması 2" },

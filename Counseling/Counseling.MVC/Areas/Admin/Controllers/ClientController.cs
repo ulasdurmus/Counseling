@@ -4,13 +4,18 @@ using Counseling.Entity.Entity;
 using Counseling.Entity.Entity.Identitiy;
 using Counseling.MVC.Areas.Admin.Models.ViewModels;
 using Counseling.MVC.Methods;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Data;
 
 namespace Counseling.MVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
+
+
     public class ClientController : Controller
     {
         private readonly IClientService _clientService;
@@ -174,9 +179,6 @@ namespace Counseling.MVC.Areas.Admin.Controllers
                 return NotFound();
             }
             await _userManager.DeleteAsync(user);
-            _clientService.Delete(client);
-
-
             return RedirectToAction("Index", "Client");
         }
         #endregion

@@ -51,9 +51,9 @@ namespace Counseling.MVC.Controllers
                     Name = sc.Category.Name,
                     Url = sc.Category.Url
                 }).ToList(),
-                    Therapist = s.ServiceTherapist.Therapist,
-                    User = s.ServiceTherapist.Therapist.User,
-                    ImageUrl = s.ServiceTherapist.Therapist.User.Image.Url,
+                    Therapist = s.Therapist,
+                    User = s.Therapist.User,
+                    ImageUrl = s.Therapist.User.Image.Url,
                     Url = s.Url
 
 

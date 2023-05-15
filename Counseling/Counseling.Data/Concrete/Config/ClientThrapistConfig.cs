@@ -14,6 +14,8 @@ namespace Counseling.Data.Concrete.Config
         public void Configure(EntityTypeBuilder<ClientTherapist> builder)
         {
             builder.HasKey(ct => new { ct.ClientId, ct.TherapistId,ct.ReservationId });
+            builder.HasOne(x => x.Therapist).WithMany(x => x.ClientTherapists).HasForeignKey(x => x.TherapistId).OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne(x => x.Client).WithMany(x => x.ClientTherapists).HasForeignKey(x => x.ClientId).OnDelete(DeleteBehavior.Cascade);
             builder.HasData(
                 new ClientTherapist { ClientId=1,TherapistId=3, ReservationId =1},
                 new ClientTherapist { ClientId=1,TherapistId=2, ReservationId =2},

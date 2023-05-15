@@ -1,10 +1,14 @@
 ﻿using Counseling.Entity.Entity.Identitiy;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Counseling.MVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
+
     public class HomeController : Controller
     {
         private readonly UserManager<User> _userManager;

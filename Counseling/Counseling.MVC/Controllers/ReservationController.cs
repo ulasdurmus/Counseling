@@ -1,4 +1,5 @@
-﻿using Counseling.Business.Abstract;
+﻿using AspNetCoreHero.ToastNotification.Abstractions;
+using Counseling.Business.Abstract;
 using Counseling.Entity.Concrete;
 using Counseling.Entity.Entity;
 using Counseling.Entity.Entity.Identitiy;
@@ -24,13 +25,16 @@ namespace Counseling.MVC.Controllers
         private readonly UserManager<User> _userManager;
         private readonly IReservationService _reservationService;
         private readonly ITherapistService _therapistService;
-        public ReservationController(IServiceService serviceService, IClientService clientService, UserManager<User> userManager, IReservationService reservationService, ITherapistService therapistService)
+        private readonly INotyfService _notyfService;
+
+        public ReservationController(IServiceService serviceService, IClientService clientService, UserManager<User> userManager, IReservationService reservationService, ITherapistService therapistService, INotyfService notyfService)
         {
             _serviceService = serviceService;
             _clientService = clientService;
             _userManager = userManager;
             _reservationService = reservationService;
             _therapistService = therapistService;
+            _notyfService = notyfService;
         }
 
         public async Task<IActionResult> Index(int id)
@@ -78,10 +82,10 @@ namespace Counseling.MVC.Controllers
         public async Task<IActionResult> Create(int id)
         {
             var service = await _serviceService.GetServiceWithFullDataById(id);
-            if (!User.IsInRole("Client"))
-            {
-                return RedirectToAction("Login", "Account");
-            }
+            //if (!User.IsInRole("Client"))
+            //{
+            //    return RedirectToAction("Login", "Account");
+            //}
             string userName = User.Identity.Name;
             var client = await _clientService.GetClientByUserName(userName);
             var hours = await _reservationService.GetAllReservationHoursAsync();
@@ -139,6 +143,7 @@ namespace Counseling.MVC.Controllers
                     }
                 };
                 await _reservationService.CretaeAsync(reservation);
+                _notyfService.Success("Rezervasyon başarıyla oluşturuldu");
                 return RedirectToAction("Index", "Home");
 
             }
@@ -156,6 +161,7 @@ namespace Counseling.MVC.Controllers
             }
             reservation.IsConfirmed= !reservation.IsConfirmed;
             _reservationService.Update(reservation);
+            _notyfService.Success("Rezervasyon işlemi onaylandı");
             return RedirectToAction("Index");
         }
         #endregion
@@ -198,13 +204,27 @@ namespace Counseling.MVC.Controllers
                 {
                     reservation.IsPaid = true;
                     _reservationService.Update(reservation);
+                    _notyfService.Success("Ödeme işlemi başarıyla tamamlandı");
                     return RedirectToAction("Index", "Home");
                 }
             }
+            _notyfService.Warning("Ödeme işlemi tamamlanamadı.");
             return View(reservationPaymentViewModel);
         }
         #endregion
-
+        #region Delete
+        public async Task<IActionResult> Delete(int id)
+        {
+            var reservation = await _reservationService.GetByIdAsync(id);
+            if (reservation == null)
+            {
+                return NotFound();
+            }
+            _reservationService.Delete(reservation);
+            _notyfService.Information("Rezervasyon başarıyla silindi");
+            return RedirectToAction("Index", "Home");
+        }
+        #endregion
         [NonAction]
         private bool CardNumberControl(string cardNumber)
         {

@@ -15,9 +15,8 @@ namespace Counseling.Data.Concrete.Config
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
-
             builder.Property(x => x.Url).IsRequired().HasMaxLength(500);
-
+            builder.HasOne(x => x.User).WithOne(x => x.Client).HasForeignKey<Client>(x => x.UserId).OnDelete(DeleteBehavior.Cascade);
             //builder.HasData(
             //    new Client { Id = 1, UserId = "5c4080ce-3cee-4051-8660-4b7f208681ce", IsApproved = true, Url = "1" },
             //    new Client { Id = 2, UserId = "d9034f11-8877-4c14-ae85-442d2449b547", IsApproved = false, Url = "2" },

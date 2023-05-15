@@ -27,12 +27,10 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
                 .Where(s => s.IsApproved == isAproved)
                 .Include(s => s.ServiceCategories)
                 .ThenInclude(sc => sc.Category)
-                .Include(s => s.ServiceTherapist)
-                .ThenInclude(st => st.Therapist)
+                .Include(s => s.Therapist)
                 .ThenInclude(tu=> tu.User)
                 .ThenInclude(si=> si.Image)
-                .Include(s => s.ServiceTherapist)
-                .ThenInclude(st=>  st.Therapist)
+                .Include(s => s.Therapist)
                 .ThenInclude(tt=> tt.Title)
                 .ToListAsync();
             return services;
@@ -44,8 +42,7 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
                 .Where(s => s.TherapistId == therapistId)
                 .Include(s => s.ServiceCategories)
                 .ThenInclude(sc => sc.Category)
-                .Include(s => s.ServiceTherapist)
-                .ThenInclude(st => st.Therapist)
+                .Include(s => s.Therapist)
                 .ToListAsync();
             return services;
         }
@@ -71,13 +68,20 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
                 }).ToList();
             await AppContext.ServiceCategories.AddRangeAsync(serviceCategories);
             await AppContext.SaveChangesAsync();
-            ServiceTherapist serviceTherapist = new ServiceTherapist
-            {
-                ServiceId = service.Id,
-                TherapistId = service.TherapistId
-            };
-            await AppContext.ServiceTherapists.AddAsync(serviceTherapist);
-            await AppContext.SaveChangesAsync();
+            //ServiceTherapist serviceTherapist = new ServiceTherapist
+            //{
+            //    ServiceId = service.Id,
+            //    TherapistId = service.TherapistId
+            //};
+            //await AppContext.ServiceTherapists.AddAsync(serviceTherapist);
+            //await AppContext.SaveChangesAsync();
+            //ClientService clientService = new ClientService
+            //{
+            //    ServiceId = service.Id,
+            //    ClientId = service.ClientId
+            //};
+            //await AppContext.ClientServices.AddAsync(clientService);
+            //await AppContext.SaveChangesAsync();
             
         }
     }

@@ -151,6 +151,10 @@ namespace Counseling.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel loginViewModel)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                await _signInManager.SignOutAsync();
+            }
             if (ModelState.IsValid)
             {
                 User user = await _userManager.FindByNameAsync(loginViewModel.UserName);

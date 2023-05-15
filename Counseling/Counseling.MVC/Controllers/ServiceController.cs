@@ -2,11 +2,13 @@
 using Counseling.Entity.Entity;
 using Counseling.Entity.Entity.Identitiy;
 using Counseling.MVC.Models.ViewModels.ServiceModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Counseling.MVC.Controllers
 {
+    [Authorize(Roles ="Therapist")]
     public class ServiceController : Controller
     {
         private readonly IServiceService _serviceService;
@@ -129,6 +131,7 @@ namespace Counseling.MVC.Controllers
                 Therapist therapist = await _therapistService.GetTherapistFullDataByUserName(User.Identity.Name);
                 var service = new Service
                 {
+                    Therapist=therapist,
                     IsApproved = serviceAddViewModel.IsApproved,
                     Price = serviceAddViewModel.Price,
                     TherapistId = therapist.Id,

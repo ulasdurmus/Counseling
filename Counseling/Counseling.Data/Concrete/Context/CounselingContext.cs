@@ -26,12 +26,12 @@ namespace Counseling.Data.Concrete.Context
         public DbSet<Service> Services{ get; set; }
         public DbSet<ServiceCategory> ServiceCategories{ get; set; }
         public DbSet<Therapist> Therapists{ get; set; }
-        public DbSet<ServiceTherapist> ServiceTherapists { get; set; }
+        //public DbSet<ServiceTherapist> ServiceTherapists { get; set; }
         public DbSet<TherapistCategory> TherapistCategories{ get; set; }
         public DbSet<TherapistTitle> TherapistTitles{ get; set; }
         public DbSet<Certificate> Certificates{ get; set; }
         public DbSet<Client> Clients{ get; set; }
-        public DbSet<ClientService> ClientServices{ get; set; }
+        //public DbSet<ClientService> ClientServices{ get; set; }
         public DbSet<ClientTherapist> ClientTherapists{ get; set; }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<ReservationHour> ReservationHours { get; set; }

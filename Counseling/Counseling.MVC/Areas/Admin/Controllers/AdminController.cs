@@ -3,14 +3,17 @@ using Counseling.Core;
 using Counseling.Entity.Entity;
 using Counseling.Entity.Entity.Identitiy;
 using Counseling.MVC.Areas.Admin.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace Counseling.MVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "SuperAdmin")]
     public class AdminController : Controller
     {
         private readonly UserManager<User> _userManager;

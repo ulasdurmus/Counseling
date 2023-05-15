@@ -4,15 +4,19 @@ using Counseling.Entity.Entity;
 using Counseling.Entity.Entity.Identitiy;
 using Counseling.MVC.Areas.Admin.Models.ViewModels;
 using Counseling.MVC.Methods;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Counseling.MVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
+
     public class TherapistController : Controller
     {
         private readonly ITherapistService _therapistService;
@@ -206,23 +210,15 @@ namespace Counseling.MVC.Areas.Admin.Controllers
         #region Delete
         public async Task<IActionResult> Delete(int id)
         {
-            //var therapist =await  _therapistService.GetByIdAsync(id);
-            //var user = await _userManager.Users.Where(x => x.Id == therapist.UserId).Include(x => x.Image).FirstOrDefaultAsync();
-            //therapist.User = user;
-
-            //if(user == null || therapist == null)
-            //{
-            //    return NotFound();
-            //}
             
-            //_therapistService.Delete(therapist);
-            //await _userManager.DeleteAsync(user);
             var therapist = await _therapistService.GetTherapistFullDataById(id);
+            var user = await _userManager.FindByNameAsync(therapist.User.UserName);
             if(therapist == null)
             {
                 return NotFound();
             }
-            _therapistService.Delete(therapist);
+            
+            await _userManager.DeleteAsync(user);
             
             return RedirectToAction("Index","Therapist");
         }
