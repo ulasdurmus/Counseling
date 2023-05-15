@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -91,6 +92,16 @@ namespace Counseling.Core
 
             return randomName;
         }
-
+        public static string CreateMessage(string title,string message,string alertType)
+        {
+            AlertMessage msg = new AlertMessage
+            {
+                Title = title,
+                Message = message,
+                AlertType = alertType
+            };
+            string restult = JsonConvert.SerializeObject(msg);
+            return restult;
+        }
     }
 }

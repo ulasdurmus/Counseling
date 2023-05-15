@@ -17,6 +17,10 @@ namespace Counseling.Business.Abstract
         void Delete(Reservation reservation);
         public List<Reservation> GetAllReservations(bool? isPaid = null, string roleName = null, int? id = null);
         public Task<Reservation> GetReservationFullDataAsync(int reservationId);
+        public Task<List<ReservationHour>> GetAllReservationHoursAsync();
+        public Task<string> GetHourValueByIdAsync(int id);
+
+
 
 
     }

@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Net;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Counseling.MVC.Controllers
 {
@@ -79,12 +80,14 @@ namespace Counseling.MVC.Controllers
             var service = await _serviceService.GetServiceWithFullDataById(id);
             if (!User.IsInRole("Client"))
             {
-                return RedirectToAction("Register", "Account");
+                return RedirectToAction("Login", "Account");
             }
             string userName = User.Identity.Name;
             var client = await _clientService.GetClientByUserName(userName);
+            var hours = await _reservationService.GetAllReservationHoursAsync();
             var reservationAddViewModel = new ReservationAddViewModel
             {
+                ReservationHours = hours,
                 ClientId = client.Id,
                 ServiceId = service.Id,
                 Price = service.Price,
@@ -98,11 +101,21 @@ namespace Counseling.MVC.Controllers
             if (ModelState.IsValid)
             {
                 var service = await _serviceService.GetServiceWithFullDataById(reservationAddViewModel.ServiceId);
+                string hour = await _reservationService.GetHourValueByIdAsync(reservationAddViewModel.ReservationHourId);
+                DateTime date = DateTime.Parse((reservationAddViewModel.ReservationDate.ToString() + " " + hour.ToString()).ToString());
+                DateTime reservatonDateTime;
+                if(DateTime.TryParse(reservationAddViewModel.ReservationDate.ToString() + " " + hour.ToString(),out reservatonDateTime))
+                {
+                    date = reservatonDateTime;
+                }
+                
                 var reservation = new Reservation
                 {
                     IsConfirmed = false,
                     Price = reservationAddViewModel.Price,
-                    ReservationDate = reservationAddViewModel.ReservationDate,
+                    //ReservationDate = ((reservationAddViewModel.ReservationDate).Date, Convert.ToDateTime(reservationAddViewModel.ReservationHourId)) ,
+                    //ReservationDate = Convert.ToDateTime(dateTime),
+                    ReservationDate = date,
                     ClientId=reservationAddViewModel.ClientId,
                     ServiceId=service.Id,
                     TherapistId=service.TherapistId,
@@ -129,6 +142,7 @@ namespace Counseling.MVC.Controllers
                 return RedirectToAction("Index", "Home");
 
             }
+            reservationAddViewModel.ReservationHours= await _reservationService.GetAllReservationHoursAsync();
             return View(reservationAddViewModel);
         }
         #endregion

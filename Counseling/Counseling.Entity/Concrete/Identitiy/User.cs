@@ -19,5 +19,7 @@ namespace Counseling.Entity.Entity.Identitiy
         public DateTime DateOfRegistration { get; set; }
         public int? ImageId { get; set; }
         public Image Image { get; set; }
+        public Therapist Therapist { get; set; }
+        public Client Client { get; set; }
     }
 }

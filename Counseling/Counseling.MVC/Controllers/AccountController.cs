@@ -1,4 +1,5 @@
-﻿using Counseling.Business.Abstract;
+﻿using AspNetCoreHero.ToastNotification.Abstractions;
+using Counseling.Business.Abstract;
 using Counseling.Business.Concrete;
 using Counseling.Core;
 using Counseling.Entity.Entity;
@@ -19,8 +20,9 @@ namespace Counseling.MVC.Controllers
         private readonly ITherapistService _therapistService;
         private readonly IImageService _imageService;
         private readonly IClientService _clientService;
+        private readonly INotyfService _notyfService;
 
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, ICategoryService categoryService, ITherapistService therapistService, IImageService imageService, IClientService clientService)
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, ICategoryService categoryService, ITherapistService therapistService, IImageService imageService, IClientService clientService, INotyfService notyfService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -28,6 +30,7 @@ namespace Counseling.MVC.Controllers
             _therapistService = therapistService;
             _imageService = imageService;
             _clientService = clientService;
+            _notyfService = notyfService;
         }
         [HttpGet]
         public async Task<IActionResult> Register(int id=1)
@@ -102,10 +105,8 @@ namespace Counseling.MVC.Controllers
                                     {
                                         UniversityId = registerViewModel.UniversityId
                                     };
-
                             }
                         }
-
                         //await _therapistService.CreateAsync(therapist);
                         if (registerViewModel.SelectedCategories != null)
                         {
@@ -129,6 +130,8 @@ namespace Counseling.MVC.Controllers
                         await _userManager.AddToRoleAsync(user, "Client");
 
                     }
+                    //TempData["Message"] = Jobs.CreateMessage("Kayıt işlemi", "Kaydınız başarıyla oluşturulmuştur.", "success");
+                    _notyfService.Success("Hesabınız başarıyla oluşturulmuştur.");
                     return RedirectToAction("Index", "Home");
                 }
 
@@ -160,6 +163,8 @@ namespace Counseling.MVC.Controllers
 
                 if (result.Succeeded)
                 {
+                    //TempData["Message"] = Jobs.CreateMessage("Giriş işlemi", "Girişiniz başarıyla tamamlanmıştır.", "success");
+                    _notyfService.Success("Giriş işlemi başarıyla tamamlandı.");
                     return Redirect(loginViewModel.ReturnUrl ?? "/");
                 }
                 ModelState.AddModelError("", "Kullanıcı adı ya da parola hatalı!");
@@ -169,6 +174,8 @@ namespace Counseling.MVC.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
+            //TempData["Message"] = Jobs.CreateMessage("Çıkış işlemi", "Hesabınızdan çıkış yaptınız.", "warning");
+            _notyfService.Information("Çıkış yapıldı.");
             return RedirectToAction("Index", "Home");
         }
         [HttpGet]

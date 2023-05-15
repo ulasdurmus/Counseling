@@ -164,7 +164,22 @@ namespace Counseling.MVC.Areas.Admin.Controllers
             return View(clientUpdateViewModel);
         }
         #endregion
+        #region Delete
+        public async Task<IActionResult> Delete(int id)
+        {
+            var client = await _clientService.GetById(id);
+            var user = await _userManager.FindByIdAsync(client.UserId);
+            if (user == null || client == null)
+            {
+                return NotFound();
+            }
+            await _userManager.DeleteAsync(user);
+            _clientService.Delete(client);
 
+
+            return RedirectToAction("Index", "Client");
+        }
+        #endregion
 
     }
 }

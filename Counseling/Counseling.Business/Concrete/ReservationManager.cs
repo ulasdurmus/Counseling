@@ -53,5 +53,15 @@ namespace Counseling.Business.Concrete
         {
             _reservationRepository.Update(reservation);
         }
+
+        public async Task<List<ReservationHour>> GetAllReservationHoursAsync()
+        {
+            return await _reservationRepository.GetAllReservationHoursAsync();
+        }
+
+        public async Task<string> GetHourValueByIdAsync(int id)
+        {
+            return await _reservationRepository.GetHourValueByIdAsync(id);
+        }
     }
 }

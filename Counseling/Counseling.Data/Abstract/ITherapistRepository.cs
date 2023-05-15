@@ -20,5 +20,6 @@ namespace Counseling.Data.Abstract
         public Task UpdateTherapist(Therapist therapist, int[] selectedCategories);
         public Task<List<Certificate>> GetAllCertificates();
         public Task<int> GetTherapistIdByUserName(string userName);
+        public Task<Therapist> GetTherapistFullDataById(int id);
     }
 }

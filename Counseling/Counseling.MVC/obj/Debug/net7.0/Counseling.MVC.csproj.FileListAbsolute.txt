@@ -6,7 +6,10 @@ C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\bin\Debug\net7.0\Counseling
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\bin\Debug\net7.0\Counseling.MVC.runtimeconfig.json
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\bin\Debug\net7.0\Counseling.MVC.dll
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\bin\Debug\net7.0\Counseling.MVC.pdb
+C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\bin\Debug\net7.0\AspNetCoreHero.ToastNotification.Views.dll
+C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\bin\Debug\net7.0\AspNetCoreHero.ToastNotification.dll
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\bin\Debug\net7.0\Humanizer.dll
+C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\bin\Debug\net7.0\Iyzipay.dll
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -273,6 +276,7 @@ C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\Counseling
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\Counseling.MVC.AssemblyInfoInputs.cache
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\Counseling.MVC.AssemblyInfo.cs
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\Counseling.MVC.csproj.CoreCompileInputs.cache
+C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\Counseling.MVC.MvcApplicationPartsAssemblyInfo.cs
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\Counseling.MVC.MvcApplicationPartsAssemblyInfo.cache
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\Counseling.MVC.RazorAssemblyInfo.cache
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\Counseling.MVC.RazorAssemblyInfo.cs
@@ -293,4 +297,3 @@ C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\refint\Cou
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\Counseling.MVC.pdb
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\Counseling.MVC.genruntimeconfig.cache
 C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\obj\Debug\net7.0\ref\Counseling.MVC.dll
-C:\Git\Projeler\Counseling\Counseling\Counseling.MVC\bin\Debug\net7.0\Iyzipay.dll

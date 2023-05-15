@@ -1,3 +1,5 @@
+using AspNetCoreHero.ToastNotification;
+using AspNetCoreHero.ToastNotification.Extensions;
 using Counseling.Business.Abstract;
 using Counseling.Business.Concrete;
 using Counseling.Data.Abstract;
@@ -68,7 +70,12 @@ builder.Services.AddScoped<ITherapistRepository,EfCoreTherapistRepository>();
 builder.Services.AddScoped<IImageRepository, EfCoreImageRepository>();
 builder.Services.AddScoped<IReservationRepository,EfCoreReservationRepository>();
 
-
+builder.Services.AddNotyf(config =>
+{
+    config.DurationInSeconds = 5;
+    config.IsDismissable = true;
+    config.Position = NotyfPosition.TopRight;
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -81,7 +88,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseNotyf();
 app.UseRouting();
 
 app.UseAuthorization();

@@ -2485,224 +2485,68 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\.jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\.jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\manUser1.jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\manUser1.jpg"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\17223ed1-2575-499e-98aa-11acf26f8200(3).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\17223ed1-2575-499e-98aa-11acf26f8200(3).jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\manUser2.jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\manUser2.jpg"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\17223ed1-2575-499e-98aa-11acf26f8200.jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\17223ed1-2575-499e-98aa-11acf26f8200.jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\womanUser1.jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\womanUser1.jpg"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\1723d9ec-dd09-4b1f-96f0-167c0c7844f3.jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\1723d9ec-dd09-4b1f-96f0-167c0c7844f3.jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\womanUser2.jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\womanUser2.jpg"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\aec505fa-a54d-4b54-a621-3c64ae142162.jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\aec505fa-a54d-4b54-a621-3c64ae142162.jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Clients\\manUser1.jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Clients\\manUser1.jpg"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\e94c3755-8057-4e46-8252-f650b891af6b(6)(11).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\e94c3755-8057-4e46-8252-f650b891af6b(6)(11).jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Clients\\manUser2.jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Clients\\manUser2.jpg"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\e94c3755-8057-4e46-8252-f650b891af6b.jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\e94c3755-8057-4e46-8252-f650b891af6b.jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Clients\\womanUser1.jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Clients\\womanUser1.jpg"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\messages-3(1)(2).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\messages-3(1)(2).jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Clients\\womanUser2.jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Clients\\womanUser2.jpg"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\messages-3(1).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\messages-3(1).jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\manUser1(1).jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\manUser1(1).jpg"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\messages-3(2)(5).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\messages-3(2)(5).jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\manUser1.jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\manUser1.jpg"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\messages-3(2).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\messages-3(2).jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\manUser2(1).jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\manUser2(1).jpg"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\messages-3(4).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\messages-3(4).jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\manUser2.jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\manUser2.jpg"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Admins\\messages-3.jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Admins\\messages-3.jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\womanUser1.jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\womanUser1.jpg"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Clients\\aec505fa-a54d-4b54-a621-3c64ae142162.jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Clients\\aec505fa-a54d-4b54-a621-3c64ae142162.jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\womanUser2(2).jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\womanUser2(2).jpg"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Clients\\messages-3(13).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Clients\\messages-3(13).jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\womanUser2(3).jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\womanUser2(3).jpg"
     },
     {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Clients\\messages-3(14).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Clients\\messages-3(14).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Clients\\messages-3(16).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Clients\\messages-3(16).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Clients\\messages-3(4)(3).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Clients\\messages-3(4)(3).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\17223ed1-2575-499e-98aa-11acf26f8200(3)(7).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\17223ed1-2575-499e-98aa-11acf26f8200(3)(7).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\17223ed1-2575-499e-98aa-11acf26f8200(3).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\17223ed1-2575-499e-98aa-11acf26f8200(3).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\17223ed1-2575-499e-98aa-11acf26f8200.jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\17223ed1-2575-499e-98aa-11acf26f8200.jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\1723d9ec-dd09-4b1f-96f0-167c0c7844f3.jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\1723d9ec-dd09-4b1f-96f0-167c0c7844f3.jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\aec505fa-a54d-4b54-a621-3c64ae142162.jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\aec505fa-a54d-4b54-a621-3c64ae142162.jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\e94c3755-8057-4e46-8252-f650b891af6b(6)(10).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\e94c3755-8057-4e46-8252-f650b891af6b(6)(10).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\e94c3755-8057-4e46-8252-f650b891af6b(6)(11).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\e94c3755-8057-4e46-8252-f650b891af6b(6)(11).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\e94c3755-8057-4e46-8252-f650b891af6b(6).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\e94c3755-8057-4e46-8252-f650b891af6b(6).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(12).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(12).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(13).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(13).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(14).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(14).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(15).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(15).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(16)(1).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(16)(1).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(16).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(16).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(2)(1).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(2)(1).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(2)(17).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(2)(17).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(2)(5)(18).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(2)(5)(18).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(2)(5)(9).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(2)(5)(9).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(2)(8).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(2)(8).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(2).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(2).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(21).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(21).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(3)(1).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(3)(1).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(3).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(3).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(4)(1).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(4)(1).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(4)(10).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(4)(10).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(4)(11).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(4)(11).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(4)(12).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(4)(12).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(4)(19).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(4)(19).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(4)(2).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(4)(2).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(4)(20).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(4)(20).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(4)(3).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(4)(3).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(4)(6).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(4)(6).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(4)(7).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(4)(7).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(4)(9).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(4)(9).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(4).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(4).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3(5).jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3(5).jpg"
-    },
-    {
-      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\messages-3.jpg",
-      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\messages-3.jpg"
+      "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\images\\ProfilePics\\Therapists\\womanUser2.jpg",
+      "PackagePath": "staticwebassets\\images\\ProfilePics\\Therapists\\womanUser2.jpg"
     },
     {
       "Id": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.MVC\\wwwroot\\js\\site.js",

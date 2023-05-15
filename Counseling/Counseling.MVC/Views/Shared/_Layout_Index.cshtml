@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Counseling.Core;
+@using Newtonsoft.Json;
+<!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
@@ -37,12 +39,18 @@
 </head>
 
 <body class="index-page bg-gray-200">
+   
     <!--Navbar-->
     @await Html.PartialAsync("_NavbarPartial")
+    
     <!--Header-->
+    
     @await Html.PartialAsync("_HeaderPartial")
     <!--Body-->
-    @RenderBody()
+    <main id="main" class="main">
+        
+        @RenderBody()
+    </main>
     <!--Footer-->
     @await Html.PartialAsync("_FooterPartial")
 
@@ -54,7 +62,7 @@
 
 
 
-
+    
     <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
     <script src="./assets/js/plugins/countup.min.js"></script>
     <script src="./assets/js/plugins/choices.min.js"></script>
@@ -72,7 +80,8 @@
     <!--  Google Maps Plugin    -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
     <script src="./assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script type="text/javascript">
 
@@ -101,6 +110,7 @@
             };
         }
     </script>
+    @await Component.InvokeAsync("Notyf")
 
 
 </body>

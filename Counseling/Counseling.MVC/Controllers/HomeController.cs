@@ -29,16 +29,18 @@ namespace Counseling.MVC.Controllers
             List<Service> services = await _serviceService.GetAllServiceWithFullDataAsync(true);
 
             List<ServiceModel> serviceModels = new List<ServiceModel>();
-            serviceModels = services.Select(s => new ServiceModel
+            if(services.Count> 0)
             {
-                ServiceId = s.Id,
-                TherapistId = s.TherapistId,
-                IsApproved = s.IsApproved,
-                IsConfirmed = s.IsConfirmed,
-                Price = s.Price,
-                Description = s.Description,
-                
-                Categories = s.ServiceCategories
+                serviceModels = services.Select(s => new ServiceModel
+                {
+                    ServiceId = s.Id,
+                    TherapistId = s.TherapistId,
+                    IsApproved = s.IsApproved,
+                    IsConfirmed = s.IsConfirmed,
+                    Price = s.Price,
+                    Description = s.Description,
+
+                    Categories = s.ServiceCategories
                 .Select(sc => new Category
                 {
 
@@ -49,14 +51,15 @@ namespace Counseling.MVC.Controllers
                     Name = sc.Category.Name,
                     Url = sc.Category.Url
                 }).ToList(),
-                Therapist = s.ServiceTherapist.Therapist,
-                User= s.ServiceTherapist.Therapist.User,
-                ImageUrl = s.ServiceTherapist.Therapist.User.Image.Url,
-                Url = s.Url
+                    Therapist = s.ServiceTherapist.Therapist,
+                    User = s.ServiceTherapist.Therapist.User,
+                    ImageUrl = s.ServiceTherapist.Therapist.User.Image.Url,
+                    Url = s.Url
 
 
-            }).ToList();
+                }).ToList();
 
+            }
             return View(serviceModels);
         }
     }

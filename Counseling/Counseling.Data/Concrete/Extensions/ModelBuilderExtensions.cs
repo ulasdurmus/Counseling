@@ -14,6 +14,16 @@ namespace Counseling.Data.Concrete.Extensions
     {
         public static void SeedData(this ModelBuilder modelBuilder)
         {
+            #region Image creat
+            List<Image> images = new List<Image>
+            {
+                new Image { Id=1,IsApproved=true,Url= "manUser1.jpg" },
+                new Image { Id=2,IsApproved=true,Url= "manUser2.jpg" },
+                new Image { Id=3,IsApproved=true,Url= "womanUser2.jpg" },
+                new Image { Id=4,IsApproved=true,Url= "womanUser2.jpg" }
+            };
+            modelBuilder.Entity<Image>().HasData(images);
+            #endregion
             #region Role Informations
             List<Role> roles = new List<Role>
             {
@@ -65,7 +75,8 @@ namespace Counseling.Data.Concrete.Extensions
                     DateOfBirth=new DateTime(1999,12,13),
                     DateOfRegistration= DateTime.Now,
                     Address="Çekmeköy",
-                    EmailConfirmed=true
+                    EmailConfirmed=true,
+                    ImageId=1,
                 },
                 //Admin
                 new User
@@ -82,7 +93,8 @@ namespace Counseling.Data.Concrete.Extensions
                     DateOfBirth = new DateTime(1985, 05, 15),
                     DateOfRegistration= DateTime.Now,
                     Address = "5678 Oak Avenue, Los Angeles",
-                    EmailConfirmed = true
+                    EmailConfirmed = true,
+                    ImageId=2,
                 },
                 //Therapist
                 new User
@@ -100,7 +112,8 @@ namespace Counseling.Data.Concrete.Extensions
                     DateOfRegistration= DateTime.Now,
                     Address = "1234 Elm Street, Springfield",
                     EmailConfirmed = true,
-                    PhoneNumber = "0544 372 12 11"
+                    PhoneNumber = "0544 372 12 11",
+                    ImageId=3,
                 },
                 new User
                 {
@@ -117,7 +130,8 @@ namespace Counseling.Data.Concrete.Extensions
                     DateOfRegistration= DateTime.Now,
                     Address = "9876 Maple Street, New York",
                     EmailConfirmed = false,
-                    PhoneNumber = "0544 372 51 33"
+                    PhoneNumber = "0544 372 51 33",
+                    ImageId=4,
                 },
                 new User
                 {
@@ -134,7 +148,8 @@ namespace Counseling.Data.Concrete.Extensions
                     DateOfRegistration= DateTime.Now,
                     Address = "1234 Elm Street",
                     EmailConfirmed = true,
-                    PhoneNumber = "0532 872 42 55"
+                    PhoneNumber = "0532 872 42 55",
+                    ImageId=1,
                 },
                 //Client
                 new User
@@ -151,7 +166,8 @@ namespace Counseling.Data.Concrete.Extensions
                     DateOfBirth = new DateTime(1998, 03, 12),
                     DateOfRegistration= DateTime.Now,
                     Address = "3456 Pine Road, Chicago",
-                    EmailConfirmed = true
+                    EmailConfirmed = true,
+                    ImageId=2,
                 },
                 new User
                 {
@@ -167,7 +183,8 @@ namespace Counseling.Data.Concrete.Extensions
                     DateOfBirth = new DateTime(1980, 11, 22),
                     DateOfRegistration= DateTime.Now,
                     Address = "2345 Cedar Avenue, San Francisco",
-                    EmailConfirmed = true
+                    EmailConfirmed = true,
+                    ImageId=3,
                 },
                 new User
                 {
@@ -183,7 +200,8 @@ namespace Counseling.Data.Concrete.Extensions
                     DateOfBirth = new DateTime(1995, 07, 03),
                     DateOfRegistration= DateTime.Now,
                     Address = "8765 Birch Street, Miami",
-                    EmailConfirmed = false
+                    EmailConfirmed = false,
+                    ImageId=4,
                 }
 
 

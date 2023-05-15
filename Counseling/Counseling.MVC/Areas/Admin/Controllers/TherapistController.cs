@@ -7,6 +7,7 @@ using Counseling.MVC.Methods;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Counseling.MVC.Areas.Admin.Controllers
@@ -205,15 +206,23 @@ namespace Counseling.MVC.Areas.Admin.Controllers
         #region Delete
         public async Task<IActionResult> Delete(int id)
         {
-            var therapist =await  _therapistService.GetByIdAsync(id);
-            var user = await _userManager.FindByIdAsync(therapist.UserId);
-            if(user == null || therapist == null)
+            //var therapist =await  _therapistService.GetByIdAsync(id);
+            //var user = await _userManager.Users.Where(x => x.Id == therapist.UserId).Include(x => x.Image).FirstOrDefaultAsync();
+            //therapist.User = user;
+
+            //if(user == null || therapist == null)
+            //{
+            //    return NotFound();
+            //}
+            
+            //_therapistService.Delete(therapist);
+            //await _userManager.DeleteAsync(user);
+            var therapist = await _therapistService.GetTherapistFullDataById(id);
+            if(therapist == null)
             {
                 return NotFound();
             }
-            await _userManager.DeleteAsync(user);
             _therapistService.Delete(therapist);
-            
             
             return RedirectToAction("Index","Therapist");
         }

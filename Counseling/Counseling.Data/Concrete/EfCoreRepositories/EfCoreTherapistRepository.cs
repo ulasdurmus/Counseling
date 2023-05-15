@@ -181,7 +181,27 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
         {
             throw new NotImplementedException();
         }
-        
+        public async Task<Therapist> GetTherapistFullDataById(int id)
+        {
+            Therapist therapist = await AppContext
+                .Therapists
+                .Where(t => t.Id == id)
+                .Include(t=> t.User)
+                .ThenInclude(t=> t.Image)
+                .Include(t => t.TherapistCategories)
+                .ThenInclude(tc => tc.Category)
+                .Include(t => t.Education)
+                .ThenInclude(te => te.University)
+                .Include(t => t.Education)
+                .ThenInclude(td => td.Department)
+                .Include(t => t.Certificates)
+                .Include(t=> t.TherapistServices)
+                .ThenInclude(ts=> ts.Service)
+                .ThenInclude(x=> x.ServiceCategories)
+                .ThenInclude(x=> x.Category)
+                .FirstOrDefaultAsync();
+            return therapist;
+        }
 
     }
 }

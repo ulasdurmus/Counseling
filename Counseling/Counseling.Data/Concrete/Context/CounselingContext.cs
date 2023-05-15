@@ -34,7 +34,8 @@ namespace Counseling.Data.Concrete.Context
         public DbSet<ClientService> ClientServices{ get; set; }
         public DbSet<ClientTherapist> ClientTherapists{ get; set; }
         public DbSet<Reservation> Reservations { get; set; }
-        
+        public DbSet<ReservationHour> ReservationHours { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -38,11 +38,33 @@
                                         DateTime maximumDate = new DateTime(year,month,day);
                                         DateTime minimumDate = DateTime.Now;
                                     }
-                                    <label asp-for="ReservationDate" class="col-md-4 col-lg-3 col-form-label"></label>
-                                    <input asp-format="{0:yyyy-MM-ddTHH:mm}" asp-for="ReservationDate" class="form-control"
-                                           max="@(maximumDate.ToString("0:yyyy-MM-ddTHH:mm"))"
-                                           min="@(minimumDate.ToString("0:yyyy-MM-ddTHH:mm"))" value=@minimumDate.ToString("yyyy-MM-ddTHH:mm")>
+                                    <label asp-for="ReservationDate" class=" col-form-label"></label>
+                                    <input type="date" asp-for="ReservationDate" class="form-control"
+                                           max="@(maximumDate.ToString("0:yyyy-MM-dd"))"
+                                           min="@(minimumDate.ToString("0:yyyy-MM-dd"))" value=@minimumDate.ToString("yyyy-MM-dd")>
 
+                                </div>
+
+                                <div class="col-md-4">
+                                    @*Choosing Hour*@
+                                    <div class="form-check">
+                                        <div class="drop-down">
+                                            <button class="btn btn-light dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Saat Seçiniz</button>
+                                            <ul class="dropdown-menu overflow-auto" style="height:300px;  width:370px;">
+
+                                                @foreach (var hour in Model.ReservationHours)
+                                                {
+                                                    <li class="dropdown-item">
+                                                        <div class="form-check ">
+                                                            <input class="form-check-input" type="radio" name="ReservationHourId" value=@hour.Id>
+                                                            <label class="form-check-label">@hour.Hour</label>
+                                                        </div>
+                                                    </li>
+                                                }
+
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="my-3">

@@ -19,6 +19,7 @@ namespace Counseling.Entity.Entity
         public bool IsOnline { get; set; }
         public List<TherapistCategory> TherapistCategories { get; set; }
         public List<ClientTherapist> ClientTherapists { get; set; }
+        public List<ServiceTherapist> TherapistServices { get; set; }
         public List<Certificate> Certificates { get; set; }
         public int EducationId { get; set; }
         public Education Education { get; set; }

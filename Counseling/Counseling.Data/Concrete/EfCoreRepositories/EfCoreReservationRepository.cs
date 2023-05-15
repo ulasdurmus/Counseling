@@ -67,5 +67,21 @@ namespace Counseling.Data.Concrete.EfCoreRepositories
 
             return reservation;
         }
+        public async Task<List<ReservationHour>> GetAllReservationHoursAsync()
+        {
+            var hours = await AppContext
+                .ReservationHours
+                .ToListAsync();
+            return hours;
+        }
+        public async Task<string> GetHourValueByIdAsync(int id)
+        {
+            var value = await AppContext
+                .ReservationHours
+                .Where(h=> h.Id ==id)
+                .Select(h=> h.Value)
+                .FirstOrDefaultAsync();
+            return value;
+        }
     }
 }

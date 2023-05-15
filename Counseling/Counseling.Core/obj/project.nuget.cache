@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Af8LcE6fdW7k21P8aLrhOaHktgoO1eVSceFLoB2IDQgXm+sgVEwqurjz8LI2tcqwyzTe3nYI+/GavZZZnAoCMA==",
+  "dgSpecHash": "IW3hjx9qq4mx7RY0HO4FIXuwNBe6X1l8xDS0mJCA3+w1NQ65CCXXMrjo90tnqM/6Z5lBmJoDjNknTtr4wbtEfQ==",
   "success": true,
   "projectFilePath": "C:\\Git\\Projeler\\Counseling\\Counseling\\Counseling.Core\\Counseling.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ulas_\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\ulas_\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\ulas_\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
     "C:\\Users\\ulas_\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
   ],
   "logs": []
