@@ -1,125 +1,126 @@
 ﻿@model TherapistManageViewModel
-<div class="page-header align-items-start min-vh-100" style="background-color: bisque" loading="lazy">
+<div class="page-header align-items-start min-vh-100 bg-dark" loading="lazy">
 
     <span class="mask bg-gradient-dark opacity-6"></span>
-    <div class="container my-5">
-        <div class="row">
-            <form asp-area=""
-                              asp-controller="Account"
-                              asp-action="TherapistManage"
-                              method="post"
-                              enctype="multipart/form-data"
-                              role="form" class="text-start ">
-            @*Genel Bilgiler*@
-            <div class=" col-12 mx-auto">
-                <div class="card z-index-0 fadeIn3 fadeInBottom mt-6">
-                    <div class="row">
-                        <div class="col-md-7 ">
-                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 w-100 mx-auto">
-                                <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+    <div class="container-fluid p-3 m-5">
 
-                                    <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">@Model.FirstName @Model.LastName</h4>
-
-                                    <div class="row mt-3">
-                                        <div class="col-2 text-center ms-auto">
-                                            <a class="btn btn-link px-3" href="javascript:;">
-                                                <i class="fa fa-facebook text-white text-lg"></i>
-                                            </a>
-                                        </div>
-                                        <div class="col-2 text-center px-1">
-                                            <a class="btn btn-link px-3" href="javascript:;">
-                                                <i class="fa fa-github text-white text-lg"></i>
-                                            </a>
-                                        </div>
-                                        <div class="col-2 text-center me-auto">
-                                            <a class="btn btn-link px-3" href="javascript:;">
-                                                <i class="fa fa-google text-white text-lg"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-md-3 mx-md-5 order-md-first col-8 m-auto">
-                            <img class="img-thumbnail p-0 position-relative mt-n4 mx-3 z-index-2 mx-auto " src="~/images/ProfilePics/Therapists/@Model.ProfilPictureUrl" />
-                        </div>
-
-                    </div>
-
-                    <div class="card-body">
-                        @*<form asp-area=""
-                        asp-controller="Account"
-                        asp-action="TherapistManage"
-                        method="post"
-                        enctype="multipart/form-data"
-                        role="form" class="text-start ">*@
+        <form asp-area=""
+              asp-controller="Account"
+              asp-action="TherapistManage"
+              method="post"
+              enctype="multipart/form-data"
+              role="form" class="text-start ">
+            <div class="row">
+                @*Genel Bilgiler*@
+                <div class=" col-12 mx-auto">
+                    <div class="card z-index-0 fadeIn3 fadeInBottom mt-6">
                         <div class="row">
-                            <div asp-validation-summary="All"></div>
-                            <div class="col-md-8">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="input-group input-group-static   my-3">
-                                            <label asp-for="FirstName"></label>
-                                            <input type="text" class="form-control" asp-for="FirstName">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group input-group-static   my-3">
-                                            <label asp-for="LastName"></label>
-                                            <input type="text" class="form-control" asp-for="LastName">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group input-group-static   my-3">
-                                            <label asp-for="PhoneNumber"></label>
-                                            <input type="tel" class="form-control" asp-for="PhoneNumber">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group input-group-static   my-3">
-                                            <label asp-for="UserName"></label>
-                                            <input type="text" class="form-control" asp-for="UserName">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group input-group-static   my-3">
-                                            <label asp-for="Email"></label>
-                                            <input type="text" class="form-control" asp-for="Email">
-                                        </div>
-                                    </div>
+                            <div class="col-md-7 ">
+                                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 w-100 mx-auto">
+                                    <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
 
+                                        <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">@Model.FirstName @Model.LastName</h4>
 
-                                    <div class="col-md-6">
-                                        <label asp-for="ProfilePic" class="col-form-label d-block"></label>
-                                        <input type="file" name="ProfilePic" class="btn btn-primary btn-sm" />
-
+                                        <div class="row mt-3">
+                                            <div class="col-2 text-center ms-auto">
+                                                <a class="btn btn-link px-3" href="javascript:;">
+                                                    <i class="fa fa-facebook text-white text-lg"></i>
+                                                </a>
+                                            </div>
+                                            <div class="col-2 text-center px-1">
+                                                <a class="btn btn-link px-3" href="javascript:;">
+                                                    <i class="fa fa-github text-white text-lg"></i>
+                                                </a>
+                                            </div>
+                                            <div class="col-2 text-center me-auto">
+                                                <a class="btn btn-link px-3" href="javascript:;">
+                                                    <i class="fa fa-google text-white text-lg"></i>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>
+
                             </div>
-                            
-                            <div class="col-md-4">
-                                <div class="input-group input-group-static   my-3">
-                                    <label asp-for="Address"></label>
-                                    <input type="text" class="form-control" asp-for="Address">
-                                </div>
-                                @*Chosing Gender*@
-                                <div class="d-flex justify-content-center">
-                                    <div class="form-check ">
-                                        <input class="form-check-input" type="radio" asp-for="Gender" value="Kadın">
-                                        <label class="form-check-label" for="Kadın">
-                                            Kadın
-                                        </label>
+                            <div class="col-md-3 mx-md-5 order-md-first col-8 m-auto">
+                                <img class="img-thumbnail p-0 position-relative mt-n4 mx-3 z-index-2 mx-auto " src="~/images/ProfilePics/Therapists/@Model.ProfilPictureUrl" />
+                            </div>
+
+                        </div>
+
+                        <div class="card-body">
+                            @*<form asp-area=""
+                            asp-controller="Account"
+                            asp-action="TherapistManage"
+                            method="post"
+                            enctype="multipart/form-data"
+                            role="form" class="text-start ">*@
+                            <div class="row">
+                                <div asp-validation-summary="All"></div>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label asp-for="FirstName"></label>
+                                                <input type="text" class="form-control" asp-for="FirstName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label asp-for="LastName"></label>
+                                                <input type="text" class="form-control" asp-for="LastName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label asp-for="PhoneNumber"></label>
+                                                <input type="tel" class="form-control" asp-for="PhoneNumber">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label asp-for="UserName"></label>
+                                                <input type="text" class="form-control" asp-for="UserName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group input-group-static   my-3">
+                                                <label asp-for="Email"></label>
+                                                <input type="text" class="form-control" asp-for="Email">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-6">
+                                            <label asp-for="ProfilePic" class="col-form-label d-block"></label>
+                                            <input type="file" name="ProfilePic" class="btn btn-primary btn-sm" />
+
+                                        </div>
+
                                     </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" asp-for="Gender" value="Erkek">
-                                        <label class="form-check-label" for="male" value="Erkek">
-                                            Erkek
-                                        </label>
-                                    </div>
                                 </div>
+
+                                <div class="col-md-4">
+                                    <div class="input-group input-group-static   my-3">
+                                        <label asp-for="Address"></label>
+                                        <input type="text" class="form-control" asp-for="Address">
+                                    </div>
+                                    @*Chosing Gender*@
+                                    <div class="d-flex justify-content-center">
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" asp-for="Gender" value="Kadın">
+                                            <label class="form-check-label" for="Kadın">
+                                                Kadın
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" asp-for="Gender" value="Erkek">
+                                            <label class="form-check-label" for="male" value="Erkek">
+                                                Erkek
+                                            </label>
+                                        </div>
+                                    </div>
                                     @*Choosing Category*@
                                     <div class="form-check">
                                         <div class="drop-down">
@@ -140,229 +141,230 @@
                                             </ul>
                                         </div>
                                     </div>
-                                <div class="">
-                                    @{
-                                        DateTime today = DateTime.Now;
-                                        int year = today.Year - 22;
-                                        int month = today.Month;
-                                        int day = today.Day;
-                                        DateTime maximumDate = new DateTime(year, month, day);
-                                    }
-                                    <label asp-for="DateOfBirth" class="col-md-4 col-lg-3 col-form-label"></label>
-                                    <input type="date" asp-for="DateOfBirth" class="form-control"
-                                           max="@(maximumDate.ToString("yyyy-MM-dd"))"
-                                           min="1990-01-01">
-                                </div>
+                                    <div class="">
+                                        @{
+                                            DateTime today = DateTime.Now;
+                                            int year = today.Year - 22;
+                                            int month = today.Month;
+                                            int day = today.Day;
+                                            DateTime maximumDate = new DateTime(year, month, day);
+                                        }
+                                        <label asp-for="DateOfBirth" class="col-md-4 col-lg-3 col-form-label"></label>
+                                        <input type="date" asp-for="DateOfBirth" class="form-control"
+                                               max="@(maximumDate.ToString("yyyy-MM-dd"))"
+                                               min="1990-01-01">
+                                    </div>
 
+                                </div>
                             </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Kaydet</button>
+                            </div>
+                            <div class="text-center">
+                                <p class="mt-4 text-sm ">
+                                    Hesabın var mı ?
+                                </p>
+                                <a asp-area=""
+                                   asp-controller="Account"
+                                   asp-action="Login"
+                                   class="btn btn-link">Giriş yap</a>
+                            </div>
+                            <input asp-for="TherapistId" type="hidden" />
+                            <input asp-for="UserId" type="hidden" />
+                            @*</form>*@
                         </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Kaydet</button>
-                        </div>
-                        <div class="text-center">
-                            <p class="mt-4 text-sm ">
-                                Hesabın var mı ?
-                            </p>
-                            <a asp-area=""
-                               asp-controller="Account"
-                               asp-action="Login"
-                               class="btn btn-link">Giriş yap</a>
-                        </div>
-                        <input asp-for="TherapistId" type="hidden" />
-                        <input asp-for="UserId" type="hidden" />
-                        @*</form>*@
                     </div>
                 </div>
-            </div>
-            @*Eğitim bilgileri*@
-            <div class=" col-12 mx-auto">
-                <div class="card z-index-0 fadeIn3 fadeInBottom mt-6">
-                    <div class="row d-flex justify-content-center">
+                @*Eğitim bilgileri*@
+                <div class=" col-12 mx-auto">
+                    <div class="card z-index-0 fadeIn3 fadeInBottom mt-6">
+                        <div class="row d-flex justify-content-center">
 
-                        <div class="col-md-7 ">
-                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 w-100 mx-auto">
-                                <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
-                                    <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Eğitim Bilgileri</h4>
+                            <div class="col-md-7 ">
+                                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 w-100 mx-auto">
+                                    <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                                        <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Eğitim Bilgileri</h4>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="card-body">
+                            @*<form asp-area=""
+                            asp-controller="Account"
+                            asp-action="TherapistManage"
+                            method="post"
+                            enctype="multipart/form-data"
+                            role="form" class="text-start ">*@
+                            <div class="row">
+                                <div asp-validation-summary="All"></div>
+                                <div class="col-md-4">
+                                    <div class="m-3">
+                                        <h4 class=" font-weight-bolder  mt-2 mb-0 text-primary ">Üniversite Adı</h4>
+                                        <label asp-for="Education.University.Name">@Model.Education.University.Name</label>
+                                    </div>
+                                    <div class="m-3">
+                                        <h4 class=" font-weight-bolder  mt-2 mb-0 text-primary">Bölüm Adı</h4>
+                                        <label asp-for="Education.University.Name">@Model.Education.Department.Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label asp-for="Education.StartedDate" class="col-form-label">Başlangıç Tarihi</label>
+                                    <input type="date" asp-for="Education.StartedDate" class="form-control"
+                                           min="1970-09-01"
+                                           max="2023-01-01">
+                                </div>
+                                <div class="col-md-2">
+                                    <label asp-for="Education.EndedDate" class="col-form-label">Bitiş Tarihi</label>
+                                    <input type="date" asp-for="Education.EndedDate" class="form-control"
+                                           min="1970-09-01"
+                                           max="2023-01-01">
+                                </div>
+                                @*Selected part*@
+                                <div class="col-md-4">
+                                    @*Choosing University*@
+                                    <div class="form-check">
+                                        <div class="drop-down">
+                                            <button class="btn btn-primary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Üniversite Seçiniz</button>
+                                            <ul class="dropdown-menu overflow-auto" style="height:300px;  width:370px;">
+
+                                                @foreach (var university in Model.Universities)
+                                                {
+                                                    <li class="dropdown-item">
+                                                        <div class="form-check ">
+                                                            <input class="form-check-input" type="radio" name="UniversityId" value=@university.Id
+                                                            @if (Model.Education.UniversityId != null)
+                                                            {
+                                                                @(Model.Education.UniversityId == university.Id ? "checked" : "")
+                                                            }>
+                                                            <label class="form-check-label">@university.Name</label>
+                                                        </div>
+                                                    </li>
+                                                }
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    @*Choosing Department*@
+                                    <div class="form-check">
+                                        <div class="drop-down">
+                                            <button class="btn btn-primary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Bölüm Seçiniz</button>
+                                            <ul class="dropdown-menu overflow-auto" style="height:100px">
+
+                                                @foreach (var department in Model.Departments)
+                                                {
+                                                    <li class="dropdown-item">
+                                                        <div class="form-check ">
+                                                            <input class="form-check-input" type="radio" name="DepartmentId" value=@department.Id
+                                                            @if (Model.Education.DepartmentId != null)
+                                                            {
+                                                                @(Model.Education.DepartmentId == department.Id ? "checked" : "")
+                                                            }>
+                                                            <label class="form-check-label">@department.Name</label>
+                                                        </div>
+                                                    </li>
+                                                }
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="text-center">
+                                <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Kaydet</button>
+                            </div>
+
+                            <input asp-for="TherapistId" type="hidden" />
+                            <input asp-for="UserId" type="hidden" />
+                            @*</form>*@
+                        </div>
                     </div>
-                    <div class="card-body">
-                        @*<form asp-area=""
-                        asp-controller="Account"
-                        asp-action="TherapistManage"
-                        method="post"
-                        enctype="multipart/form-data"
-                        role="form" class="text-start ">*@
-                        <div class="row">
+                </div>
+                @*Sertifika bilgileri*@
+                <div class=" col-12 mx-auto">
+                    <div class="card z-index-0 fadeIn3 fadeInBottom mt-6">
+                        <div class="row d-flex justify-content-center">
+
+                            <div class="col-md-7 ">
+                                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 w-100 mx-auto">
+                                    <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                                        <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Sertifika Bilgileri</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            @*<form asp-area=""
+                            asp-controller="Account"
+                            asp-action="TherapistManage"
+                            method="post"
+                            enctype="multipart/form-data"
+                            role="form" class="text-start ">*@
                             <div asp-validation-summary="All"></div>
-                            <div class="col-md-4">
-                                <div class="m-3">
-                                    <h4 class=" font-weight-bolder  mt-2 mb-0 text-primary ">Üniversite Adı</h4>
-                                    <label asp-for="Education.University.Name">@Model.Education.University.Name</label>
-                                </div>
-                                <div class="m-3">
-                                    <h4 class=" font-weight-bolder  mt-2 mb-0 text-primary">Bölüm Adı</h4>
-                                    <label asp-for="Education.University.Name">@Model.Education.Department.Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <label asp-for="Education.StartedDate" class="col-form-label">Başlangıç Tarihi</label>
-                                <input type="date" asp-for="Education.StartedDate" class="form-control"
-                                           min="1970-09-01"
-                                           max="2023-01-01">
-                            </div>
-                            <div class="col-md-2">
-                                <label asp-for="Education.EndedDate" class="col-form-label">Bitiş Tarihi</label>
-                                <input type="date" asp-for="Education.EndedDate" class="form-control"
-                                           min="1970-09-01"
-                                           max="2023-01-01">
-                            </div>
-                            @*Selected part*@
-                            <div class="col-md-4">
-                                @*Choosing University*@
-                                <div class="form-check">
-                                    <div class="drop-down">
-                                        <button class="btn btn-primary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Üniversite Seçiniz</button>
-                                        <ul class="dropdown-menu overflow-auto" style="height:300px;  width:370px;">
+                            <div class="row">
 
-                                            @foreach (var university in Model.Universities)
-                                            {
-                                                <li class="dropdown-item">
-                                                    <div class="form-check ">
-                                                        <input class="form-check-input" type="radio" name="UniversityId" value=@university.Id
-                                                        @if (Model.Education.UniversityId != null)
-                                                        {
-                                                            @(Model.Education.UniversityId == university.Id ? "checked" : "")
-                                                        }>
-                                                        <label class="form-check-label">@university.Name</label>
-                                                    </div>
-                                                </li>
-                                            }
-
-                                        </ul>
+                                @if (Model.Certificates != null)
+                                {
+                                    <div class="col-md-6">
+                                        @*Sertifika varsa adını yazdıracağım*@
+                                        @foreach (var certificate in Model.Certificates)
+                                        {
+                                            <div class="m-3">
+                                                <h4 class=" font-weight-bolder  mt-2 mb-0 text-primary ">Sertifika Adı</h4>
+                                                <label>@certificate.Name</label>
+                                            </div>
+                                            <div class="m-3">
+                                                <h4 class=" font-weight-bolder  mt-2 mb-0 text-primary ">Sertifika Açıklaması</h4>
+                                                <label>@certificate.Description</label>
+                                            </div>
+                                            <div class="m-3">
+                                                <h4 class=" font-weight-bolder  mt-2 mb-0 text-primary ">Belgeyi İndir</h4>
+                                                <a>@certificate.PdfUrl</a>
+                                            </div>
+                                        }
                                     </div>
-                                </div>
-                                @*Choosing Department*@
-                                <div class="form-check">
-                                    <div class="drop-down">
-                                        <button class="btn btn-primary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">Bölüm Seçiniz</button>
-                                        <ul class="dropdown-menu overflow-auto" style="height:100px">
 
-                                            @foreach (var department in Model.Departments)
-                                            {
-                                                <li class="dropdown-item">
-                                                    <div class="form-check ">
-                                                        <input class="form-check-input" type="radio" name="DepartmentId" value=@department.Id
-                                                        @if (Model.Education.DepartmentId != null)
-                                                        {
-                                                            @(Model.Education.DepartmentId == department.Id ? "checked" : "")
-                                                        }>
-                                                        <label class="form-check-label">@department.Name</label>
-                                                    </div>
-                                                </li>
-                                            }
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                }
 
 
-                        <div class="text-center">
-                            <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Kaydet</button>
-                        </div>
-
-                        <input asp-for="TherapistId" type="hidden" />
-                        <input asp-for="UserId" type="hidden" />
-                        @*</form>*@
-                    </div>
-                </div>
-            </div>
-            @*Sertifika bilgileri*@
-            <div class=" col-12 mx-auto">
-                <div class="card z-index-0 fadeIn3 fadeInBottom mt-6">
-                    <div class="row d-flex justify-content-center">
-
-                        <div class="col-md-7 ">
-                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 w-100 mx-auto">
-                                <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
-                                    <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Sertifika Bilgileri</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        @*<form asp-area=""
-                        asp-controller="Account"
-                        asp-action="TherapistManage"
-                        method="post"
-                        enctype="multipart/form-data"
-                        role="form" class="text-start ">*@
-                        <div asp-validation-summary="All"></div>
-                        <div class="row">
-
-                            @if (Model.Certificates != null)
-                            {
+                                @*sErtifika ekleme bölümü*@
                                 <div class="col-md-6">
-                                    @*Sertifika varsa adını yazdıracağım*@
-                                    @foreach (var certificate in Model.Certificates)
-                                    {
-                                        <div class="m-3">
-                                            <h4 class=" font-weight-bolder  mt-2 mb-0 text-primary ">Sertifika Adı</h4>
-                                            <label>@certificate.Name</label>
+                                    <h4 class=" font-weight-bolder  mt-2 mb-0 text-primary ">Sertifika Ekle</h4>
+                                    <div class="col-md-12">
+                                        <div class="input-group input-group-static my-3">
+                                            <label asp-for="CertificateName"></label>
+                                            <input type="text" class="form-control" asp-for="CertificateName">
                                         </div>
-                                        <div class="m-3">
-                                            <h4 class=" font-weight-bolder  mt-2 mb-0 text-primary ">Sertifika Açıklaması</h4>
-                                            <label>@certificate.Description</label>
-                                        </div>
-                                        <div class="m-3">
-                                            <h4 class=" font-weight-bolder  mt-2 mb-0 text-primary ">Belgeyi İndir</h4>
-                                            <a>@certificate.PdfUrl</a>
-                                        </div>
-                                    }
-                                </div>
-
-                            }
-
-
-                            @*sErtifika ekleme bölümü*@
-                            <div class="col-md-6">
-                                <h4 class=" font-weight-bolder  mt-2 mb-0 text-primary ">Sertifika Ekle</h4>
-                                <div class="col-md-12">
-                                    <div class="input-group input-group-static my-3">
-                                        <label asp-for="CertificateName"></label>
-                                        <input type="text" class="form-control" asp-for="CertificateName">
                                     </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="input-group input-group-static my-3">
-                                        <label asp-for="CertificateDescription"></label>
-                                        <input type="text" class="form-control" asp-for="CertificateDescription">
+                                    <div class="col-md-12">
+                                        <div class="input-group input-group-static my-3">
+                                            <label asp-for="CertificateDescription"></label>
+                                            <input type="text" class="form-control" asp-for="CertificateDescription">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <h5 class=" font-weight-bolder  my-2 mb-0 text-primary ">Sertifika Ekle</h5>
-                                    <input type="file" name="CertificatePdf" class="btn btn-primary btn-sm mt-3" />
+                                    <div class="col-md-12">
+                                        <h5 class=" font-weight-bolder  my-2 mb-0 text-primary ">Sertifika Ekle</h5>
+                                        <input type="file" name="CertificatePdf" class="btn btn-primary btn-sm mt-3" />
+                                    </div>
                                 </div>
                             </div>
+
+
+                            <div class="text-center">
+                                <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Kaydet</button>
+                            </div>
+
+                            <input asp-for="TherapistId" type="hidden" />
+                            <input asp-for="UserId" type="hidden" />
+                            @*</form>*@
                         </div>
-
-
-                        <div class="text-center">
-                            <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Kaydet</button>
-                        </div>
-
-                        <input asp-for="TherapistId" type="hidden" />
-                        <input asp-for="UserId" type="hidden" />
-                        @*</form>*@
                     </div>
-                </div>
 
+                </div>
             </div>
-            </form>
-        </div>
+        </form>
+
     </div>
 
 </div>

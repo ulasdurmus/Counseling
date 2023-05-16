@@ -21,6 +21,7 @@ namespace Counseling.Data.Concrete.Extensions
                 new Image { Id=2,IsApproved=true,Url= "manUser2.jpg" },
                 new Image { Id=3,IsApproved=true,Url= "womanUser2.jpg" },
                 new Image { Id=4,IsApproved=true,Url= "womanUser2.jpg" }
+
             };
             modelBuilder.Entity<Image>().HasData(images);
             #endregion

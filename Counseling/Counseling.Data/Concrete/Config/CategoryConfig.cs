@@ -28,7 +28,8 @@ namespace Counseling.Data.Concrete.Config
                     Description = "Bireylerin duygusal, zihinsel ve davranışsal sorunlarını değerlendirmek ve bireysel olarak danışmanlık sağlamak.",
                     Url = "bireysel-danismanlik",
                     IsDeleted = false,
-                    IsApproved = true
+                    IsApproved = true,
+                    ImageUrl= "bireyseldanismanlık.jpg"
                 },
                 new Category
                 {
@@ -37,7 +38,8 @@ namespace Counseling.Data.Concrete.Config
                     Description = "Çiftler ve aileler arasındaki ilişki sorunlarını değerlendirmek ve terapi yöntemleri kullanarak çiftler ve ailelerle danışmanlık sağlamak.",
                     Url = "cift-ve-aile-danismanligi",
                     IsDeleted = false,
-                    IsApproved = true
+                    IsApproved = true,
+                    ImageUrl = "cift-aile-danismanligi.jpg"
                 },
                 new Category
                 {
@@ -46,7 +48,8 @@ namespace Counseling.Data.Concrete.Config
                     Description = "Ergenlerin duygusal, sosyal ve davranışsal gelişimini desteklemek, ergenlerle danışmanlık yapmak ve onlara rehberlik etmek.",
                     Url = "ergen-danismanligi",
                     IsDeleted = false,
-                    IsApproved = true
+                    IsApproved = true,
+                    ImageUrl= "ergen-danismanligi.jpeg"
                 },
                 new Category
                 {
@@ -55,7 +58,8 @@ namespace Counseling.Data.Concrete.Config
                     Description = "Madde bağımlılığı veya diğer bağımlılıklarla mücadele eden bireylere danışmanlık sağlamak, bağımlılıkları değerlendirmek ve tedavi planları oluşturmak.",
                     Url = "bagimlilik-danismanligi",
                     IsDeleted = false,
-                    IsApproved = true
+                    IsApproved = true,
+                    ImageUrl= "bagimlilik-danismanligi.jpeg"
                 },
                 new Category
                 {
@@ -64,7 +68,8 @@ namespace Counseling.Data.Concrete.Config
                     Description = "Krize giren bireylere destek sağlamak, travma sonrası stres bozukluğu ve diğer travma reaksiyonlarına müdahale etmek, travma sonrası iyileşmeyi desteklemek.",
                     Url = "kriz-ve-tramva-danismanligi",
                     IsDeleted = false,
-                    IsApproved = true
+                    IsApproved = true,
+                    ImageUrl = "krizvetramva.jpg"
                 },
                 new Category
                 {
@@ -73,7 +78,8 @@ namespace Counseling.Data.Concrete.Config
                     Description = "Bireylerin sosyal becerilerini geliştirmek, iletişim, ilişki kurma, sınır koyma gibi sosyal becerileri öğretmek ve desteklemek.",
                     Url = "sosyal-beceri-egitimi",
                     IsDeleted = false,
-                    IsApproved = true
+                    IsApproved = true,
+                    ImageUrl= "sosyalbeceridanismanligi.jpg"
                 },
                 new Category
                 {
@@ -82,7 +88,8 @@ namespace Counseling.Data.Concrete.Config
                     Description = "Bireylerin kendini değerlendirmesine ve keşfetmesine yardımcı olmak, güçlü yönleri ve zorlukları tanımak ve kişisel büyümeyi desteklemek.",
                     Url = "oz-fegerlendirme-ve-kendini-kesfetme",
                     IsDeleted = false,
-                    IsApproved = true
+                    IsApproved = true,
+                    ImageUrl= "kendinikesfetme.jpg"
                 },
                 new Category
                 {
@@ -91,7 +98,8 @@ namespace Counseling.Data.Concrete.Config
                     Description = "Bireylerin yaşam değişimleri, dönem geçişleri ve adaptasyon süreçlerine danışmanlık sağlamak, değişime uyum sürecini desteklemek ve başa çıkma becerilerini geliştirmek.",
                     Url = "yasam-degisimi-ve-gecisler",
                     IsDeleted = false,
-                    IsApproved = true
+                    IsApproved = true,
+                    ImageUrl= "yasamdegisimivegecisler.jpeg"
                 });
 
         }

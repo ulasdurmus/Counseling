@@ -15,6 +15,7 @@ namespace Counseling.Entity.Entity
         public string Url { get; set; }
         public bool IsApproved { get; set; }
         public bool IsDeleted { get; set; }
+        public string ImageUrl { get; set; }
         public List<TherapistCategory> TherapistCategories { get; set; }
     }
 }

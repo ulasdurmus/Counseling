@@ -8,6 +8,7 @@ using Counseling.MVC.Models.ViewModels.ServiceModels;
 using Iyzipay;
 using Iyzipay.Model;
 using Iyzipay.Request;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 //using Microsoft.Extensions.Options;
@@ -78,6 +79,7 @@ namespace Counseling.MVC.Controllers
         }
 
         #region Create
+        [Authorize(Roles ="client")]
         [HttpGet]
         public async Task<IActionResult> Create(int id)
         {
